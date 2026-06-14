@@ -41,7 +41,6 @@ CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_inter
  /opt/ros/jazzy/include/rcutils/rcutils/visibility_control_macros.h \
  /opt/ros/jazzy/include/rcutils/rcutils/sha256.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
- /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_c/frob_interfaces/msg/detail/obstacle_detection__struct.h \
  /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_c/frob_interfaces/msg/detail/obstacle_detection__functions.h \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
@@ -70,4 +69,5 @@ CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_inter
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h \
- /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h
+ /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
+ /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_c/frob_interfaces/msg/detail/obstacle_detection__struct.h

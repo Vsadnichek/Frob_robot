@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_rs/frob_interfaces/rust/Cargo.toml"
   "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_rs/frob_interfaces/rust/build.rs"
+  "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_rs/frob_interfaces/rust/src/action.rs"
+  "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_rs/frob_interfaces/rust/src/action/rmw.rs"
   "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_rs/frob_interfaces/rust/src/lib.rs"
   "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_rs/frob_interfaces/rust/src/msg.rs"
   "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_rs/frob_interfaces/rust/src/msg/rmw.rs"

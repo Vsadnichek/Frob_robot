@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/frob_interfaces__rosidl_generator_type_description"
+  "rosidl_generator_type_description/frob_interfaces/action/ExecuteMotion.json"
   "rosidl_generator_type_description/frob_interfaces/msg/IntersectionDetection.json"
   "rosidl_generator_type_description/frob_interfaces/msg/LineDetection.json"
   "rosidl_generator_type_description/frob_interfaces/msg/ObstacleDetection.json"

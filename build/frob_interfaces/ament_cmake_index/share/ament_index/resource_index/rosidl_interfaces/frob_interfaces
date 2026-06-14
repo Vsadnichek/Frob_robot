@@ -1,3 +1,5 @@
+action/ExecuteMotion.action
+action/ExecuteMotion.idl
 msg/IntersectionDetection.idl
 msg/IntersectionDetection.msg
 msg/LineDetection.idl

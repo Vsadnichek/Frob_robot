@@ -1,0 +1,14 @@
+graph_navigator:
+  ros__parameters:
+    start_node: 13
+    target_node: 108
+    initial_heading: 0.0
+    turn_threshold: 0.08
+
+motion_executor:
+  ros__parameters:
+    forward_speed: 0.12
+    rotate_speed: 1.2
+    forward_tolerance: 0.02
+    rotate_tolerance: 0.05
+    kp_angular: 2.5

@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "frob_interfaces/msg/detail/line_detection__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
-#include "frob_interfaces/msg/detail/line_detection__functions.h"
+#include "frob_interfaces/msg/detail/line_detection__type_support.h"
 #include "frob_interfaces/msg/detail/line_detection__struct.h"
+#include "frob_interfaces/msg/detail/line_detection__functions.h"
 
 #ifdef __cplusplus
 extern "C"

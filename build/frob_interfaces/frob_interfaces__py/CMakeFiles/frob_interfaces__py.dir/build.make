@@ -75,14 +75,17 @@ include /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__
 /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__py/CMakeFiles/frob_interfaces__py: rosidl_generator_py/frob_interfaces/msg/_sign_detection.py
 /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__py/CMakeFiles/frob_interfaces__py: rosidl_generator_py/frob_interfaces/msg/_intersection_detection.py
 /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__py/CMakeFiles/frob_interfaces__py: rosidl_generator_py/frob_interfaces/msg/_obstacle_detection.py
+/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__py/CMakeFiles/frob_interfaces__py: rosidl_generator_py/frob_interfaces/action/_execute_motion.py
 /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__py/CMakeFiles/frob_interfaces__py: rosidl_generator_py/frob_interfaces/srv/__init__.py
 /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__py/CMakeFiles/frob_interfaces__py: rosidl_generator_py/frob_interfaces/msg/__init__.py
+/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__py/CMakeFiles/frob_interfaces__py: rosidl_generator_py/frob_interfaces/action/__init__.py
 /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__py/CMakeFiles/frob_interfaces__py: rosidl_generator_py/frob_interfaces/srv/_turn_s.c
 /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__py/CMakeFiles/frob_interfaces__py: rosidl_generator_py/frob_interfaces/srv/_forward_s.c
 /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__py/CMakeFiles/frob_interfaces__py: rosidl_generator_py/frob_interfaces/msg/_line_detection_s.c
 /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__py/CMakeFiles/frob_interfaces__py: rosidl_generator_py/frob_interfaces/msg/_sign_detection_s.c
 /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__py/CMakeFiles/frob_interfaces__py: rosidl_generator_py/frob_interfaces/msg/_intersection_detection_s.c
 /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__py/CMakeFiles/frob_interfaces__py: rosidl_generator_py/frob_interfaces/msg/_obstacle_detection_s.c
+/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__py/CMakeFiles/frob_interfaces__py: rosidl_generator_py/frob_interfaces/action/_execute_motion_s.c
 
 rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_py/__init__.py
@@ -103,9 +106,15 @@ rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fas
 rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/frob_interfaces/msg/SignDetection.idl
 rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/frob_interfaces/msg/IntersectionDetection.idl
 rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/frob_interfaces/msg/ObstacleDetection.idl
+rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/frob_interfaces/action/ExecuteMotion.idl
 rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
+rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
+rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
+rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
+rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
+rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
 	cd /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__py && /usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
@@ -133,11 +142,17 @@ rosidl_generator_py/frob_interfaces/msg/_intersection_detection.py: rosidl_gener
 rosidl_generator_py/frob_interfaces/msg/_obstacle_detection.py: rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/frob_interfaces/msg/_obstacle_detection.py
 
+rosidl_generator_py/frob_interfaces/action/_execute_motion.py: rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/frob_interfaces/action/_execute_motion.py
+
 rosidl_generator_py/frob_interfaces/srv/__init__.py: rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/frob_interfaces/srv/__init__.py
 
 rosidl_generator_py/frob_interfaces/msg/__init__.py: rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/frob_interfaces/msg/__init__.py
+
+rosidl_generator_py/frob_interfaces/action/__init__.py: rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/frob_interfaces/action/__init__.py
 
 rosidl_generator_py/frob_interfaces/srv/_turn_s.c: rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/frob_interfaces/srv/_turn_s.c
@@ -157,10 +172,16 @@ rosidl_generator_py/frob_interfaces/msg/_intersection_detection_s.c: rosidl_gene
 rosidl_generator_py/frob_interfaces/msg/_obstacle_detection_s.c: rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/frob_interfaces/msg/_obstacle_detection_s.c
 
+rosidl_generator_py/frob_interfaces/action/_execute_motion_s.c: rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/frob_interfaces/action/_execute_motion_s.c
+
 frob_interfaces__py: /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__py/CMakeFiles/frob_interfaces__py
 frob_interfaces__py: rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_c.c
 frob_interfaces__py: rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 frob_interfaces__py: rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+frob_interfaces__py: rosidl_generator_py/frob_interfaces/action/__init__.py
+frob_interfaces__py: rosidl_generator_py/frob_interfaces/action/_execute_motion.py
+frob_interfaces__py: rosidl_generator_py/frob_interfaces/action/_execute_motion_s.c
 frob_interfaces__py: rosidl_generator_py/frob_interfaces/msg/__init__.py
 frob_interfaces__py: rosidl_generator_py/frob_interfaces/msg/_intersection_detection.py
 frob_interfaces__py: rosidl_generator_py/frob_interfaces/msg/_intersection_detection_s.c

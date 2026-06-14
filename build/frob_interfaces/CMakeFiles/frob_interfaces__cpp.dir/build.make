@@ -96,6 +96,11 @@ CMakeFiles/frob_interfaces__cpp: rosidl_generator_cpp/frob_interfaces/msg/detail
 CMakeFiles/frob_interfaces__cpp: rosidl_generator_cpp/frob_interfaces/msg/detail/obstacle_detection__struct.hpp
 CMakeFiles/frob_interfaces__cpp: rosidl_generator_cpp/frob_interfaces/msg/detail/obstacle_detection__traits.hpp
 CMakeFiles/frob_interfaces__cpp: rosidl_generator_cpp/frob_interfaces/msg/detail/obstacle_detection__type_support.hpp
+CMakeFiles/frob_interfaces__cpp: rosidl_generator_cpp/frob_interfaces/action/execute_motion.hpp
+CMakeFiles/frob_interfaces__cpp: rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__builder.hpp
+CMakeFiles/frob_interfaces__cpp: rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__struct.hpp
+CMakeFiles/frob_interfaces__cpp: rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__traits.hpp
+CMakeFiles/frob_interfaces__cpp: rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__type_support.hpp
 CMakeFiles/frob_interfaces__cpp: rosidl_generator_cpp/frob_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/frob_interfaces/srv/turn.hpp: /opt/ros/jazzy/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -123,9 +128,15 @@ rosidl_generator_cpp/frob_interfaces/srv/turn.hpp: rosidl_adapter/frob_interface
 rosidl_generator_cpp/frob_interfaces/srv/turn.hpp: rosidl_adapter/frob_interfaces/msg/SignDetection.idl
 rosidl_generator_cpp/frob_interfaces/srv/turn.hpp: rosidl_adapter/frob_interfaces/msg/IntersectionDetection.idl
 rosidl_generator_cpp/frob_interfaces/srv/turn.hpp: rosidl_adapter/frob_interfaces/msg/ObstacleDetection.idl
+rosidl_generator_cpp/frob_interfaces/srv/turn.hpp: rosidl_adapter/frob_interfaces/action/ExecuteMotion.idl
 rosidl_generator_cpp/frob_interfaces/srv/turn.hpp: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 rosidl_generator_cpp/frob_interfaces/srv/turn.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/frob_interfaces/srv/turn.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
+rosidl_generator_cpp/frob_interfaces/srv/turn.hpp: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
+rosidl_generator_cpp/frob_interfaces/srv/turn.hpp: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
+rosidl_generator_cpp/frob_interfaces/srv/turn.hpp: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
+rosidl_generator_cpp/frob_interfaces/srv/turn.hpp: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
+rosidl_generator_cpp/frob_interfaces/srv/turn.hpp: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_cpp__arguments.json
 
@@ -216,10 +227,30 @@ rosidl_generator_cpp/frob_interfaces/msg/detail/obstacle_detection__traits.hpp: 
 rosidl_generator_cpp/frob_interfaces/msg/detail/obstacle_detection__type_support.hpp: rosidl_generator_cpp/frob_interfaces/srv/turn.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/frob_interfaces/msg/detail/obstacle_detection__type_support.hpp
 
+rosidl_generator_cpp/frob_interfaces/action/execute_motion.hpp: rosidl_generator_cpp/frob_interfaces/srv/turn.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/frob_interfaces/action/execute_motion.hpp
+
+rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__builder.hpp: rosidl_generator_cpp/frob_interfaces/srv/turn.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__builder.hpp
+
+rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__struct.hpp: rosidl_generator_cpp/frob_interfaces/srv/turn.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__struct.hpp
+
+rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__traits.hpp: rosidl_generator_cpp/frob_interfaces/srv/turn.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__traits.hpp
+
+rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__type_support.hpp: rosidl_generator_cpp/frob_interfaces/srv/turn.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__type_support.hpp
+
 rosidl_generator_cpp/frob_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp: rosidl_generator_cpp/frob_interfaces/srv/turn.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/frob_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 frob_interfaces__cpp: CMakeFiles/frob_interfaces__cpp
+frob_interfaces__cpp: rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__builder.hpp
+frob_interfaces__cpp: rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__struct.hpp
+frob_interfaces__cpp: rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__traits.hpp
+frob_interfaces__cpp: rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__type_support.hpp
+frob_interfaces__cpp: rosidl_generator_cpp/frob_interfaces/action/execute_motion.hpp
 frob_interfaces__cpp: rosidl_generator_cpp/frob_interfaces/msg/detail/intersection_detection__builder.hpp
 frob_interfaces__cpp: rosidl_generator_cpp/frob_interfaces/msg/detail/intersection_detection__struct.hpp
 frob_interfaces__cpp: rosidl_generator_cpp/frob_interfaces/msg/detail/intersection_detection__traits.hpp

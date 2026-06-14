@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/frob_interfaces__rosidl_generator_py.dir/rosidl_generator_py/frob_interfaces/action/_execute_motion_s.c.o"
+  "CMakeFiles/frob_interfaces__rosidl_generator_py.dir/rosidl_generator_py/frob_interfaces/action/_execute_motion_s.c.o.d"
   "CMakeFiles/frob_interfaces__rosidl_generator_py.dir/rosidl_generator_py/frob_interfaces/msg/_intersection_detection_s.c.o"
   "CMakeFiles/frob_interfaces__rosidl_generator_py.dir/rosidl_generator_py/frob_interfaces/msg/_intersection_detection_s.c.o.d"
   "CMakeFiles/frob_interfaces__rosidl_generator_py.dir/rosidl_generator_py/frob_interfaces/msg/_line_detection_s.c.o"

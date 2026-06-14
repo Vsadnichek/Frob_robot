@@ -73,6 +73,8 @@ include /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__
 /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__rs/CMakeFiles/frob_interfaces__rs: rosidl_generator_rs/frob_interfaces/rust/src/msg/rmw.rs
 /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__rs/CMakeFiles/frob_interfaces__rs: rosidl_generator_rs/frob_interfaces/rust/src/srv.rs
 /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__rs/CMakeFiles/frob_interfaces__rs: rosidl_generator_rs/frob_interfaces/rust/src/srv/rmw.rs
+/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__rs/CMakeFiles/frob_interfaces__rs: rosidl_generator_rs/frob_interfaces/rust/src/action.rs
+/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__rs/CMakeFiles/frob_interfaces__rs: rosidl_generator_rs/frob_interfaces/rust/src/action/rmw.rs
 
 rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: /opt/ros/jazzy/lib/rosidl_generator_rs/rosidl_generator_rs
 rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_rs/__init__.py
@@ -92,15 +94,22 @@ rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: rosidl_adapter/frob_interfa
 rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: rosidl_adapter/frob_interfaces/msg/SignDetection.idl
 rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: rosidl_adapter/frob_interfaces/msg/IntersectionDetection.idl
 rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: rosidl_adapter/frob_interfaces/msg/ObstacleDetection.idl
+rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: rosidl_adapter/frob_interfaces/action/ExecuteMotion.idl
 rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: rosidl_adapter/frob_interfaces/srv/Turn.idl
 rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: rosidl_adapter/frob_interfaces/srv/Forward.idl
 rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: rosidl_adapter/frob_interfaces/msg/LineDetection.idl
 rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: rosidl_adapter/frob_interfaces/msg/SignDetection.idl
 rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: rosidl_adapter/frob_interfaces/msg/IntersectionDetection.idl
 rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: rosidl_adapter/frob_interfaces/msg/ObstacleDetection.idl
+rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: rosidl_adapter/frob_interfaces/action/ExecuteMotion.idl
 rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
+rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
+rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
+rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
+rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
+rosidl_generator_rs/frob_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Rust code for ROS interfaces"
 	cd /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__rs && /usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_rs/cmake/../../../lib/rosidl_generator_rs/rosidl_generator_rs --generator-arguments-file /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_rs__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
@@ -122,9 +131,17 @@ rosidl_generator_rs/frob_interfaces/rust/src/srv.rs: rosidl_generator_rs/frob_in
 rosidl_generator_rs/frob_interfaces/rust/src/srv/rmw.rs: rosidl_generator_rs/frob_interfaces/rust/src/lib.rs
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_rs/frob_interfaces/rust/src/srv/rmw.rs
 
+rosidl_generator_rs/frob_interfaces/rust/src/action.rs: rosidl_generator_rs/frob_interfaces/rust/src/lib.rs
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_rs/frob_interfaces/rust/src/action.rs
+
+rosidl_generator_rs/frob_interfaces/rust/src/action/rmw.rs: rosidl_generator_rs/frob_interfaces/rust/src/lib.rs
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_rs/frob_interfaces/rust/src/action/rmw.rs
+
 frob_interfaces__rs: /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__rs/CMakeFiles/frob_interfaces__rs
 frob_interfaces__rs: rosidl_generator_rs/frob_interfaces/rust/Cargo.toml
 frob_interfaces__rs: rosidl_generator_rs/frob_interfaces/rust/build.rs
+frob_interfaces__rs: rosidl_generator_rs/frob_interfaces/rust/src/action.rs
+frob_interfaces__rs: rosidl_generator_rs/frob_interfaces/rust/src/action/rmw.rs
 frob_interfaces__rs: rosidl_generator_rs/frob_interfaces/rust/src/lib.rs
 frob_interfaces__rs: rosidl_generator_rs/frob_interfaces/rust/src/msg.rs
 frob_interfaces__rs: rosidl_generator_rs/frob_interfaces/rust/src/msg/rmw.rs

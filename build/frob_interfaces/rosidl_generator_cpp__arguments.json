@@ -8,12 +8,18 @@
     "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces:msg/LineDetection.idl",
     "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces:msg/SignDetection.idl",
     "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces:msg/IntersectionDetection.idl",
-    "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces:msg/ObstacleDetection.idl"
+    "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces:msg/ObstacleDetection.idl",
+    "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces:action/ExecuteMotion.idl"
   ],
   "ros_interface_dependencies": [
     "service_msgs:/opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl",
     "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl",
-    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl"
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl",
+    "action_msgs:/opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl",
+    "action_msgs:/opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl",
+    "action_msgs:/opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl",
+    "action_msgs:/opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl",
+    "unique_identifier_msgs:/opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl"
   ],
   "target_dependencies": [
     "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp",
@@ -41,9 +47,15 @@
     "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces/msg/SignDetection.idl",
     "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces/msg/IntersectionDetection.idl",
     "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces/msg/ObstacleDetection.idl",
+    "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces/action/ExecuteMotion.idl",
     "/opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl",
     "/opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl",
-    "/opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl"
+    "/opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl",
+    "/opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl",
+    "/opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl",
+    "/opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl",
+    "/opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl",
+    "/opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl"
   ],
   "type_description_tuples": [
     "srv/Turn.idl:/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_type_description/frob_interfaces/srv/Turn.json",
@@ -51,6 +63,7 @@
     "msg/LineDetection.idl:/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_type_description/frob_interfaces/msg/LineDetection.json",
     "msg/SignDetection.idl:/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_type_description/frob_interfaces/msg/SignDetection.json",
     "msg/IntersectionDetection.idl:/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_type_description/frob_interfaces/msg/IntersectionDetection.json",
-    "msg/ObstacleDetection.idl:/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_type_description/frob_interfaces/msg/ObstacleDetection.json"
+    "msg/ObstacleDetection.idl:/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_type_description/frob_interfaces/msg/ObstacleDetection.json",
+    "action/ExecuteMotion.idl:/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_type_description/frob_interfaces/action/ExecuteMotion.json"
   ]
 }

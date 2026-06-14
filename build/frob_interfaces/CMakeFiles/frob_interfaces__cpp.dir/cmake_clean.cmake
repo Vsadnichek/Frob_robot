@@ -1,5 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/frob_interfaces__cpp"
+  "rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__builder.hpp"
+  "rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__struct.hpp"
+  "rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__traits.hpp"
+  "rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__type_support.hpp"
+  "rosidl_generator_cpp/frob_interfaces/action/execute_motion.hpp"
   "rosidl_generator_cpp/frob_interfaces/msg/detail/intersection_detection__builder.hpp"
   "rosidl_generator_cpp/frob_interfaces/msg/detail/intersection_detection__struct.hpp"
   "rosidl_generator_cpp/frob_interfaces/msg/detail/intersection_detection__traits.hpp"

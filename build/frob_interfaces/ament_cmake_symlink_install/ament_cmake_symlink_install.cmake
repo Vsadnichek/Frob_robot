@@ -336,6 +336,9 @@ ament_cmake_symlink_install_files("/home/vsadnik/ros2_ws/frob_robot/src/frob_int
 # install(FILES "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_type_description/frob_interfaces/msg/ObstacleDetection.json" "DESTINATION" "share/frob_interfaces/msg")
 ament_cmake_symlink_install_files("/home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces" FILES "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_type_description/frob_interfaces/msg/ObstacleDetection.json" "DESTINATION" "share/frob_interfaces/msg")
 
+# install(FILES "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_type_description/frob_interfaces/action/ExecuteMotion.json" "DESTINATION" "share/frob_interfaces/action")
+ament_cmake_symlink_install_files("/home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces" FILES "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_type_description/frob_interfaces/action/ExecuteMotion.json" "DESTINATION" "share/frob_interfaces/action")
+
 # install(DIRECTORY "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_c/frob_interfaces/" "DESTINATION" "include/frob_interfaces/frob_interfaces" "PATTERN" "*.h")
 ament_cmake_symlink_install_directory("/home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces" DIRECTORY "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_c/frob_interfaces/" "DESTINATION" "include/frob_interfaces/frob_interfaces" "PATTERN" "*.h")
 
@@ -405,6 +408,9 @@ ament_cmake_symlink_install_files("/home/vsadnik/ros2_ws/frob_robot/src/frob_int
 # install(FILES "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces/msg/ObstacleDetection.idl" "DESTINATION" "share/frob_interfaces/msg")
 ament_cmake_symlink_install_files("/home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces" FILES "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces/msg/ObstacleDetection.idl" "DESTINATION" "share/frob_interfaces/msg")
 
+# install(FILES "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces/action/ExecuteMotion.idl" "DESTINATION" "share/frob_interfaces/action")
+ament_cmake_symlink_install_files("/home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces" FILES "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces/action/ExecuteMotion.idl" "DESTINATION" "share/frob_interfaces/action")
+
 # install(FILES "/home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces/srv/Turn.srv" "DESTINATION" "share/frob_interfaces/srv")
 ament_cmake_symlink_install_files("/home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces" FILES "/home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces/srv/Turn.srv" "DESTINATION" "share/frob_interfaces/srv")
 
@@ -422,6 +428,9 @@ ament_cmake_symlink_install_files("/home/vsadnik/ros2_ws/frob_robot/src/frob_int
 
 # install(FILES "/home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces/msg/ObstacleDetection.msg" "DESTINATION" "share/frob_interfaces/msg")
 ament_cmake_symlink_install_files("/home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces" FILES "/home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces/msg/ObstacleDetection.msg" "DESTINATION" "share/frob_interfaces/msg")
+
+# install(FILES "/home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces/action/ExecuteMotion.action" "DESTINATION" "share/frob_interfaces/action")
+ament_cmake_symlink_install_files("/home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces" FILES "/home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces/action/ExecuteMotion.action" "DESTINATION" "share/frob_interfaces/action")
 
 # install(FILES "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/frob_interfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces" FILES "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/frob_interfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

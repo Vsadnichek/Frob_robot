@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
-#include "frob_interfaces/srv/detail/forward__struct.h"
-#include "frob_interfaces/srv/detail/forward__type_support.h"
 #include "frob_interfaces/srv/detail/forward__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "frob_interfaces/srv/detail/forward__type_support.h"
+#include "frob_interfaces/srv/detail/forward__struct.h"
 
 #ifdef __cplusplus
 extern "C"

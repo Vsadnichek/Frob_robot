@@ -72,6 +72,7 @@ CMakeFiles/frob_interfaces__rosidl_generator_type_description: rosidl_generator_
 CMakeFiles/frob_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/frob_interfaces/msg/SignDetection.json
 CMakeFiles/frob_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/frob_interfaces/msg/IntersectionDetection.json
 CMakeFiles/frob_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/frob_interfaces/msg/ObstacleDetection.json
+CMakeFiles/frob_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/frob_interfaces/action/ExecuteMotion.json
 
 rosidl_generator_type_description/frob_interfaces/srv/Turn.json: /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description
 rosidl_generator_type_description/frob_interfaces/srv/Turn.json: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_type_description/__init__.py
@@ -81,6 +82,7 @@ rosidl_generator_type_description/frob_interfaces/srv/Turn.json: rosidl_adapter/
 rosidl_generator_type_description/frob_interfaces/srv/Turn.json: rosidl_adapter/frob_interfaces/msg/SignDetection.idl
 rosidl_generator_type_description/frob_interfaces/srv/Turn.json: rosidl_adapter/frob_interfaces/msg/IntersectionDetection.idl
 rosidl_generator_type_description/frob_interfaces/srv/Turn.json: rosidl_adapter/frob_interfaces/msg/ObstacleDetection.idl
+rosidl_generator_type_description/frob_interfaces/srv/Turn.json: rosidl_adapter/frob_interfaces/action/ExecuteMotion.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type hashes for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_type_description__arguments.json
 
@@ -99,7 +101,11 @@ rosidl_generator_type_description/frob_interfaces/msg/IntersectionDetection.json
 rosidl_generator_type_description/frob_interfaces/msg/ObstacleDetection.json: rosidl_generator_type_description/frob_interfaces/srv/Turn.json
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/frob_interfaces/msg/ObstacleDetection.json
 
+rosidl_generator_type_description/frob_interfaces/action/ExecuteMotion.json: rosidl_generator_type_description/frob_interfaces/srv/Turn.json
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/frob_interfaces/action/ExecuteMotion.json
+
 frob_interfaces__rosidl_generator_type_description: CMakeFiles/frob_interfaces__rosidl_generator_type_description
+frob_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/frob_interfaces/action/ExecuteMotion.json
 frob_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/frob_interfaces/msg/IntersectionDetection.json
 frob_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/frob_interfaces/msg/LineDetection.json
 frob_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/frob_interfaces/msg/ObstacleDetection.json

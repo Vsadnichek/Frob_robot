@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
-#include "frob_interfaces/msg/detail/intersection_detection__type_support.h"
 #include "frob_interfaces/msg/detail/intersection_detection__functions.h"
 #include "frob_interfaces/msg/detail/intersection_detection__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "frob_interfaces/msg/detail/intersection_detection__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

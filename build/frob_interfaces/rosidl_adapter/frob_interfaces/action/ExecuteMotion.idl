@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from frob_interfaces/action/ExecuteMotion.action
+// generated code does not contain a copyright notice
+
+
+module frob_interfaces {
+  module action {
+    struct ExecuteMotion_Goal {
+      @verbatim (language="comment", text=
+        "\"forward\" or \"rotate\"")
+      string command;
+
+      @verbatim (language="comment", text=
+        "distance in meters for forward, angle in radians for rotate")
+      float value;
+    };
+    struct ExecuteMotion_Result {
+      boolean success;
+    };
+    struct ExecuteMotion_Feedback {
+      @verbatim (language="comment", text=
+        "0.0..1.0")
+      float progress;
+    };
+  };
+};

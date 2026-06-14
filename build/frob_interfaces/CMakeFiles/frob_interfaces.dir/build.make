@@ -72,7 +72,12 @@ CMakeFiles/frob_interfaces: /home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces
 CMakeFiles/frob_interfaces: /home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces/msg/SignDetection.msg
 CMakeFiles/frob_interfaces: /home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces/msg/IntersectionDetection.msg
 CMakeFiles/frob_interfaces: /home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces/msg/ObstacleDetection.msg
+CMakeFiles/frob_interfaces: /home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces/action/ExecuteMotion.action
 CMakeFiles/frob_interfaces: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
+CMakeFiles/frob_interfaces: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
+CMakeFiles/frob_interfaces: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
+CMakeFiles/frob_interfaces: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
+CMakeFiles/frob_interfaces: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
 
 frob_interfaces: CMakeFiles/frob_interfaces
 frob_interfaces: CMakeFiles/frob_interfaces.dir/build.make

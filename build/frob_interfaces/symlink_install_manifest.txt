@@ -5,6 +5,11 @@
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/SignDetection.json
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/IntersectionDetection.json
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/ObstacleDetection.json
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/action/ExecuteMotion.json
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/action/detail/execute_motion__functions.h
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/action/detail/execute_motion__struct.h
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/action/detail/execute_motion__type_support.h
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/action/execute_motion.h
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__functions.h
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__struct.h
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__type_support.h
@@ -32,6 +37,7 @@
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/turn.h
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/environment/library_path.sh
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/environment/library_path.dsv
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/action/detail/execute_motion__rosidl_typesupport_fastrtps_c.h
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__rosidl_typesupport_fastrtps_c.h
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/line_detection__rosidl_typesupport_fastrtps_c.h
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/obstacle_detection__rosidl_typesupport_fastrtps_c.h
@@ -39,6 +45,7 @@
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__rosidl_typesupport_fastrtps_c.h
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__rosidl_typesupport_fastrtps_c.h
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/action/detail/execute_motion__rosidl_typesupport_introspection_c.h
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__rosidl_typesupport_introspection_c.h
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/line_detection__rosidl_typesupport_introspection_c.h
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/obstacle_detection__rosidl_typesupport_introspection_c.h
@@ -46,6 +53,11 @@
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__rosidl_typesupport_introspection_c.h
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__rosidl_typesupport_introspection_c.h
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/action/detail/execute_motion__builder.hpp
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/action/detail/execute_motion__struct.hpp
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/action/detail/execute_motion__traits.hpp
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/action/detail/execute_motion__type_support.hpp
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/action/execute_motion.hpp
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__builder.hpp
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__struct.hpp
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__traits.hpp
@@ -77,6 +89,7 @@
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__type_support.hpp
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/forward.hpp
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/turn.hpp
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/action/detail/execute_motion__rosidl_typesupport_fastrtps_cpp.hpp
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__rosidl_typesupport_fastrtps_cpp.hpp
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/line_detection__rosidl_typesupport_fastrtps_cpp.hpp
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/obstacle_detection__rosidl_typesupport_fastrtps_cpp.hpp
@@ -84,6 +97,7 @@
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__rosidl_typesupport_fastrtps_cpp.hpp
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__rosidl_typesupport_fastrtps_cpp.hpp
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/action/detail/execute_motion__rosidl_typesupport_introspection_cpp.hpp
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__rosidl_typesupport_introspection_cpp.hpp
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/line_detection__rosidl_typesupport_introspection_cpp.hpp
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/obstacle_detection__rosidl_typesupport_introspection_cpp.hpp
@@ -100,6 +114,9 @@
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_c.c
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/action/__init__.py
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/action/_execute_motion.py
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/action/_execute_motion_s.c
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_c.so
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_fastrtps_c.so
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_introspection_c.so
@@ -123,6 +140,8 @@
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/ament_index/resource_index/rust_packages/frob_interfaces
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/rust/Cargo.toml
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/rust/build.rs
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/rust/src/action.rs
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/rust/src/action/rmw.rs
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/rust/src/lib.rs
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/rust/src/msg.rs
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/rust/src/msg/rmw.rs
@@ -134,12 +153,14 @@
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/SignDetection.idl
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/IntersectionDetection.idl
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/ObstacleDetection.idl
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/action/ExecuteMotion.idl
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/srv/Turn.srv
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/srv/Forward.srv
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/LineDetection.msg
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/SignDetection.msg
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/IntersectionDetection.msg
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/ObstacleDetection.msg
+/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/action/ExecuteMotion.action
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/ament_index/resource_index/package_run_dependencies/frob_interfaces
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/ament_index/resource_index/parent_prefix_path/frob_interfaces
 /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/environment/ament_prefix_path.sh

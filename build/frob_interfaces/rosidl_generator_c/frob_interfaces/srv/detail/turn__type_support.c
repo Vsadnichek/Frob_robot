@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "rosidl_typesupport_interface/macros.h"
-#include "frob_interfaces/srv/detail/turn__struct.h"
 #include "frob_interfaces/srv/detail/turn__type_support.h"
 #include "frob_interfaces/srv/detail/turn__functions.h"
+#include "frob_interfaces/srv/detail/turn__struct.h"
 
 #ifdef __cplusplus
 extern "C"

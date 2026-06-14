@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "frob_interfaces/msg/detail/sign_detection__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "frob_interfaces/msg/detail/sign_detection__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "frob_interfaces/msg/detail/sign_detection__type_support.h"
 
 #ifdef __cplusplus

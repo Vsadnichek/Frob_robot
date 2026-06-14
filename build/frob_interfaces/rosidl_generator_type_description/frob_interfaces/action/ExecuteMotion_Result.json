@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "frob_interfaces/action/ExecuteMotion_Result",
+      "fields": [
+        {
+          "name": "success",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "frob_interfaces/action/ExecuteMotion_Result",
+      "hash_string": "RIHS01_d65af4424a5df1f4c7cc0d6a7fb1972b95f7a8ed694c53c886a70096fc351012"
+    }
+  ]
+}

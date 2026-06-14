@@ -1,0 +1,30 @@
+[0.687s] Invoking command in '/home/vsadnik/ros2_ws/frob_robot/build/frob_mission': AMENT_PREFIX_PATH=/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/vsadnik/ros2_ws/frob_robot/build/frob_mission/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vsadnik/ros2_ws/frob_robot/install/frob_mission/lib/python3.12/site-packages:/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/vsadnik/ros2_ws/frob_robot/build/frob_mission/build --no-deps symlink_data
+[0.919s] running develop
+[1.065s] running egg_info
+[1.065s] creating frob_mission.egg-info
+[1.078s] writing frob_mission.egg-info/PKG-INFO
+[1.079s] writing dependency_links to frob_mission.egg-info/dependency_links.txt
+[1.079s] writing entry points to frob_mission.egg-info/entry_points.txt
+[1.079s] writing requirements to frob_mission.egg-info/requires.txt
+[1.079s] writing top-level names to frob_mission.egg-info/top_level.txt
+[1.079s] writing manifest file 'frob_mission.egg-info/SOURCES.txt'
+[1.106s] reading manifest file 'frob_mission.egg-info/SOURCES.txt'
+[1.106s] writing manifest file 'frob_mission.egg-info/SOURCES.txt'
+[1.121s] running build_ext
+[1.121s] Creating /home/vsadnik/ros2_ws/frob_robot/install/frob_mission/lib/python3.12/site-packages/frob-mission.egg-link (link to .)
+[1.122s] Installing graph_navigator script to /home/vsadnik/ros2_ws/frob_robot/install/frob_mission/lib/frob_mission
+[1.122s] Installing motion_executor script to /home/vsadnik/ros2_ws/frob_robot/install/frob_mission/lib/frob_mission
+[1.122s] 
+[1.122s] Installed /home/vsadnik/ros2_ws/frob_robot/build/frob_mission
+[1.122s] running symlink_data
+[1.122s] creating /home/vsadnik/ros2_ws/frob_robot/install/frob_mission/share/ament_index
+[1.122s] creating /home/vsadnik/ros2_ws/frob_robot/install/frob_mission/share/ament_index/resource_index
+[1.123s] creating /home/vsadnik/ros2_ws/frob_robot/install/frob_mission/share/ament_index/resource_index/packages
+[1.123s] symbolically linking /home/vsadnik/ros2_ws/frob_robot/build/frob_mission/resource/frob_mission -> /home/vsadnik/ros2_ws/frob_robot/install/frob_mission/share/ament_index/resource_index/packages
+[1.123s] symbolically linking /home/vsadnik/ros2_ws/frob_robot/build/frob_mission/package.xml -> /home/vsadnik/ros2_ws/frob_robot/install/frob_mission/share/frob_mission
+[1.123s] creating /home/vsadnik/ros2_ws/frob_robot/install/frob_mission/share/frob_mission/config
+[1.123s] symbolically linking /home/vsadnik/ros2_ws/frob_robot/build/frob_mission/config/graph.yaml -> /home/vsadnik/ros2_ws/frob_robot/install/frob_mission/share/frob_mission/config
+[1.123s] symbolically linking /home/vsadnik/ros2_ws/frob_robot/build/frob_mission/config/mission_params.yaml -> /home/vsadnik/ros2_ws/frob_robot/install/frob_mission/share/frob_mission/config
+[1.123s] creating /home/vsadnik/ros2_ws/frob_robot/install/frob_mission/share/frob_mission/launch
+[1.123s] symbolically linking /home/vsadnik/ros2_ws/frob_robot/build/frob_mission/launch/mission.launch.py -> /home/vsadnik/ros2_ws/frob_robot/install/frob_mission/share/frob_mission/launch
+[1.148s] Invoked command in '/home/vsadnik/ros2_ws/frob_robot/build/frob_mission' returned '0': AMENT_PREFIX_PATH=/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/vsadnik/ros2_ws/frob_robot/build/frob_mission/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vsadnik/ros2_ws/frob_robot/install/frob_mission/lib/python3.12/site-packages:/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/vsadnik/ros2_ws/frob_robot/build/frob_mission/build --no-deps symlink_data
