@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/pi/Frob_robot/ros2/src/ros2_ws/build/rf2o_laser_odometry/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

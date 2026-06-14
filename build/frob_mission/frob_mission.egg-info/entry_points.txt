@@ -1,3 +1,0 @@
-[console_scripts]
-graph_navigator = frob_mission.graph_navigator:main
-motion_executor = frob_mission.motion_executor:main

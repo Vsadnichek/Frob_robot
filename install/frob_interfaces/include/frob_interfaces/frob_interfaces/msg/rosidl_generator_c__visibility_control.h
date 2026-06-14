@@ -1,1 +1,0 @@
-/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_c/frob_interfaces/msg/rosidl_generator_c__visibility_control.h

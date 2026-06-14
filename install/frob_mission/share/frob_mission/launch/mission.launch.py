@@ -1,1 +1,0 @@
-/home/vsadnik/ros2_ws/frob_robot/build/frob_mission/launch/mission.launch.py

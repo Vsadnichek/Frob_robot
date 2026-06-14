@@ -1,6 +1,0 @@
-string command     # "forward" or "rotate"
-float32 value       # distance in meters for forward, angle in radians for rotate
----
-bool success
----
-float32 progress    # 0.0..1.0

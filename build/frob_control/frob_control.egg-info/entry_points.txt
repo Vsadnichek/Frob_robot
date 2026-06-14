@@ -1,2 +1,0 @@
-[console_scripts]
-joy_control = frob_control.joy_control:main

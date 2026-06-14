@@ -1,1 +1,0 @@
-/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_rs/frob_interfaces/rust/src/action.rs

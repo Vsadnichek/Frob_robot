@@ -1,1 +1,0 @@
-/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_cpp/frob_interfaces/action/detail/execute_motion__struct.hpp

@@ -1,1 +1,0 @@
-/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_typesupport_introspection_cpp/frob_interfaces/msg/detail/intersection_detection__rosidl_typesupport_introspection_cpp.hpp

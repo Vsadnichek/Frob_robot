@@ -1,1 +1,0 @@
-/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake
