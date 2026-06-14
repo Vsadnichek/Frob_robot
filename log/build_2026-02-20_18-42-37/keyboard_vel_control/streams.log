@@ -1,0 +1,35 @@
+[3.496s] Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/keyboard_vel_control': PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/keyboard_vel_control build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control/install.log --single-version-externally-managed install_data
+[4.317s] /home/pi/.local/lib/python3.12/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[4.318s]   warnings.warn(msg)
+[4.918s] running egg_info
+[5.001s] creating ../../build/keyboard_vel_control/keyboard_vel_control.egg-info
+[5.003s] writing ../../build/keyboard_vel_control/keyboard_vel_control.egg-info/PKG-INFO
+[5.005s] writing dependency_links to ../../build/keyboard_vel_control/keyboard_vel_control.egg-info/dependency_links.txt
+[5.007s] writing entry points to ../../build/keyboard_vel_control/keyboard_vel_control.egg-info/entry_points.txt
+[5.008s] writing requirements to ../../build/keyboard_vel_control/keyboard_vel_control.egg-info/requires.txt
+[5.009s] writing top-level names to ../../build/keyboard_vel_control/keyboard_vel_control.egg-info/top_level.txt
+[5.012s] writing manifest file '../../build/keyboard_vel_control/keyboard_vel_control.egg-info/SOURCES.txt'
+[5.196s] reading manifest file '../../build/keyboard_vel_control/keyboard_vel_control.egg-info/SOURCES.txt'
+[5.199s] writing manifest file '../../build/keyboard_vel_control/keyboard_vel_control.egg-info/SOURCES.txt'
+[5.201s] running build
+[5.202s] running build_py
+[5.205s] creating /home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control/build/lib/keyboard_vel_control
+[5.206s] copying keyboard_vel_control/__init__.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control/build/lib/keyboard_vel_control
+[5.206s] copying keyboard_vel_control/keyboard_vel_control_node.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control/build/lib/keyboard_vel_control
+[5.208s] running install
+[5.239s] running install_lib
+[5.363s] creating /home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/lib/python3.12/site-packages/keyboard_vel_control
+[5.368s] copying /home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control/build/lib/keyboard_vel_control/__init__.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/lib/python3.12/site-packages/keyboard_vel_control
+[5.368s] copying /home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control/build/lib/keyboard_vel_control/keyboard_vel_control_node.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/lib/python3.12/site-packages/keyboard_vel_control
+[5.368s] byte-compiling /home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/lib/python3.12/site-packages/keyboard_vel_control/__init__.py to __init__.cpython-312.pyc
+[5.372s] byte-compiling /home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/lib/python3.12/site-packages/keyboard_vel_control/keyboard_vel_control_node.py to keyboard_vel_control_node.cpython-312.pyc
+[5.377s] running install_data
+[5.379s] creating /home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/share/ament_index/resource_index/packages
+[5.379s] copying resource/keyboard_vel_control -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/share/ament_index/resource_index/packages
+[5.381s] copying package.xml -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/share/keyboard_vel_control
+[5.382s] running install_egg_info
+[5.476s] Copying ../../build/keyboard_vel_control/keyboard_vel_control.egg-info to /home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/lib/python3.12/site-packages/keyboard_vel_control-0.0.0-py3.12.egg-info
+[5.482s] running install_scripts
+[5.735s] Installing keyboard_vel_control script to /home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/lib/keyboard_vel_control
+[5.741s] writing list of installed files to '/home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control/install.log'
+[6.057s] Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/keyboard_vel_control' returned '0': PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/keyboard_vel_control build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control/install.log --single-version-externally-managed install_data

@@ -1,0 +1,175 @@
+[0.053s] Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_interfaces -- -j4 -l4
+[0.755s] [  2%] Built target frob_interfaces__rosidl_generator_type_description
+[0.816s] [  4%] Built target frob_interfaces__cpp
+[0.819s] [  4%] Built target ament_cmake_python_copy_frob_interfaces
+[0.861s] [ 22%] Built target frob_interfaces__rosidl_generator_c
+[0.947s] [ 31%] Built target frob_interfaces__rosidl_typesupport_cpp
+[0.954s] [ 40%] Built target frob_interfaces__rosidl_typesupport_introspection_cpp
+[0.954s] [ 50%] Built target frob_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.995s] [ 59%] Built target frob_interfaces__rosidl_typesupport_c
+[1.005s] [ 68%] Built target frob_interfaces__rosidl_typesupport_introspection_c
+[1.018s] [ 77%] Built target frob_interfaces__rosidl_typesupport_fastrtps_c
+[1.062s] [ 77%] Built target frob_interfaces
+[1.103s] [ 79%] Built target frob_interfaces__py
+[1.159s] [ 86%] Built target frob_interfaces__rosidl_generator_py
+[1.224s] [ 90%] Built target frob_interfaces_s__rosidl_typesupport_introspection_c
+[1.228s] [ 95%] Built target frob_interfaces_s__rosidl_typesupport_fastrtps_c
+[1.229s] [100%] Built target frob_interfaces_s__rosidl_typesupport_c
+[1.363s] running egg_info
+[1.394s] writing frob_interfaces.egg-info/PKG-INFO
+[1.397s] writing dependency_links to frob_interfaces.egg-info/dependency_links.txt
+[1.397s] writing top-level names to frob_interfaces.egg-info/top_level.txt
+[1.488s] reading manifest file 'frob_interfaces.egg-info/SOURCES.txt'
+[1.490s] writing manifest file 'frob_interfaces.egg-info/SOURCES.txt'
+[1.601s] [100%] Built target ament_cmake_python_build_frob_interfaces_egg
+[2.269s] Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_interfaces -- -j4 -l4
+[2.272s] Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_interfaces
+[2.547s] -- Install configuration: ""
+[2.547s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/ament_index/resource_index/rosidl_interfaces/frob_interfaces
+[2.548s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/srv/Turn.json
+[2.548s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/srv/Forward.json
+[2.549s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces
+[2.549s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg
+[2.549s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/rosidl_generator_c__visibility_control.h
+[2.550s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv
+[2.550s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/turn.h
+[2.550s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/forward.h
+[2.551s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail
+[2.551s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__functions.h
+[2.551s] -- Installing: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__type_support.c
+[2.551s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__functions.c
+[2.552s] -- Installing: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__type_support.c
+[2.553s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__struct.h
+[2.553s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__type_support.h
+[2.553s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__functions.c
+[2.553s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__type_support.h
+[2.553s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__struct.h
+[2.553s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__description.c
+[2.553s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__functions.h
+[2.553s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__description.c
+[2.554s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/environment/library_path.sh
+[2.554s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/environment/library_path.dsv
+[2.556s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_generator_c.so
+[2.556s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces
+[2.556s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg
+[2.557s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.557s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv
+[2.557s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail
+[2.557s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__rosidl_typesupport_fastrtps_c.h
+[2.557s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__rosidl_typesupport_fastrtps_c.h
+[2.558s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_fastrtps_c.so
+[2.559s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces
+[2.559s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg
+[2.561s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.561s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv
+[2.561s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail
+[2.561s] -- Installing: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__type_support.c
+[2.561s] -- Installing: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__type_support.c
+[2.563s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__rosidl_typesupport_introspection_c.h
+[2.563s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__rosidl_typesupport_introspection_c.h
+[2.564s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_introspection_c.so
+[2.567s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_c.so
+[2.568s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces
+[2.568s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg
+[2.568s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[2.568s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv
+[2.568s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/turn.hpp
+[2.568s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/forward.hpp
+[2.568s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail
+[2.568s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__traits.hpp
+[2.568s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__type_support.hpp
+[2.568s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__struct.hpp
+[2.568s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__struct.hpp
+[2.569s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__traits.hpp
+[2.569s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__builder.hpp
+[2.569s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__builder.hpp
+[2.569s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__type_support.hpp
+[2.569s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces
+[2.569s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg
+[2.569s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.569s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv
+[2.569s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail
+[2.569s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__rosidl_typesupport_fastrtps_cpp.hpp
+[2.569s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/dds_fastrtps
+[2.569s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__rosidl_typesupport_fastrtps_cpp.hpp
+[2.571s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[2.571s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces
+[2.572s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv
+[2.572s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail
+[2.572s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__rosidl_typesupport_introspection_cpp.hpp
+[2.572s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__type_support.cpp
+[2.572s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__type_support.cpp
+[2.572s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__rosidl_typesupport_introspection_cpp.hpp
+[2.573s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_introspection_cpp.so
+[2.576s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_cpp.so
+[2.576s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/environment/pythonpath.sh
+[2.576s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/environment/pythonpath.dsv
+[2.578s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces-0.0.0-py3.12.egg-info
+[2.578s] -- Installing: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+[2.578s] -- Installing: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+[2.578s] -- Installing: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+[2.578s] -- Installing: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+[2.578s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces
+[2.579s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_introspection_c.so
+[2.579s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[2.580s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[2.580s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[2.580s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_c.so
+[2.580s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv
+[2.582s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/_forward_s.c
+[2.582s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/_forward.py
+[2.582s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/__init__.py
+[2.582s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/_turn.py
+[2.582s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/_turn_s.c
+[2.582s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/__init__.py
+[2.582s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_c.c
+[2.651s] Listing '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces'...
+[2.651s] Listing '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv'...
+[2.673s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[2.675s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_introspection_c.so
+[2.676s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_c.so
+[2.678s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_generator_py.so
+[2.679s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/srv/Turn.idl
+[2.679s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/srv/Forward.idl
+[2.679s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/srv/Turn.srv
+[2.679s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/srv/Forward.srv
+[2.679s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/ament_index/resource_index/package_run_dependencies/frob_interfaces
+[2.679s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/ament_index/resource_index/parent_prefix_path/frob_interfaces
+[2.679s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/environment/ament_prefix_path.sh
+[2.680s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/environment/ament_prefix_path.dsv
+[2.680s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/environment/path.sh
+[2.680s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/environment/path.dsv
+[2.681s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/local_setup.bash
+[2.681s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/local_setup.sh
+[2.681s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/local_setup.zsh
+[2.682s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/local_setup.dsv
+[2.682s] -- Installing: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/package.dsv
+[2.682s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/ament_index/resource_index/packages/frob_interfaces
+[2.685s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_generator_cExport.cmake
+[2.685s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_generator_cExport-noconfig.cmake
+[2.686s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[2.686s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[2.687s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[2.688s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.689s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_cExport.cmake
+[2.690s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[2.690s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_generator_cppExport.cmake
+[2.692s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.692s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[2.693s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[2.694s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.695s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_cppExport.cmake
+[2.695s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[2.697s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_generator_pyExport.cmake
+[2.697s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[2.697s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/rosidl_cmake-extras.cmake
+[2.697s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.698s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.698s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[2.698s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[2.699s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.699s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.699s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfacesConfig.cmake
+[2.699s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfacesConfig-version.cmake
+[2.699s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/package.xml
+[2.704s] Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_interfaces

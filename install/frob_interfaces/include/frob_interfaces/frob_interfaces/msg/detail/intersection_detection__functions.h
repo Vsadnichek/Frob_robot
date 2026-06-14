@@ -1,0 +1,1 @@
+/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_c/frob_interfaces/msg/detail/intersection_detection__functions.h

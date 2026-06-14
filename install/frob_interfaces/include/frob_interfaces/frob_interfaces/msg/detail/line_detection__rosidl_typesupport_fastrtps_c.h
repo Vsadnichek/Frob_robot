@@ -1,0 +1,1 @@
+/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_typesupport_fastrtps_c/frob_interfaces/msg/detail/line_detection__rosidl_typesupport_fastrtps_c.h

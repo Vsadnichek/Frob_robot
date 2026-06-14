@@ -1,0 +1,1 @@
+/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake

@@ -1,0 +1,38 @@
+[0.042s] Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_description -- -j4 -l4
+[0.676s] Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_description -- -j4 -l4
+[0.991s] Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_description
+[1.301s] -- Install configuration: ""
+[1.303s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/urdf
+[1.303s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/urdf/so101_new_calib.urdf
+[1.304s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/meshes
+[1.304s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/meshes/rotation_pitch_so101_v1.stl
+[1.305s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/meshes/upper_arm_so101_v1.stl
+[1.305s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/meshes/under_arm_so101_v1.stl
+[1.305s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/meshes/waveshare_mounting_plate_so101_v2.stl
+[1.306s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/meshes/moving_jaw_so101_v1.stl
+[1.306s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/meshes/sts3215_03a_v1.stl
+[1.306s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/meshes/motor_holder_so101_wrist_v1.stl
+[1.306s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/meshes/base_so101_v2.stl
+[1.306s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/meshes/sts3215_03a_no_horn_v1.stl
+[1.306s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/meshes/wrist_roll_follower_so101_v1.stl
+[1.306s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/meshes/wrist_roll_pitch_so101_v2.stl
+[1.307s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/meshes/base_motor_holder_so101_v1.stl
+[1.307s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/meshes/motor_holder_so101_base_v1.stl
+[1.307s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/config
+[1.307s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/config/joint_names_so_arm_urdf.yaml
+[1.308s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/ament_index/resource_index/package_run_dependencies/so101_description
+[1.308s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/ament_index/resource_index/parent_prefix_path/so101_description
+[1.309s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/environment/ament_prefix_path.sh
+[1.309s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/environment/ament_prefix_path.dsv
+[1.309s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/environment/path.sh
+[1.309s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/environment/path.dsv
+[1.310s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/local_setup.bash
+[1.310s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/local_setup.sh
+[1.310s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/local_setup.zsh
+[1.310s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/local_setup.dsv
+[1.310s] -- Installing: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/package.dsv
+[1.310s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/ament_index/resource_index/packages/so101_description
+[1.312s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/cmake/so101_descriptionConfig.cmake
+[1.312s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/cmake/so101_descriptionConfig-version.cmake
+[1.312s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/package.xml
+[1.317s] Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_description

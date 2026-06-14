@@ -1,0 +1,25 @@
+running egg_info
+writing ../../build/frob_control/frob_control.egg-info/PKG-INFO
+writing dependency_links to ../../build/frob_control/frob_control.egg-info/dependency_links.txt
+writing entry points to ../../build/frob_control/frob_control.egg-info/entry_points.txt
+writing requirements to ../../build/frob_control/frob_control.egg-info/requires.txt
+writing top-level names to ../../build/frob_control/frob_control.egg-info/top_level.txt
+reading manifest file '../../build/frob_control/frob_control.egg-info/SOURCES.txt'
+writing manifest file '../../build/frob_control/frob_control.egg-info/SOURCES.txt'
+running build
+running build_py
+copying frob_control/joy_control.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_control/build/lib/frob_control
+copying frob_control/__init__.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_control/build/lib/frob_control
+running install
+running install_lib
+running install_data
+copying resource/frob_control -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/share/ament_index/resource_index/packages
+copying package.xml -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/share/frob_control
+copying config/joy_config.yaml -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/share/frob_control/config
+copying launch/joy_control.launch.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/share/frob_control/launch
+running install_egg_info
+removing '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/lib/python3.12/site-packages/frob_control-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/frob_control/frob_control.egg-info to /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/lib/python3.12/site-packages/frob_control-0.0.0-py3.12.egg-info
+running install_scripts
+Installing joy_control script to /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/lib/frob_control
+writing list of installed files to '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_control/install.log'

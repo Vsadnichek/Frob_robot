@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "frob_interfaces__py",
+		"source" : "/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/frob_interfaces__py"
+	}
+}

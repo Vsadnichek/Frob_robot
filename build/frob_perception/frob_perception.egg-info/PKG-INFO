@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: frob-perception
+Version: 0.0.0
+Summary: Camera driver and perception (line detection, sign detection)
+Maintainer: Alex Kulagin
+Maintainer-email: sashakulagin2007@gmail.com
+License: Apache License 2.0

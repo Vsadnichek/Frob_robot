@@ -1,0 +1,136 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\geometry{margin=1in}
+
+\title{Description of the Hackathon ``Movement in the City''\\
+International Youth Robotics Competition\\
+``RTC Cup -- Premier League''}
+\author{Central Research and Development Institute of Robotics and Technical Cybernetics}
+\date{Version from 24.04.2025}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+Saint Petersburg\\
+2025
+\end{center}
+
+\tableofcontents
+\newpage
+
+\section{Task}
+
+Autonomous driving in an urban environment: the robot must autonomously deliver simulated passengers from pickup zones to a drop-off zone. The robot must follow traffic rules throughout the route, including compliance with signs, road markings, as well as checkpoints or hazardous object barriers.
+
+Pickup zones are marked with the ``Bus Stop'' sign, and the drop-off zone is marked with the ``Parking'' sign (see Appendix).
+
+The task is considered completed if the robot drives through the city following traffic rules, stops for 2 seconds at pickup zones before the ``Bus Stop'' sign (for simulated passenger boarding), and then reaches the drop-off zone and stops before the ``Parking'' sign.
+
+The robot's movement on the testing ground may be arbitrary, taking into account traffic signs and road markings. Additionally, the robot may use its own map of the city for navigation, constructed during preparation.
+
+\section{Technical Description of the Testing Ground}
+
+\subsection{General Description}
+
+The testing ground is a model of a city block with road markings and traffic signs. Figure~1 shows a schematic representation of the testing ground.
+
+The testing ground consists of 25 tightly connected square cells arranged in a $5 \times 5$ grid. Four cells contain building models mounted on pedestals. The size of each cell is 800~mm, and the total size of the testing ground is 4000~mm per side.
+
+\begin{center}
+\textit{Figure 1 -- Testing ground schematic}
+\end{center}
+
+A fence surrounds the block, made of white plastic panels tightly connected together. The inner side of the panels is covered with a matte film depicting an urban environment (greenery, buildings, etc.) without bright colors.
+
+\subsection{Road Description}
+
+The road is made of painted plywood (dark gray, matte surface) with applied road markings (white, matte surface).
+
+Road markings are applied on all cells of the testing ground (Figure~2). A dashed line with a width of 40~mm is used exclusively for robot navigation.
+
+On corner cells, the dashed line has rounded turns (4 in total). At T-intersections, lines intersect at right angles. The appearance of all marking elements is provided in Appendix~A.
+
+\begin{center}
+\textit{Figure 2 -- Road marking fragment}
+\end{center}
+
+\subsection{Buildings Description}
+
+Four building models are placed at the center of pedestals of size $800 \times 800 \times 80$~mm.
+
+The building base does not exceed $500 \times 500$~mm, and the height varies from 500 to 600~mm (measured from the top of the pedestal).
+
+Holes for installing signs are located at the corners of the pedestal (Figure~3).
+
+\begin{center}
+\textit{Figure 3 -- Building cell (top view) with grass and sign holes}
+\end{center}
+
+\subsection{Traffic Signs Description}
+
+Traffic signs on the testing ground are proportionally reduced versions of signs defined in GOST R 52289--2019.
+
+The signs have a diameter of 100~mm and are mounted on a pole at least 150~mm high from the road surface. The pole is fixed in free holes of building cells.
+
+The front side of the sign is covered with matte paper showing the symbol. The back side is made of painted plywood (dark gray or white, matte).
+
+To regulate robot movement, the following signs are used:
+
+\begin{itemize}
+\item Mandatory signs:
+\begin{itemize}
+\item ``Go straight''
+\item ``Turn left''
+\item ``Turn right''
+\end{itemize}
+\item Prohibitory signs:
+\begin{itemize}
+\item ``No left turn''
+\item ``No right turn''
+\end{itemize}
+\end{itemize}
+
+Signs are installed on the right side of the road in the direction of movement.
+
+\subsection{Start of the Route}
+
+The starting cell is located at a corner of the testing ground and is determined by the organizers at the beginning of the competition. The initial direction of movement is also specified.
+
+Further movement is performed according to the installed signs.
+
+\subsection{End of the Route}
+
+The robot must stop in the drop-off zone before the ``Parking'' sign.
+
+\section*{Appendix A. Appearance of Road Elements}
+
+\begin{itemize}
+\item A.1 -- Testing ground, top view
+\item A.2 -- Turn and T-intersection with signs
+\end{itemize}
+
+\section*{Appendix B. Traffic Signs}
+
+\begin{itemize}
+\item B.1 -- Go straight
+\item B.2 -- Turn left
+\item B.3 -- Turn right
+\item B.4 -- No left turn
+\item B.5 -- No right turn
+\item B.6 -- Bus stop
+\item B.7 -- Parking
+\item B.8 -- Hazardous object
+\end{itemize}
+
+\textbf{Note:} All signs listed in Appendix~B are made in original scale. Participants may use the provided materials to prepare for the competition and create their own test signs.
+
+\end{document}

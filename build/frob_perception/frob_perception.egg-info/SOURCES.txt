@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+config/perception_params.yaml
+frob_perception/__init__.py
+frob_perception/camera_node.py
+frob_perception/perception_node.py
+frob_perception.egg-info/PKG-INFO
+frob_perception.egg-info/SOURCES.txt
+frob_perception.egg-info/dependency_links.txt
+frob_perception.egg-info/entry_points.txt
+frob_perception.egg-info/requires.txt
+frob_perception.egg-info/top_level.txt
+frob_perception.egg-info/zip-safe
+launch/perception.launch.py
+resource/frob_perception

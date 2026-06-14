@@ -1,0 +1,10 @@
+/**:
+  ros__parameters:
+    publish_debug_image: true
+    debug_image_topic: "/perception/debug_image"
+
+camera_node:
+  ros__parameters:
+    width: 640
+    height: 480
+    fps: 30.0

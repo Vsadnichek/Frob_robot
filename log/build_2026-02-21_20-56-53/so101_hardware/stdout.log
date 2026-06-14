@@ -1,0 +1,29 @@
+[100%] Built target so101_hardware
+-- Install configuration: ""
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/so101_hardware.xml
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/include/so101_hardware
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/include/so101_hardware/so101_hardware
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/include/so101_hardware/so101_hardware/so101_system.hpp
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/lib/libso101_hardware.so
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/environment/library_path.sh
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/environment/library_path.dsv
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/ament_index/resource_index/package_run_dependencies/so101_hardware
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/ament_index/resource_index/parent_prefix_path/so101_hardware
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/environment/ament_prefix_path.sh
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/environment/path.sh
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/environment/path.dsv
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/local_setup.bash
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/local_setup.sh
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/local_setup.zsh
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/local_setup.dsv
+-- Installing: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/package.dsv
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/ament_index/resource_index/packages/so101_hardware
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/so101_hardware
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/cmake/export_so101_hardwareExport.cmake
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/cmake/export_so101_hardwareExport-noconfig.cmake
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/cmake/so101_hardwareConfig.cmake
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/cmake/so101_hardwareConfig-version.cmake
+-- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/package.xml

@@ -1,0 +1,1 @@
+/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/ament_cmake_core/frob_interfacesConfig.cmake

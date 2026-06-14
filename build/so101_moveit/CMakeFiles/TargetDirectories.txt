@@ -1,0 +1,9 @@
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_moveit/CMakeFiles/uninstall.dir
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_moveit/CMakeFiles/so101_moveit_uninstall.dir
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_moveit/CMakeFiles/test.dir
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_moveit/CMakeFiles/edit_cache.dir
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_moveit/CMakeFiles/rebuild_cache.dir
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_moveit/CMakeFiles/list_install_components.dir
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_moveit/CMakeFiles/install.dir
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_moveit/CMakeFiles/install/local.dir
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_moveit/CMakeFiles/install/strip.dir

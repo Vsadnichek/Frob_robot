@@ -1,0 +1,59 @@
+[0.027s] Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware -- -j4 -l4
+[1.111s] [ 12%] [32mBuilding CXX object CMakeFiles/so101_hardware.dir/scservo_sdk/SCSCL.cpp.o[0m
+[1.115s] [ 25%] [32mBuilding CXX object CMakeFiles/so101_hardware.dir/scservo_sdk/SCSerial.cpp.o[0m
+[1.130s] [ 37%] [32mBuilding CXX object CMakeFiles/so101_hardware.dir/scservo_sdk/SMSBL.cpp.o[0m
+[1.144s] [ 50%] [32mBuilding CXX object CMakeFiles/so101_hardware.dir/scservo_sdk/SMSCL.cpp.o[0m
+[1.415s] [ 62%] [32mBuilding CXX object CMakeFiles/so101_hardware.dir/scservo_sdk/SMS_STS.cpp.o[0m
+[1.581s] [ 75%] [32mBuilding CXX object CMakeFiles/so101_hardware.dir/src/so101_system.cpp.o[0m
+[14.449s] [01m[K/home/pi/Frob_robot/ros2/src/ros2_ws/src/lerobot-ros-moveit/so101_hardware/src/so101_system.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::CallbackReturn so101_hardware::SO101SystemHardware::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’:
+[14.450s] [01m[K/home/pi/Frob_robot/ros2/src/ros2_ws/src/lerobot-ros-moveit/so101_hardware/src/so101_system.cpp:40:51:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn hardware_interface::HardwareComponentInterface::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’ is deprecated: Use on_init(const HardwareComponentInterfaceParams & params) instead. [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[14.450s]    40 |   if ([01;35m[Khardware_interface::SystemInterface::on_init(info)[m[K !=
+[14.451s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[14.455s] In file included from [01m[K/opt/ros/jazzy/include/hardware_interface/hardware_interface/system_interface.hpp:18[m[K,
+[14.456s]                  from [01m[K/home/pi/Frob_robot/ros2/src/ros2_ws/src/lerobot-ros-moveit/so101_hardware/include/so101_hardware/so101_system.hpp:25[m[K,
+[14.456s]                  from [01m[K/home/pi/Frob_robot/ros2/src/ros2_ws/src/lerobot-ros-moveit/so101_hardware/src/so101_system.cpp:15[m[K:
+[14.456s] [01m[K/opt/ros/jazzy/include/hardware_interface/hardware_interface/hardware_component_interface.hpp:140:26:[m[K [01;36m[Knote: [m[Kdeclared here
+[14.456s]   140 |   virtual CallbackReturn [01;36m[Kon_init[m[K(const HardwareInfo & hardware_info);
+[14.456s]       |                          [01;36m[K^~~~~~~[m[K
+[14.626s] [01m[K/home/pi/Frob_robot/ros2/src/ros2_ws/src/lerobot-ros-moveit/so101_hardware/src/so101_system.cpp:[m[K In member function ‘[01m[Kdouble so101_hardware::SO101SystemHardware::[01;32m[KrawToRadians[m[K(int, const so101_hardware::MotorCalibration&, bool)[m[K’:
+[14.630s] [01m[K/home/pi/Frob_robot/ros2/src/ros2_ws/src/lerobot-ros-moveit/so101_hardware/src/so101_system.cpp:497:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kis_gripper[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.630s]   497 |     int raw_position, const MotorCalibration& calib, [01;35m[Kbool is_gripper[m[K) {
+[14.631s]       |                                                      [01;35m[K~~~~~^~~~~~~~~~[m[K
+[14.631s] [01m[K/home/pi/Frob_robot/ros2/src/ros2_ws/src/lerobot-ros-moveit/so101_hardware/src/so101_system.cpp:[m[K In member function ‘[01m[Kint so101_hardware::SO101SystemHardware::[01;32m[KradiansToRaw[m[K(double, const so101_hardware::MotorCalibration&, bool)[m[K’:
+[14.634s] [01m[K/home/pi/Frob_robot/ros2/src/ros2_ws/src/lerobot-ros-moveit/so101_hardware/src/so101_system.cpp:536:57:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kis_gripper[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.635s]   536 |     double radians, const MotorCalibration& calib, [01;35m[Kbool is_gripper[m[K) {
+[14.635s]       |                                                    [01;35m[K~~~~~^~~~~~~~~~[m[K
+[23.384s] [ 87%] [1m[32mLinking CXX shared library libso101_hardware.so[0m
+[24.564s] [100%] Built target so101_hardware
+[24.970s] Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware -- -j4 -l4
+[24.977s] Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware
+[25.301s] -- Install configuration: ""
+[25.303s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/so101_hardware.xml
+[25.308s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/include/so101_hardware
+[25.310s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/include/so101_hardware/so101_hardware
+[25.311s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/include/so101_hardware/so101_hardware/so101_system.hpp
+[25.313s] -- Installing: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/lib/libso101_hardware.so
+[25.320s] -- Set non-toolchain portion of runtime path of "/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/lib/libso101_hardware.so" to ""
+[25.321s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/environment/library_path.sh
+[25.321s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/environment/library_path.dsv
+[25.324s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/ament_index/resource_index/package_run_dependencies/so101_hardware
+[25.326s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/ament_index/resource_index/parent_prefix_path/so101_hardware
+[25.326s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/environment/ament_prefix_path.sh
+[25.326s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/environment/ament_prefix_path.dsv
+[25.327s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/environment/path.sh
+[25.327s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/environment/path.dsv
+[25.327s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/local_setup.bash
+[25.328s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/local_setup.sh
+[25.328s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/local_setup.zsh
+[25.328s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/local_setup.dsv
+[25.329s] -- Installing: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/package.dsv
+[25.330s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/ament_index/resource_index/packages/so101_hardware
+[25.330s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/so101_hardware
+[25.335s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/cmake/export_so101_hardwareExport.cmake
+[25.336s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/cmake/export_so101_hardwareExport-noconfig.cmake
+[25.336s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/cmake/ament_cmake_export_targets-extras.cmake
+[25.336s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/cmake/ament_cmake_export_dependencies-extras.cmake
+[25.336s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/cmake/so101_hardwareConfig.cmake
+[25.337s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/cmake/so101_hardwareConfig-version.cmake
+[25.337s] -- Up-to-date: /home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/package.xml
+[25.344s] Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware

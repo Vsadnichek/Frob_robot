@@ -1,0 +1,39 @@
+running egg_info
+creating ../../build/frob_odometry/frob_odometry.egg-info
+writing ../../build/frob_odometry/frob_odometry.egg-info/PKG-INFO
+writing dependency_links to ../../build/frob_odometry/frob_odometry.egg-info/dependency_links.txt
+writing entry points to ../../build/frob_odometry/frob_odometry.egg-info/entry_points.txt
+writing requirements to ../../build/frob_odometry/frob_odometry.egg-info/requires.txt
+writing top-level names to ../../build/frob_odometry/frob_odometry.egg-info/top_level.txt
+writing manifest file '../../build/frob_odometry/frob_odometry.egg-info/SOURCES.txt'
+reading manifest file '../../build/frob_odometry/frob_odometry.egg-info/SOURCES.txt'
+writing manifest file '../../build/frob_odometry/frob_odometry.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/build/lib/frob_odometry
+copying frob_odometry/old_odometry.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/build/lib/frob_odometry
+copying frob_odometry/odom.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/build/lib/frob_odometry
+copying frob_odometry/__init__.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/build/lib/frob_odometry
+running install
+running install_lib
+creating /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages/frob_odometry
+copying /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/build/lib/frob_odometry/old_odometry.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages/frob_odometry
+copying /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/build/lib/frob_odometry/odom.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages/frob_odometry
+copying /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/build/lib/frob_odometry/__init__.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages/frob_odometry
+byte-compiling /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages/frob_odometry/old_odometry.py to old_odometry.cpython-312.pyc
+byte-compiling /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages/frob_odometry/odom.py to odom.cpython-312.pyc
+byte-compiling /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages/frob_odometry/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/ament_index/resource_index/packages
+copying resource/frob_odometry -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/ament_index/resource_index/packages
+copying package.xml -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry
+creating /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/launch
+copying launch/odometry.launch.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/launch
+creating /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/config
+copying config/odometry_params.yaml -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/config
+copying config/ekf.yaml -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/config
+running install_egg_info
+Copying ../../build/frob_odometry/frob_odometry.egg-info to /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages/frob_odometry-0.0.0-py3.12.egg-info
+running install_scripts
+Installing odometry_publisher script to /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/frob_odometry
+writing list of installed files to '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/install.log'

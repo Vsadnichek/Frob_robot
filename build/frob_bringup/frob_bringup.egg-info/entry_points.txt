@@ -1,0 +1,2 @@
+[console_scripts]
+keyboard_teleop = frob_bringup.cmd_vel_teleop:main

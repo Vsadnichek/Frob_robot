@@ -1,0 +1,357 @@
+[0.005s] Invoking command in '/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces
+[0.737s] -- The C compiler identification is GNU 13.3.0
+[1.145s] -- The CXX compiler identification is GNU 13.3.0
+[1.167s] -- Detecting C compiler ABI info
+[1.293s] -- Detecting C compiler ABI info - done
+[1.298s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.299s] -- Detecting C compile features
+[1.300s] -- Detecting C compile features - done
+[1.307s] -- Detecting CXX compiler ABI info
+[1.389s] -- Detecting CXX compiler ABI info - done
+[1.395s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.395s] -- Detecting CXX compile features
+[1.395s] -- Detecting CXX compile features - done
+[1.404s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.511s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.562s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.615s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[1.625s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.696s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.758s] -- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[2.172s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[2.454s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.807s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.811s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[2.896s] -- Found PythonExtra: /usr/bin/python3  
+[3.199s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[3.312s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[3.328s] -- Configuring done (3.3s)
+[3.354s] -- Generating done (0.0s)
+[3.367s] -- Build files have been written to: /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces
+[3.373s] Invoked command in '/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/vsadnik/ros2_ws/frob_robot/src/frob_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces
+[3.374s] Invoking command in '/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces -- -j12 -l12
+[3.413s] [  1%] Generating Rust code for ROS interfaces
+[3.413s] [  2%] Generating type hashes for ROS interfaces
+[3.419s] [  2%] Built target ament_cmake_python_symlink_frob_interfaces
+[3.561s] running egg_info
+[3.562s] creating frob_interfaces.egg-info
+[3.577s] writing frob_interfaces.egg-info/PKG-INFO
+[3.577s] writing dependency_links to frob_interfaces.egg-info/dependency_links.txt
+[3.577s] writing top-level names to frob_interfaces.egg-info/top_level.txt
+[3.577s] writing manifest file 'frob_interfaces.egg-info/SOURCES.txt'
+[3.582s] [  2%] Built target frob_interfaces__rosidl_generator_type_description
+[3.590s] [  3%] Generating C code for ROS interfaces
+[3.599s] [  4%] Generating C++ code for ROS interfaces
+[3.610s] [  4%] Built target frob_interfaces__rs
+[3.619s] reading manifest file 'frob_interfaces.egg-info/SOURCES.txt'
+[3.619s] writing manifest file 'frob_interfaces.egg-info/SOURCES.txt'
+[3.636s] [  4%] Built target ament_cmake_python_build_frob_interfaces_egg
+[3.917s] [  4%] Built target frob_interfaces__cpp
+[3.976s] [  5%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/msg/detail/line_detection__functions.c.o
+[3.976s] [  7%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/srv/detail/turn__description.c.o
+[3.976s] [  9%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/srv/detail/turn__functions.c.o
+[3.976s] [  9%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/msg/detail/sign_detection__description.c.o
+[3.976s] [ 10%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/srv/detail/forward__functions.c.o
+[3.976s] [ 11%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/msg/detail/line_detection__description.c.o
+[3.976s] [ 12%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/msg/detail/line_detection__type_support.c.o
+[3.976s] [ 14%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/srv/detail/forward__type_support.c.o
+[3.977s] [ 16%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/msg/detail/sign_detection__type_support.c.o
+[3.977s] [ 16%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/srv/detail/forward__description.c.o
+[3.979s] [ 17%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/msg/detail/sign_detection__functions.c.o
+[3.979s] [ 18%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/srv/detail/turn__type_support.c.o
+[4.024s] [ 20%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/msg/detail/intersection_detection__description.c.o
+[4.026s] [ 21%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/msg/detail/intersection_detection__functions.c.o
+[4.051s] [ 25%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/msg/detail/intersection_detection__type_support.c.o
+[4.051s] [ 25%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/msg/detail/obstacle_detection__description.c.o
+[4.051s] [ 25%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/msg/detail/obstacle_detection__type_support.c.o
+[4.051s] [ 25%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/msg/detail/obstacle_detection__functions.c.o
+[4.108s] [ 27%] Linking C shared library libfrob_interfaces__rosidl_generator_c.so
+[4.139s] [ 27%] Built target frob_interfaces__rosidl_generator_c
+[4.146s] [ 29%] Generating C++ introspection for ROS interfaces
+[4.146s] [ 29%] Generating C type support for eProsima Fast-RTPS
+[4.146s] [ 30%] Generating C++ type support for eProsima Fast-RTPS
+[4.146s] [ 32%] Generating C type support dispatch for ROS interfaces
+[4.146s] [ 31%] Generating C++ type support dispatch for ROS interfaces
+[4.146s] [ 34%] Generating C introspection for ROS interfaces
+[4.362s] [ 36%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/frob_interfaces/srv/forward__type_support.cpp.o
+[4.362s] [ 36%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/frob_interfaces/srv/turn__type_support.cpp.o
+[4.362s] [ 37%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/frob_interfaces/msg/line_detection__type_support.cpp.o
+[4.364s] [ 38%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/frob_interfaces/msg/sign_detection__type_support.cpp.o
+[4.364s] [ 40%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/frob_interfaces/msg/obstacle_detection__type_support.cpp.o
+[4.364s] [ 41%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/frob_interfaces/msg/intersection_detection__type_support.cpp.o
+[4.393s] [ 43%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/frob_interfaces/srv/forward__type_support.cpp.o
+[4.393s] [ 43%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/frob_interfaces/srv/turn__type_support.cpp.o
+[4.467s] [ 44%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/frob_interfaces/srv/detail/turn__type_support.cpp.o
+[4.469s] [ 45%] Building C object CMakeFiles/frob_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/frob_interfaces/srv/detail/turn__type_support.c.o
+[4.495s] [ 47%] Building C object CMakeFiles/frob_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/frob_interfaces/srv/detail/forward__type_support.c.o
+[4.499s] [ 48%] Linking CXX shared library libfrob_interfaces__rosidl_typesupport_c.so
+[4.499s] [ 49%] Building C object CMakeFiles/frob_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/frob_interfaces/msg/detail/line_detection__type_support.c.o
+[4.500s] [ 50%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/frob_interfaces/srv/detail/forward__type_support.cpp.o
+[4.501s] [ 51%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/frob_interfaces/msg/detail/line_detection__type_support.cpp.o
+[4.502s] [ 52%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/frob_interfaces/msg/line_detection__type_support.cpp.o
+[4.528s] [ 54%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/frob_interfaces/msg/detail/sign_detection__type_support.cpp.o
+[4.528s] [ 55%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/frob_interfaces/msg/detail/intersection_detection__type_support.cpp.o
+[4.534s] [ 55%] Built target frob_interfaces__rosidl_typesupport_c
+[4.534s] [ 56%] Building C object CMakeFiles/frob_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/frob_interfaces/msg/detail/sign_detection__type_support.c.o
+[4.542s] [ 57%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/frob_interfaces/msg/detail/obstacle_detection__type_support.cpp.o
+[4.549s] [ 58%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/frob_interfaces/srv/detail/dds_fastrtps/turn__type_support.cpp.o
+[4.564s] [ 60%] Building C object CMakeFiles/frob_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/frob_interfaces/msg/detail/intersection_detection__type_support.c.o
+[4.569s] [ 61%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/frob_interfaces/srv/detail/turn__type_support_c.cpp.o
+[4.600s] [ 62%] Building C object CMakeFiles/frob_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/frob_interfaces/msg/detail/obstacle_detection__type_support.c.o
+[4.640s] [ 63%] Linking C shared library libfrob_interfaces__rosidl_typesupport_introspection_c.so
+[4.691s] [ 63%] Built target frob_interfaces__rosidl_typesupport_introspection_c
+[4.703s] [ 64%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/frob_interfaces/srv/detail/forward__type_support_c.cpp.o
+[4.767s] [ 65%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/frob_interfaces/msg/sign_detection__type_support.cpp.o
+[4.767s] [ 67%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/frob_interfaces/msg/intersection_detection__type_support.cpp.o
+[4.768s] [ 68%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/frob_interfaces/srv/detail/dds_fastrtps/forward__type_support.cpp.o
+[4.770s] [ 69%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/frob_interfaces/msg/detail/dds_fastrtps/line_detection__type_support.cpp.o
+[4.778s] [ 70%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/frob_interfaces/msg/detail/dds_fastrtps/sign_detection__type_support.cpp.o
+[4.888s] [ 71%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/frob_interfaces/msg/obstacle_detection__type_support.cpp.o
+[4.892s] [ 72%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/frob_interfaces/msg/detail/line_detection__type_support_c.cpp.o
+[4.904s] [ 74%] Linking CXX shared library libfrob_interfaces__rosidl_typesupport_introspection_cpp.so
+[4.961s] [ 75%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/frob_interfaces/msg/detail/sign_detection__type_support_c.cpp.o
+[4.988s] [ 75%] Built target frob_interfaces__rosidl_typesupport_introspection_cpp
+[4.999s] [ 76%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/frob_interfaces/msg/detail/intersection_detection__type_support_c.cpp.o
+[5.020s] [ 77%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/frob_interfaces/msg/detail/dds_fastrtps/intersection_detection__type_support.cpp.o
+[5.044s] [ 78%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/frob_interfaces/msg/detail/dds_fastrtps/obstacle_detection__type_support.cpp.o
+[5.070s] [ 80%] Building CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/frob_interfaces/msg/detail/obstacle_detection__type_support_c.cpp.o
+[5.137s] [ 81%] Linking CXX shared library libfrob_interfaces__rosidl_typesupport_cpp.so
+[5.214s] [ 81%] Built target frob_interfaces__rosidl_typesupport_cpp
+[5.351s] [ 82%] Linking CXX shared library libfrob_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[5.384s] [ 83%] Linking CXX shared library libfrob_interfaces__rosidl_typesupport_fastrtps_c.so
+[5.407s] [ 83%] Built target frob_interfaces__rosidl_typesupport_fastrtps_cpp
+[5.418s] [ 83%] Built target frob_interfaces__rosidl_typesupport_fastrtps_c
+[5.433s] [ 83%] Built target frob_interfaces
+[5.449s] [ 84%] Generating Python code for ROS interfaces
+[5.961s] [ 84%] Built target frob_interfaces__py
+[5.978s] [ 85%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_py.dir/rosidl_generator_py/frob_interfaces/msg/_intersection_detection_s.c.o
+[5.978s] [ 87%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_py.dir/rosidl_generator_py/frob_interfaces/srv/_forward_s.c.o
+[5.978s] [ 88%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_py.dir/rosidl_generator_py/frob_interfaces/msg/_line_detection_s.c.o
+[5.978s] [ 89%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_py.dir/rosidl_generator_py/frob_interfaces/srv/_turn_s.c.o
+[5.978s] [ 90%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_py.dir/rosidl_generator_py/frob_interfaces/msg/_obstacle_detection_s.c.o
+[5.979s] [ 91%] Building C object CMakeFiles/frob_interfaces__rosidl_generator_py.dir/rosidl_generator_py/frob_interfaces/msg/_sign_detection_s.c.o
+[6.136s] [ 92%] Linking C shared library libfrob_interfaces__rosidl_generator_py.so
+[6.170s] [ 92%] Built target frob_interfaces__rosidl_generator_py
+[6.186s] [ 95%] Building C object CMakeFiles/frob_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_c.c.o
+[6.186s] [ 95%] Building C object CMakeFiles/frob_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[6.187s] [ 96%] Building C object CMakeFiles/frob_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o
+[6.266s] [100%] Linking C shared module rosidl_generator_py/frob_interfaces/frob_interfaces_s__rosidl_typesupport_introspection_c.so
+[6.266s] [100%] Linking C shared module rosidl_generator_py/frob_interfaces/frob_interfaces_s__rosidl_typesupport_c.so
+[6.266s] [100%] Linking C shared module rosidl_generator_py/frob_interfaces/frob_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[6.288s] [100%] Built target frob_interfaces_s__rosidl_typesupport_introspection_c
+[6.288s] [100%] Built target frob_interfaces_s__rosidl_typesupport_c
+[6.288s] [100%] Built target frob_interfaces_s__rosidl_typesupport_fastrtps_c
+[6.298s] Invoked command in '/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces -- -j12 -l12
+[6.306s] Invoking command in '/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces
+[6.313s] -- Install configuration: ""
+[6.314s] -- Execute custom install script
+[6.314s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/ament_index/resource_index/rosidl_interfaces/frob_interfaces
+[6.322s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/srv/Turn.json
+[6.329s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/srv/Forward.json
+[6.336s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/LineDetection.json
+[6.343s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/SignDetection.json
+[6.350s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/IntersectionDetection.json
+[6.357s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/ObstacleDetection.json
+[6.364s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__functions.h
+[6.373s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__struct.h
+[6.380s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__type_support.h
+[6.387s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/line_detection__functions.h
+[6.394s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/line_detection__struct.h
+[6.400s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/line_detection__type_support.h
+[6.406s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/obstacle_detection__functions.h
+[6.412s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/obstacle_detection__struct.h
+[6.419s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/obstacle_detection__type_support.h
+[6.426s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/sign_detection__functions.h
+[6.433s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/sign_detection__struct.h
+[6.440s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/sign_detection__type_support.h
+[6.447s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/intersection_detection.h
+[6.454s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/line_detection.h
+[6.460s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/obstacle_detection.h
+[6.467s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/rosidl_generator_c__visibility_control.h
+[6.474s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/sign_detection.h
+[6.481s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__functions.h
+[6.489s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__struct.h
+[6.496s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__type_support.h
+[6.503s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__functions.h
+[6.510s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__struct.h
+[6.517s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__type_support.h
+[6.524s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/forward.h
+[6.531s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/turn.h
+[6.538s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/environment/library_path.sh
+[6.545s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/environment/library_path.dsv
+[6.555s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__rosidl_typesupport_fastrtps_c.h
+[6.563s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/line_detection__rosidl_typesupport_fastrtps_c.h
+[6.570s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/obstacle_detection__rosidl_typesupport_fastrtps_c.h
+[6.577s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/sign_detection__rosidl_typesupport_fastrtps_c.h
+[6.583s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[6.589s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__rosidl_typesupport_fastrtps_c.h
+[6.596s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__rosidl_typesupport_fastrtps_c.h
+[6.602s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__rosidl_typesupport_introspection_c.h
+[6.610s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/line_detection__rosidl_typesupport_introspection_c.h
+[6.617s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/obstacle_detection__rosidl_typesupport_introspection_c.h
+[6.625s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/sign_detection__rosidl_typesupport_introspection_c.h
+[6.632s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[6.640s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__rosidl_typesupport_introspection_c.h
+[6.647s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__rosidl_typesupport_introspection_c.h
+[6.655s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__builder.hpp
+[6.663s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__struct.hpp
+[6.669s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__traits.hpp
+[6.677s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__type_support.hpp
+[6.685s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/line_detection__builder.hpp
+[6.693s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/line_detection__struct.hpp
+[6.700s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/line_detection__traits.hpp
+[6.707s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/line_detection__type_support.hpp
+[6.713s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/obstacle_detection__builder.hpp
+[6.719s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/obstacle_detection__struct.hpp
+[6.724s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/obstacle_detection__traits.hpp
+[6.731s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/obstacle_detection__type_support.hpp
+[6.737s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/sign_detection__builder.hpp
+[6.743s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/sign_detection__struct.hpp
+[6.748s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/sign_detection__traits.hpp
+[6.755s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/sign_detection__type_support.hpp
+[6.761s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/intersection_detection.hpp
+[6.767s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/line_detection.hpp
+[6.772s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/obstacle_detection.hpp
+[6.778s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[6.785s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/sign_detection.hpp
+[6.791s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__builder.hpp
+[6.796s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__struct.hpp
+[6.802s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__traits.hpp
+[6.808s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__type_support.hpp
+[6.814s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__builder.hpp
+[6.820s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__struct.hpp
+[6.827s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__traits.hpp
+[6.833s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__type_support.hpp
+[6.840s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/forward.hpp
+[6.846s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/turn.hpp
+[6.852s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__rosidl_typesupport_fastrtps_cpp.hpp
+[6.859s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/line_detection__rosidl_typesupport_fastrtps_cpp.hpp
+[6.865s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/obstacle_detection__rosidl_typesupport_fastrtps_cpp.hpp
+[6.871s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/sign_detection__rosidl_typesupport_fastrtps_cpp.hpp
+[6.877s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[6.883s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__rosidl_typesupport_fastrtps_cpp.hpp
+[6.889s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__rosidl_typesupport_fastrtps_cpp.hpp
+[6.896s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/intersection_detection__rosidl_typesupport_introspection_cpp.hpp
+[6.902s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/line_detection__rosidl_typesupport_introspection_cpp.hpp
+[6.908s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/obstacle_detection__rosidl_typesupport_introspection_cpp.hpp
+[6.914s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/detail/sign_detection__rosidl_typesupport_introspection_cpp.hpp
+[6.920s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__rosidl_typesupport_introspection_cpp.hpp
+[6.926s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__rosidl_typesupport_introspection_cpp.hpp
+[6.933s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/environment/pythonpath.sh
+[6.939s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/environment/pythonpath.dsv
+[6.945s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+[6.951s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+[6.958s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+[6.964s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+[6.971s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/__init__.py
+[6.978s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_c.c
+[6.984s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[6.990s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[6.997s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_c.so
+[7.003s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[7.009s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_introspection_c.so
+[7.014s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/msg/__init__.py
+[7.021s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/msg/_intersection_detection.py
+[7.027s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/msg/_intersection_detection_s.c
+[7.032s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/msg/_line_detection.py
+[7.038s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/msg/_line_detection_s.c
+[7.044s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/msg/_obstacle_detection.py
+[7.050s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/msg/_obstacle_detection_s.c
+[7.056s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/msg/_sign_detection.py
+[7.062s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/msg/_sign_detection_s.c
+[7.069s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/__init__.py
+[7.075s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/_forward.py
+[7.081s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/_forward_s.c
+[7.088s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/_turn.py
+[7.094s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/_turn_s.c
+[7.101s] -- Up-to-date symlink: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[7.101s] -- Up-to-date symlink: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_introspection_c.so
+[7.101s] -- Up-to-date symlink: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_c.so
+[7.101s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/ament_index/resource_index/rust_packages/frob_interfaces
+[7.108s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/rust/Cargo.toml
+[7.115s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/rust/build.rs
+[7.122s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/rust/src/lib.rs
+[7.128s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/rust/src/msg.rs
+[7.134s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/rust/src/msg/rmw.rs
+[7.140s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/rust/src/srv.rs
+[7.146s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/rust/src/srv/rmw.rs
+[7.153s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/srv/Turn.idl
+[7.159s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/srv/Forward.idl
+[7.165s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/LineDetection.idl
+[7.171s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/SignDetection.idl
+[7.178s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/IntersectionDetection.idl
+[7.184s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/ObstacleDetection.idl
+[7.190s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/srv/Turn.srv
+[7.197s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/srv/Forward.srv
+[7.203s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/LineDetection.msg
+[7.209s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/SignDetection.msg
+[7.215s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/IntersectionDetection.msg
+[7.222s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/msg/ObstacleDetection.msg
+[7.228s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/ament_index/resource_index/package_run_dependencies/frob_interfaces
+[7.235s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/ament_index/resource_index/parent_prefix_path/frob_interfaces
+[7.241s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/environment/ament_prefix_path.sh
+[7.246s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/environment/ament_prefix_path.dsv
+[7.252s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/environment/path.sh
+[7.259s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/environment/path.dsv
+[7.265s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/local_setup.bash
+[7.271s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/local_setup.sh
+[7.278s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/local_setup.zsh
+[7.284s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/local_setup.dsv
+[7.291s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/package.dsv
+[7.297s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/ament_index/resource_index/packages/frob_interfaces
+[7.304s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/rosidl_cmake-extras.cmake
+[7.310s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[7.317s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[7.323s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[7.329s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[7.335s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[7.342s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[7.348s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfacesConfig.cmake
+[7.355s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfacesConfig-version.cmake
+[7.361s] -- Symlinking: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/package.xml
+[7.366s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/libfrob_interfaces__rosidl_generator_c.so
+[7.367s] -- Set non-toolchain portion of runtime path of "/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/libfrob_interfaces__rosidl_generator_c.so" to ""
+[7.367s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_fastrtps_c.so
+[7.367s] -- Set non-toolchain portion of runtime path of "/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[7.367s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_introspection_c.so
+[7.368s] -- Set non-toolchain portion of runtime path of "/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[7.368s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_c.so
+[7.368s] -- Set non-toolchain portion of runtime path of "/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_c.so" to ""
+[7.368s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[7.368s] -- Set non-toolchain portion of runtime path of "/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[7.368s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_introspection_cpp.so
+[7.369s] -- Set non-toolchain portion of runtime path of "/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[7.369s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_cpp.so
+[7.369s] -- Set non-toolchain portion of runtime path of "/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_cpp.so" to ""
+[7.440s] Listing '/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces'...
+[7.440s] Compiling '/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/__init__.py'...
+[7.440s] Listing '/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/msg'...
+[7.440s] Compiling '/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/msg/__init__.py'...
+[7.440s] Compiling '/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/msg/_intersection_detection.py'...
+[7.440s] Compiling '/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/msg/_line_detection.py'...
+[7.440s] Compiling '/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/msg/_obstacle_detection.py'...
+[7.440s] Compiling '/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/msg/_sign_detection.py'...
+[7.440s] Listing '/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv'...
+[7.440s] Compiling '/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/__init__.py'...
+[7.440s] Compiling '/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/_forward.py'...
+[7.440s] Compiling '/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/_turn.py'...
+[7.443s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/libfrob_interfaces__rosidl_generator_py.so
+[7.443s] -- Set non-toolchain portion of runtime path of "/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/libfrob_interfaces__rosidl_generator_py.so" to ""
+[7.443s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_generator_cExport.cmake
+[7.444s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_generator_cExport-noconfig.cmake
+[7.444s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[7.444s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[7.444s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[7.444s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[7.444s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_cExport.cmake
+[7.444s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[7.444s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_generator_cppExport.cmake
+[7.444s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[7.445s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[7.445s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[7.445s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[7.445s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_cppExport.cmake
+[7.445s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[7.445s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_generator_pyExport.cmake
+[7.445s] -- Installing: /home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[7.447s] Invoked command in '/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces

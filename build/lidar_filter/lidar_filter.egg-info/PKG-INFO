@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: lidar_filter
+Version: 0.0.0
+Summary: Lidar point cloud radius filter
+Maintainer: Your Name
+Maintainer-email: your@email.com
+License: Apache License 2.0
+Requires-Dist: setuptools
+Requires-Dist: numpy
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary

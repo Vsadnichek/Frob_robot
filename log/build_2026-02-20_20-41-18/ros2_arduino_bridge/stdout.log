@@ -1,0 +1,24 @@
+running egg_info
+writing ../../build/ros2_arduino_bridge/ros2_arduino_bridge.egg-info/PKG-INFO
+writing dependency_links to ../../build/ros2_arduino_bridge/ros2_arduino_bridge.egg-info/dependency_links.txt
+writing entry points to ../../build/ros2_arduino_bridge/ros2_arduino_bridge.egg-info/entry_points.txt
+writing requirements to ../../build/ros2_arduino_bridge/ros2_arduino_bridge.egg-info/requires.txt
+writing top-level names to ../../build/ros2_arduino_bridge/ros2_arduino_bridge.egg-info/top_level.txt
+reading manifest file '../../build/ros2_arduino_bridge/ros2_arduino_bridge.egg-info/SOURCES.txt'
+writing manifest file '../../build/ros2_arduino_bridge/ros2_arduino_bridge.egg-info/SOURCES.txt'
+running build
+running build_py
+copying ros2_arduino_bridge/connection.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_arduino_bridge/build/lib/ros2_arduino_bridge
+copying ros2_arduino_bridge/arduino_bridge.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_arduino_bridge/build/lib/ros2_arduino_bridge
+copying ros2_arduino_bridge/__init__.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_arduino_bridge/build/lib/ros2_arduino_bridge
+running install
+running install_lib
+running install_data
+copying resource/ros2_arduino_bridge -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/share/ament_index/resource_index/packages
+copying package.xml -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/share/ros2_arduino_bridge
+running install_egg_info
+removing '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages/ros2_arduino_bridge-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/ros2_arduino_bridge/ros2_arduino_bridge.egg-info to /home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages/ros2_arduino_bridge-0.0.0-py3.12.egg-info
+running install_scripts
+Installing arduino_bridge script to /home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/lib/ros2_arduino_bridge
+writing list of installed files to '/home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_arduino_bridge/install.log'

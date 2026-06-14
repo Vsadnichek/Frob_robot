@@ -1,0 +1,2 @@
+[console_scripts]
+odometry_publisher = frob_odometry.odom:main

@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from frob_interfaces/msg/LineDetection.msg
+// generated code does not contain a copyright notice
+
+
+module frob_interfaces {
+  module msg {
+    struct LineDetection {
+      boolean detected;
+
+      float lateral_error;
+
+      float angle_error;
+
+      float confidence;
+
+      float line_center_x;
+
+      float line_center_y;
+    };
+  };
+};

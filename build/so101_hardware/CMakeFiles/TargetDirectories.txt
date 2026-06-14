@@ -1,0 +1,10 @@
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware/CMakeFiles/uninstall.dir
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware/CMakeFiles/so101_hardware_uninstall.dir
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware/CMakeFiles/so101_hardware.dir
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware/CMakeFiles/test.dir
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware/CMakeFiles/edit_cache.dir
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware/CMakeFiles/rebuild_cache.dir
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware/CMakeFiles/list_install_components.dir
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware/CMakeFiles/install.dir
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware/CMakeFiles/install/local.dir
+/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware/CMakeFiles/install/strip.dir

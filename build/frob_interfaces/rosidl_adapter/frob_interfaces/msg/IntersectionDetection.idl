@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from frob_interfaces/msg/IntersectionDetection.msg
+// generated code does not contain a copyright notice
+
+
+module frob_interfaces {
+  module msg {
+    module IntersectionDetection_Constants {
+      const uint8 NONE = 0;
+      const uint8 T_LEFT = 1;
+      const uint8 T_RIGHT = 2;
+      const uint8 T_FORWARD = 3;
+      const uint8 CORNER_LEFT = 4;
+      const uint8 CORNER_RIGHT = 5;
+      const uint8 CROSSROAD = 6;
+    };
+    struct IntersectionDetection {
+      uint8 junction_type;
+
+      float distance;
+
+      boolean detected;
+    };
+  };
+};

@@ -1,0 +1,1 @@
+/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_generator_cpp/frob_interfaces/msg/detail/sign_detection__traits.hpp

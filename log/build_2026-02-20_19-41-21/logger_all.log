@@ -1,0 +1,990 @@
+[0.150s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.150s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffff874686b0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff87628cb0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff87628cb0>>, mixin_verb=('build',))
+[0.203s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.204s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/pi/Frob_robot/ros2/src/ros2_ws'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_bringup) by extension 'ignore'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_bringup) by extension 'ignore_ament_install'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_bringup) by extensions ['colcon_pkg']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_bringup) by extension 'colcon_pkg'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_bringup) by extensions ['colcon_meta']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_bringup) by extension 'colcon_meta'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_bringup) by extensions ['ros']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_bringup) by extension 'ros'
+[0.245s] DEBUG:colcon.colcon_core.package_identification:Package 'src/frob_bringup' with type 'ros.ament_python' and name 'frob_bringup'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_control) by extensions ['ignore', 'ignore_ament_install']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_control) by extension 'ignore'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_control) by extension 'ignore_ament_install'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_control) by extensions ['colcon_pkg']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_control) by extension 'colcon_pkg'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_control) by extensions ['colcon_meta']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_control) by extension 'colcon_meta'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_control) by extensions ['ros']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_control) by extension 'ros'
+[0.246s] DEBUG:colcon.colcon_core.package_identification:Package 'src/frob_control' with type 'ros.ament_python' and name 'frob_control'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_description) by extensions ['ignore', 'ignore_ament_install']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_description) by extension 'ignore'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_description) by extension 'ignore_ament_install'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_description) by extensions ['colcon_pkg']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_description) by extension 'colcon_pkg'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_description) by extensions ['colcon_meta']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_description) by extension 'colcon_meta'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_description) by extensions ['ros']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_description) by extension 'ros'
+[0.247s] DEBUG:colcon.colcon_core.package_identification:Package 'src/frob_description' with type 'ros.ament_python' and name 'frob_description'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_interfaces) by extension 'ignore'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_interfaces) by extension 'ignore_ament_install'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_interfaces) by extensions ['colcon_pkg']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_interfaces) by extension 'colcon_pkg'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_interfaces) by extensions ['colcon_meta']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_interfaces) by extension 'colcon_meta'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_interfaces) by extensions ['ros']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_interfaces) by extension 'ros'
+[0.248s] DEBUG:colcon.colcon_core.package_identification:Package 'src/frob_interfaces' with type 'ros.ament_cmake' and name 'frob_interfaces'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_navigation) by extensions ['ignore', 'ignore_ament_install']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_navigation) by extension 'ignore'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_navigation) by extension 'ignore_ament_install'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_navigation) by extensions ['colcon_pkg']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_navigation) by extension 'colcon_pkg'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_navigation) by extensions ['colcon_meta']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_navigation) by extension 'colcon_meta'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_navigation) by extensions ['ros']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_navigation) by extension 'ros'
+[0.250s] DEBUG:colcon.colcon_core.package_identification:Package 'src/frob_navigation' with type 'ros.ament_python' and name 'frob_navigation'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_odometry) by extensions ['ignore', 'ignore_ament_install']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_odometry) by extension 'ignore'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_odometry) by extension 'ignore_ament_install'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_odometry) by extensions ['colcon_pkg']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_odometry) by extension 'colcon_pkg'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_odometry) by extensions ['colcon_meta']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_odometry) by extension 'colcon_meta'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_odometry) by extensions ['ros']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/frob_odometry) by extension 'ros'
+[0.251s] DEBUG:colcon.colcon_core.package_identification:Package 'src/frob_odometry' with type 'ros.ament_python' and name 'frob_odometry'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/keyboard_vel_control) by extensions ['ignore', 'ignore_ament_install']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/keyboard_vel_control) by extension 'ignore'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/keyboard_vel_control) by extension 'ignore_ament_install'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/keyboard_vel_control) by extensions ['colcon_pkg']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/keyboard_vel_control) by extension 'colcon_pkg'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/keyboard_vel_control) by extensions ['colcon_meta']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/keyboard_vel_control) by extension 'colcon_meta'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/keyboard_vel_control) by extensions ['ros']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/keyboard_vel_control) by extension 'ros'
+[0.252s] DEBUG:colcon.colcon_core.package_identification:Package 'src/keyboard_vel_control' with type 'ros.ament_python' and name 'keyboard_vel_control'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit) by extensions ['ignore', 'ignore_ament_install']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit) by extension 'ignore'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit) by extension 'ignore_ament_install'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit) by extensions ['colcon_pkg']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit) by extension 'colcon_pkg'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit) by extensions ['colcon_meta']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit) by extension 'colcon_meta'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit) by extensions ['ros']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit) by extension 'ros'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit) by extensions ['cmake', 'python']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit) by extension 'cmake'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit) by extension 'python'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit) by extensions ['python_setup_py']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit) by extension 'python_setup_py'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices) by extensions ['ignore', 'ignore_ament_install']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices) by extension 'ignore'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices) by extension 'ignore_ament_install'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices) by extensions ['colcon_pkg']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices) by extension 'colcon_pkg'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices) by extensions ['colcon_meta']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices) by extension 'colcon_meta'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices) by extensions ['ros']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices) by extension 'ros'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices) by extensions ['cmake', 'python']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices) by extension 'cmake'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices) by extension 'python'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices) by extensions ['python_setup_py']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices) by extension 'python_setup_py'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices/lerobot_teleoperator_devices) by extensions ['ignore', 'ignore_ament_install']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices/lerobot_teleoperator_devices) by extension 'ignore'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices/lerobot_teleoperator_devices) by extension 'ignore_ament_install'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices/lerobot_teleoperator_devices) by extensions ['colcon_pkg']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices/lerobot_teleoperator_devices) by extension 'colcon_pkg'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices/lerobot_teleoperator_devices) by extensions ['colcon_meta']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices/lerobot_teleoperator_devices) by extension 'colcon_meta'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices/lerobot_teleoperator_devices) by extensions ['ros']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices/lerobot_teleoperator_devices) by extension 'ros'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices/lerobot_teleoperator_devices) by extensions ['cmake', 'python']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices/lerobot_teleoperator_devices) by extension 'cmake'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices/lerobot_teleoperator_devices) by extension 'python'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices/lerobot_teleoperator_devices) by extensions ['python_setup_py']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/lerobot_teleoperator_devices/lerobot_teleoperator_devices) by extension 'python_setup_py'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_description) by extensions ['ignore', 'ignore_ament_install']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_description) by extension 'ignore'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_description) by extension 'ignore_ament_install'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_description) by extensions ['colcon_pkg']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_description) by extension 'colcon_pkg'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_description) by extensions ['colcon_meta']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_description) by extension 'colcon_meta'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_description) by extensions ['ros']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_description) by extension 'ros'
+[0.255s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lerobot-ros-moveit/so101_description' with type 'ros.ament_cmake' and name 'so101_description'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_hardware) by extension 'ignore'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_hardware) by extension 'ignore_ament_install'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_hardware) by extensions ['colcon_pkg']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_hardware) by extension 'colcon_pkg'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_hardware) by extensions ['colcon_meta']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_hardware) by extension 'colcon_meta'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_hardware) by extensions ['ros']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_hardware) by extension 'ros'
+[0.256s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lerobot-ros-moveit/so101_hardware' with type 'ros.ament_cmake' and name 'so101_hardware'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_moveit) by extensions ['ignore', 'ignore_ament_install']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_moveit) by extension 'ignore'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_moveit) by extension 'ignore_ament_install'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_moveit) by extensions ['colcon_pkg']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_moveit) by extension 'colcon_pkg'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_moveit) by extensions ['colcon_meta']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_moveit) by extension 'colcon_meta'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_moveit) by extensions ['ros']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/lerobot-ros-moveit/so101_moveit) by extension 'ros'
+[0.258s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lerobot-ros-moveit/so101_moveit' with type 'ros.ament_cmake' and name 'so101_moveit'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_filter) by extensions ['ignore', 'ignore_ament_install']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_filter) by extension 'ignore'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_filter) by extension 'ignore_ament_install'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_filter) by extensions ['colcon_pkg']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_filter) by extension 'colcon_pkg'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_filter) by extensions ['colcon_meta']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_filter) by extension 'colcon_meta'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_filter) by extensions ['ros']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_filter) by extension 'ros'
+[0.259s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lidar_filter' with type 'ros.ament_python' and name 'lidar_filter'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extensions ['ignore', 'ignore_ament_install']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'ignore'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'ignore_ament_install'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extensions ['colcon_pkg']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'colcon_pkg'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extensions ['colcon_meta']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'colcon_meta'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extensions ['ros']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'ros'
+[0.260s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rf2o_laser_odometry' with type 'ros.ament_cmake' and name 'rf2o_laser_odometry'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_arduino_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_arduino_bridge) by extension 'ignore'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_arduino_bridge) by extension 'ignore_ament_install'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_arduino_bridge) by extensions ['colcon_pkg']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_arduino_bridge) by extension 'colcon_pkg'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_arduino_bridge) by extensions ['colcon_meta']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_arduino_bridge) by extension 'colcon_meta'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_arduino_bridge) by extensions ['ros']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_arduino_bridge) by extension 'ros'
+[0.261s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_arduino_bridge' with type 'ros.ament_python' and name 'ros2_arduino_bridge'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mpu6050) by extensions ['ignore', 'ignore_ament_install']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mpu6050) by extension 'ignore'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mpu6050) by extension 'ignore_ament_install'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mpu6050) by extensions ['colcon_pkg']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mpu6050) by extension 'colcon_pkg'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mpu6050) by extensions ['colcon_meta']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mpu6050) by extension 'colcon_meta'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mpu6050) by extensions ['ros']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mpu6050) by extension 'ros'
+[0.262s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_mpu6050' with type 'ros.ament_cmake' and name 'ros2_mpu6050'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'ignore'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'ignore_ament_install'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['colcon_pkg']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'colcon_pkg'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['colcon_meta']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'colcon_meta'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['ros']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'ros'
+[0.263s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sllidar_ros2' with type 'ros.ament_cmake' and name 'sllidar_ros2'
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.294s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 15 installed packages in /home/pi/Frob_robot/ros2/src/ros2_ws/install
+[0.296s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 355 installed packages in /opt/ros/jazzy
+[0.298s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'frob_control' build argument 'cmake_args' from command line to 'None'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'frob_control' build argument 'cmake_target' from command line to 'None'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'frob_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'frob_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'frob_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'frob_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'frob_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'frob_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'frob_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.366s] DEBUG:colcon.colcon_core.verb:Building package 'frob_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control', 'merge_install': False, 'path': '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_control', 'symlink_install': False, 'test_result_base': None}
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'frob_description' build argument 'cmake_args' from command line to 'None'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'frob_description' build argument 'cmake_target' from command line to 'None'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'frob_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'frob_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'frob_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'frob_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'frob_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'frob_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'frob_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.367s] DEBUG:colcon.colcon_core.verb:Building package 'frob_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description', 'merge_install': False, 'path': '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_description', 'symlink_install': False, 'test_result_base': None}
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'frob_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'frob_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'frob_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'frob_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'frob_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'frob_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'frob_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'frob_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'frob_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.367s] DEBUG:colcon.colcon_core.verb:Building package 'frob_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces', 'merge_install': False, 'path': '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'frob_navigation' build argument 'cmake_args' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'frob_navigation' build argument 'cmake_target' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'frob_navigation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'frob_navigation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'frob_navigation' build argument 'cmake_clean_first' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'frob_navigation' build argument 'cmake_force_configure' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'frob_navigation' build argument 'ament_cmake_args' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'frob_navigation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'frob_navigation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.368s] DEBUG:colcon.colcon_core.verb:Building package 'frob_navigation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_navigation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation', 'merge_install': False, 'path': '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_navigation', 'symlink_install': False, 'test_result_base': None}
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'frob_odometry' build argument 'cmake_args' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'frob_odometry' build argument 'cmake_target' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'frob_odometry' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'frob_odometry' build argument 'cmake_clean_cache' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'frob_odometry' build argument 'cmake_clean_first' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'frob_odometry' build argument 'cmake_force_configure' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'frob_odometry' build argument 'ament_cmake_args' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'frob_odometry' build argument 'catkin_cmake_args' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'frob_odometry' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.368s] DEBUG:colcon.colcon_core.verb:Building package 'frob_odometry' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry', 'merge_install': False, 'path': '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_odometry', 'symlink_install': False, 'test_result_base': None}
+[0.369s] Level 5:colcon.colcon_core.verb:set package 'keyboard_vel_control' build argument 'cmake_args' from command line to 'None'
+[0.369s] Level 5:colcon.colcon_core.verb:set package 'keyboard_vel_control' build argument 'cmake_target' from command line to 'None'
+[0.369s] Level 5:colcon.colcon_core.verb:set package 'keyboard_vel_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.369s] Level 5:colcon.colcon_core.verb:set package 'keyboard_vel_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.369s] Level 5:colcon.colcon_core.verb:set package 'keyboard_vel_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.369s] Level 5:colcon.colcon_core.verb:set package 'keyboard_vel_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.369s] Level 5:colcon.colcon_core.verb:set package 'keyboard_vel_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.369s] Level 5:colcon.colcon_core.verb:set package 'keyboard_vel_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.369s] Level 5:colcon.colcon_core.verb:set package 'keyboard_vel_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.369s] DEBUG:colcon.colcon_core.verb:Building package 'keyboard_vel_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control', 'merge_install': False, 'path': '/home/pi/Frob_robot/ros2/src/ros2_ws/src/keyboard_vel_control', 'symlink_install': False, 'test_result_base': None}
+[0.369s] Level 5:colcon.colcon_core.verb:set package 'lidar_filter' build argument 'cmake_args' from command line to 'None'
+[0.369s] Level 5:colcon.colcon_core.verb:set package 'lidar_filter' build argument 'cmake_target' from command line to 'None'
+[0.369s] Level 5:colcon.colcon_core.verb:set package 'lidar_filter' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.369s] Level 5:colcon.colcon_core.verb:set package 'lidar_filter' build argument 'cmake_clean_cache' from command line to 'False'
+[0.369s] Level 5:colcon.colcon_core.verb:set package 'lidar_filter' build argument 'cmake_clean_first' from command line to 'False'
+[0.369s] Level 5:colcon.colcon_core.verb:set package 'lidar_filter' build argument 'cmake_force_configure' from command line to 'False'
+[0.369s] Level 5:colcon.colcon_core.verb:set package 'lidar_filter' build argument 'ament_cmake_args' from command line to 'None'
+[0.369s] Level 5:colcon.colcon_core.verb:set package 'lidar_filter' build argument 'catkin_cmake_args' from command line to 'None'
+[0.369s] Level 5:colcon.colcon_core.verb:set package 'lidar_filter' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.369s] DEBUG:colcon.colcon_core.verb:Building package 'lidar_filter' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/build/lidar_filter', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter', 'merge_install': False, 'path': '/home/pi/Frob_robot/ros2/src/ros2_ws/src/lidar_filter', 'symlink_install': False, 'test_result_base': None}
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_args' from command line to 'None'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_target' from command line to 'None'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_clean_cache' from command line to 'False'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_clean_first' from command line to 'False'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_force_configure' from command line to 'False'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'ament_cmake_args' from command line to 'None'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'catkin_cmake_args' from command line to 'None'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.370s] DEBUG:colcon.colcon_core.verb:Building package 'rf2o_laser_odometry' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/build/rf2o_laser_odometry', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry', 'merge_install': False, 'path': '/home/pi/Frob_robot/ros2/src/ros2_ws/src/rf2o_laser_odometry', 'symlink_install': False, 'test_result_base': None}
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'ros2_mpu6050' build argument 'cmake_args' from command line to 'None'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'ros2_mpu6050' build argument 'cmake_target' from command line to 'None'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'ros2_mpu6050' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'ros2_mpu6050' build argument 'cmake_clean_cache' from command line to 'False'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'ros2_mpu6050' build argument 'cmake_clean_first' from command line to 'False'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'ros2_mpu6050' build argument 'cmake_force_configure' from command line to 'False'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'ros2_mpu6050' build argument 'ament_cmake_args' from command line to 'None'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'ros2_mpu6050' build argument 'catkin_cmake_args' from command line to 'None'
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'ros2_mpu6050' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.370s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_mpu6050' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_mpu6050', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050', 'merge_install': False, 'path': '/home/pi/Frob_robot/ros2/src/ros2_ws/src/ros2_mpu6050', 'symlink_install': False, 'test_result_base': None}
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_target' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_clean_first' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_force_configure' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'ament_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.371s] DEBUG:colcon.colcon_core.verb:Building package 'sllidar_ros2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/build/sllidar_ros2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2', 'merge_install': False, 'path': '/home/pi/Frob_robot/ros2/src/ros2_ws/src/sllidar_ros2', 'symlink_install': False, 'test_result_base': None}
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'so101_description' build argument 'cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'so101_description' build argument 'cmake_target' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'so101_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'so101_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'so101_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'so101_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'so101_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'so101_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'so101_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.371s] DEBUG:colcon.colcon_core.verb:Building package 'so101_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description', 'merge_install': False, 'path': '/home/pi/Frob_robot/ros2/src/ros2_ws/src/lerobot-ros-moveit/so101_description', 'symlink_install': False, 'test_result_base': None}
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'so101_hardware' build argument 'cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'so101_hardware' build argument 'cmake_target' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'so101_hardware' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'so101_hardware' build argument 'cmake_clean_cache' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'so101_hardware' build argument 'cmake_clean_first' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'so101_hardware' build argument 'cmake_force_configure' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'so101_hardware' build argument 'ament_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'so101_hardware' build argument 'catkin_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'so101_hardware' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.372s] DEBUG:colcon.colcon_core.verb:Building package 'so101_hardware' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware', 'merge_install': False, 'path': '/home/pi/Frob_robot/ros2/src/ros2_ws/src/lerobot-ros-moveit/so101_hardware', 'symlink_install': False, 'test_result_base': None}
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'ros2_arduino_bridge' build argument 'cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'ros2_arduino_bridge' build argument 'cmake_target' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'ros2_arduino_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'ros2_arduino_bridge' build argument 'cmake_clean_cache' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'ros2_arduino_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'ros2_arduino_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'ros2_arduino_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'ros2_arduino_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'ros2_arduino_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.372s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_arduino_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_arduino_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge', 'merge_install': False, 'path': '/home/pi/Frob_robot/ros2/src/ros2_ws/src/ros2_arduino_bridge', 'symlink_install': False, 'test_result_base': None}
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'so101_moveit' build argument 'cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'so101_moveit' build argument 'cmake_target' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'so101_moveit' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'so101_moveit' build argument 'cmake_clean_cache' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'so101_moveit' build argument 'cmake_clean_first' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'so101_moveit' build argument 'cmake_force_configure' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'so101_moveit' build argument 'ament_cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'so101_moveit' build argument 'catkin_cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'so101_moveit' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.373s] DEBUG:colcon.colcon_core.verb:Building package 'so101_moveit' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_moveit', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit', 'merge_install': False, 'path': '/home/pi/Frob_robot/ros2/src/ros2_ws/src/lerobot-ros-moveit/so101_moveit', 'symlink_install': False, 'test_result_base': None}
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'frob_bringup' build argument 'cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'frob_bringup' build argument 'cmake_target' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'frob_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'frob_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'frob_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'frob_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'frob_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'frob_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'frob_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.373s] DEBUG:colcon.colcon_core.verb:Building package 'frob_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup', 'merge_install': False, 'path': '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.373s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.375s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.375s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_interfaces' with build type 'ament_cmake'
+[0.376s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_interfaces'
+[0.378s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.378s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.378s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.385s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/sllidar_ros2' with build type 'ament_cmake'
+[0.385s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/sllidar_ros2'
+[0.385s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.385s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.391s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/lerobot-ros-moveit/so101_description' with build type 'ament_cmake'
+[0.391s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/lerobot-ros-moveit/so101_description'
+[0.392s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.392s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.398s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_control' with build type 'ament_python'
+[0.398s] Level 1:colcon.colcon_core.shell:create_environment_hook('frob_control', 'ament_prefix_path')
+[0.398s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/share/frob_control/hook/ament_prefix_path.ps1'
+[0.399s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/share/frob_control/hook/ament_prefix_path.dsv'
+[0.400s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/share/frob_control/hook/ament_prefix_path.sh'
+[0.401s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.401s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.413s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_interfaces -- -j4 -l4
+[0.418s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/sllidar_ros2 -- -j4 -l4
+[0.424s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_description -- -j4 -l4
+[0.934s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_control'
+[0.935s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.935s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.942s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_description -- -j4 -l4
+[1.134s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_description
+[1.136s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/sllidar_ros2 -- -j4 -l4
+[1.138s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/sllidar_ros2
+[1.377s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(so101_description)
+[1.379s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_description
+[1.382s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description' for CMake module files
+[1.383s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description' for CMake config files
+[1.384s] Level 1:colcon.colcon_core.shell:create_environment_hook('so101_description', 'cmake_prefix_path')
+[1.385s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/hook/cmake_prefix_path.ps1'
+[1.388s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/hook/cmake_prefix_path.dsv'
+[1.389s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/hook/cmake_prefix_path.sh'
+[1.390s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/bin'
+[1.390s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/lib/pkgconfig/so101_description.pc'
+[1.390s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/lib/python3.12/site-packages'
+[1.391s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/bin'
+[1.391s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/package.ps1'
+[1.392s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/package.dsv'
+[1.393s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/package.sh'
+[1.393s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/package.bash'
+[1.394s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/package.zsh'
+[1.395s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/colcon-core/packages/so101_description)
+[1.396s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(so101_description)
+[1.396s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description' for CMake module files
+[1.397s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description' for CMake config files
+[1.397s] Level 1:colcon.colcon_core.shell:create_environment_hook('so101_description', 'cmake_prefix_path')
+[1.398s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/hook/cmake_prefix_path.ps1'
+[1.398s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/hook/cmake_prefix_path.dsv'
+[1.399s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/hook/cmake_prefix_path.sh'
+[1.400s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/bin'
+[1.400s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/lib/pkgconfig/so101_description.pc'
+[1.401s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/lib/python3.12/site-packages'
+[1.401s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/bin'
+[1.401s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/package.ps1'
+[1.402s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/package.dsv'
+[1.403s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/package.sh'
+[1.404s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/package.bash'
+[1.405s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/so101_description/package.zsh'
+[1.405s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description/share/colcon-core/packages/so101_description)
+[1.409s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_interfaces -- -j4 -l4
+[1.410s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_description' with build type 'ament_python'
+[1.410s] Level 1:colcon.colcon_core.shell:create_environment_hook('frob_description', 'ament_prefix_path')
+[1.410s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/share/frob_description/hook/ament_prefix_path.ps1'
+[1.411s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/share/frob_description/hook/ament_prefix_path.dsv'
+[1.411s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_interfaces
+[1.412s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/share/frob_description/hook/ament_prefix_path.sh'
+[1.413s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.413s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.421s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sllidar_ros2)
+[1.422s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2' for CMake module files
+[1.422s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/sllidar_ros2
+[1.424s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2' for CMake config files
+[1.424s] Level 1:colcon.colcon_core.shell:create_environment_hook('sllidar_ros2', 'cmake_prefix_path')
+[1.425s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.ps1'
+[1.425s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.dsv'
+[1.426s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.sh'
+[1.427s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/lib'
+[1.427s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/bin'
+[1.427s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/lib/pkgconfig/sllidar_ros2.pc'
+[1.428s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/lib/python3.12/site-packages'
+[1.428s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/bin'
+[1.429s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.ps1'
+[1.429s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.dsv'
+[1.430s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.sh'
+[1.431s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.bash'
+[1.472s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.zsh'
+[1.473s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/share/colcon-core/packages/sllidar_ros2)
+[1.475s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sllidar_ros2)
+[1.475s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2' for CMake module files
+[1.476s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2' for CMake config files
+[1.476s] Level 1:colcon.colcon_core.shell:create_environment_hook('sllidar_ros2', 'cmake_prefix_path')
+[1.476s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.ps1'
+[1.477s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.dsv'
+[1.478s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.sh'
+[1.479s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/lib'
+[1.479s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/bin'
+[1.479s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/lib/pkgconfig/sllidar_ros2.pc'
+[1.479s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/lib/python3.12/site-packages'
+[1.480s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/bin'
+[1.480s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.ps1'
+[1.481s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.dsv'
+[1.482s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.sh'
+[1.483s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.bash'
+[1.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.zsh'
+[1.485s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2/share/colcon-core/packages/sllidar_ros2)
+[1.487s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_navigation' with build type 'ament_python'
+[1.487s] Level 1:colcon.colcon_core.shell:create_environment_hook('frob_navigation', 'ament_prefix_path')
+[1.487s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/frob_navigation/hook/ament_prefix_path.ps1'
+[1.488s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/frob_navigation/hook/ament_prefix_path.dsv'
+[1.489s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/frob_navigation/hook/ament_prefix_path.sh'
+[1.490s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.490s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.885s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_description'
+[1.886s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.886s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.238s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_navigation'
+[2.239s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.239s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.245s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(frob_interfaces)
+[2.245s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces' for CMake module files
+[2.246s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_interfaces
+[2.247s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces' for CMake config files
+[2.248s] Level 1:colcon.colcon_core.shell:create_environment_hook('frob_interfaces', 'cmake_prefix_path')
+[2.248s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/hook/cmake_prefix_path.ps1'
+[2.249s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/hook/cmake_prefix_path.dsv'
+[2.250s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/hook/cmake_prefix_path.sh'
+[2.251s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib'
+[2.251s] Level 1:colcon.colcon_core.shell:create_environment_hook('frob_interfaces', 'ld_library_path_lib')
+[2.251s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/hook/ld_library_path_lib.ps1'
+[2.252s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/hook/ld_library_path_lib.dsv'
+[2.253s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/hook/ld_library_path_lib.sh'
+[2.253s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/bin'
+[2.253s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/pkgconfig/frob_interfaces.pc'
+[2.254s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages'
+[2.254s] Level 1:colcon.colcon_core.shell:create_environment_hook('frob_interfaces', 'pythonpath')
+[2.254s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/hook/pythonpath.ps1'
+[2.255s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/hook/pythonpath.dsv'
+[2.256s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/hook/pythonpath.sh'
+[2.257s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/bin'
+[2.257s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/package.ps1'
+[2.258s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/package.dsv'
+[2.259s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/package.sh'
+[2.259s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/package.bash'
+[2.261s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/package.zsh'
+[2.261s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/colcon-core/packages/frob_interfaces)
+[2.263s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(frob_interfaces)
+[2.263s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces' for CMake module files
+[2.264s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces' for CMake config files
+[2.264s] Level 1:colcon.colcon_core.shell:create_environment_hook('frob_interfaces', 'cmake_prefix_path')
+[2.265s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/hook/cmake_prefix_path.ps1'
+[2.265s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/hook/cmake_prefix_path.dsv'
+[2.266s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/hook/cmake_prefix_path.sh'
+[2.267s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib'
+[2.267s] Level 1:colcon.colcon_core.shell:create_environment_hook('frob_interfaces', 'ld_library_path_lib')
+[2.267s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/hook/ld_library_path_lib.ps1'
+[2.268s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/hook/ld_library_path_lib.dsv'
+[2.269s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/hook/ld_library_path_lib.sh'
+[2.270s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/bin'
+[2.270s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/pkgconfig/frob_interfaces.pc'
+[2.270s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages'
+[2.270s] Level 1:colcon.colcon_core.shell:create_environment_hook('frob_interfaces', 'pythonpath')
+[2.271s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/hook/pythonpath.ps1'
+[2.271s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/hook/pythonpath.dsv'
+[2.272s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/hook/pythonpath.sh'
+[2.273s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/bin'
+[2.273s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/package.ps1'
+[2.274s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/package.dsv'
+[2.275s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/package.sh'
+[2.276s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/package.bash'
+[2.276s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/frob_interfaces/package.zsh'
+[2.278s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/share/colcon-core/packages/frob_interfaces)
+[2.279s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/ros2_arduino_bridge' with build type 'ament_python'
+[2.280s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_arduino_bridge', 'ament_prefix_path')
+[2.280s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/share/ros2_arduino_bridge/hook/ament_prefix_path.ps1'
+[2.281s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/share/ros2_arduino_bridge/hook/ament_prefix_path.dsv'
+[2.282s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/share/ros2_arduino_bridge/hook/ament_prefix_path.sh'
+[2.283s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.283s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.293s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_control': PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/frob_control build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_control/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_control/install.log --single-version-externally-managed install_data
+[2.733s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/ros2_arduino_bridge'
+[2.734s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.734s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.162s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_navigation': PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/frob_navigation build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_navigation/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_navigation/install.log --single-version-externally-managed install_data
+[3.173s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_description': PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/frob_description build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_description/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_description/install.log --single-version-externally-managed install_data
+[3.179s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control' for CMake module files
+[3.180s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control' for CMake config files
+[3.181s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/lib'
+[3.182s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_control' returned '0': PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/frob_control build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_control/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_control/install.log --single-version-externally-managed install_data
+[3.182s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/bin'
+[3.182s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/lib/pkgconfig/frob_control.pc'
+[3.182s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/lib/python3.12/site-packages'
+[3.183s] Level 1:colcon.colcon_core.shell:create_environment_hook('frob_control', 'pythonpath')
+[3.183s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/share/frob_control/hook/pythonpath.ps1'
+[3.184s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/share/frob_control/hook/pythonpath.dsv'
+[3.185s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/share/frob_control/hook/pythonpath.sh'
+[3.186s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/bin'
+[3.186s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(frob_control)
+[3.187s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/share/frob_control/package.ps1'
+[3.187s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/share/frob_control/package.dsv'
+[3.188s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/share/frob_control/package.sh'
+[3.190s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/share/frob_control/package.bash'
+[3.190s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/share/frob_control/package.zsh'
+[3.191s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/share/colcon-core/packages/frob_control)
+[3.193s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_odometry' with build type 'ament_python'
+[3.194s] Level 1:colcon.colcon_core.shell:create_environment_hook('frob_odometry', 'ament_prefix_path')
+[3.194s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/hook/ament_prefix_path.ps1'
+[3.195s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/hook/ament_prefix_path.dsv'
+[3.196s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/hook/ament_prefix_path.sh'
+[3.197s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.197s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.649s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_odometry'
+[3.649s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.649s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.658s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/ros2_arduino_bridge': CMAKE_PREFIX_PATH=/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050:/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor LD_LIBRARY_PATH=/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_arduino_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ros2_arduino_bridge build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_arduino_bridge/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_arduino_bridge/install.log --single-version-externally-managed install_data
+[4.042s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation' for CMake module files
+[4.043s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_navigation' returned '0': PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/frob_navigation build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_navigation/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_navigation/install.log --single-version-externally-managed install_data
+[4.043s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation' for CMake config files
+[4.044s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/lib'
+[4.045s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/bin'
+[4.045s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/lib/pkgconfig/frob_navigation.pc'
+[4.045s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/lib/python3.12/site-packages'
+[4.045s] Level 1:colcon.colcon_core.shell:create_environment_hook('frob_navigation', 'pythonpath')
+[4.046s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/frob_navigation/hook/pythonpath.ps1'
+[4.046s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/frob_navigation/hook/pythonpath.dsv'
+[4.047s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/frob_navigation/hook/pythonpath.sh'
+[4.049s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/bin'
+[4.049s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(frob_navigation)
+[4.049s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/frob_navigation/package.ps1'
+[4.050s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/frob_navigation/package.dsv'
+[4.051s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/frob_navigation/package.sh'
+[4.052s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/frob_navigation/package.bash'
+[4.053s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/frob_navigation/package.zsh'
+[4.054s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/colcon-core/packages/frob_navigation)
+[4.056s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/keyboard_vel_control' with build type 'ament_python'
+[4.056s] Level 1:colcon.colcon_core.shell:create_environment_hook('keyboard_vel_control', 'ament_prefix_path')
+[4.057s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/share/keyboard_vel_control/hook/ament_prefix_path.ps1'
+[4.058s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/share/keyboard_vel_control/hook/ament_prefix_path.dsv'
+[4.059s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/share/keyboard_vel_control/hook/ament_prefix_path.sh'
+[4.060s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.060s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.067s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description' for CMake module files
+[4.068s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description' for CMake config files
+[4.067s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_description' returned '0': PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/frob_description build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_description/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_description/install.log --single-version-externally-managed install_data
+[4.069s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/lib'
+[4.070s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/bin'
+[4.070s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/lib/pkgconfig/frob_description.pc'
+[4.070s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/lib/python3.12/site-packages'
+[4.070s] Level 1:colcon.colcon_core.shell:create_environment_hook('frob_description', 'pythonpath')
+[4.071s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/share/frob_description/hook/pythonpath.ps1'
+[4.071s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/share/frob_description/hook/pythonpath.dsv'
+[4.072s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/share/frob_description/hook/pythonpath.sh'
+[4.074s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/bin'
+[4.074s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(frob_description)
+[4.075s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/share/frob_description/package.ps1'
+[4.075s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/share/frob_description/package.dsv'
+[4.076s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/share/frob_description/package.sh'
+[4.077s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/share/frob_description/package.bash'
+[4.078s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/share/frob_description/package.zsh'
+[4.078s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/share/colcon-core/packages/frob_description)
+[4.080s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/lidar_filter' with build type 'ament_python'
+[4.080s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar_filter', 'ament_prefix_path')
+[4.080s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/share/lidar_filter/hook/ament_prefix_path.ps1'
+[4.081s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/share/lidar_filter/hook/ament_prefix_path.dsv'
+[4.082s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/share/lidar_filter/hook/ament_prefix_path.sh'
+[4.083s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.083s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.487s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/keyboard_vel_control'
+[4.488s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.488s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.839s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/lidar_filter'
+[4.839s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.839s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.848s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_odometry': PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/frob_odometry build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/install.log --single-version-externally-managed install_data
+[4.852s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge' for CMake module files
+[4.853s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/ros2_arduino_bridge' returned '0': CMAKE_PREFIX_PATH=/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050:/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor LD_LIBRARY_PATH=/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_arduino_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ros2_arduino_bridge build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_arduino_bridge/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_arduino_bridge/install.log --single-version-externally-managed install_data
+[4.853s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge' for CMake config files
+[4.854s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/lib'
+[4.855s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/bin'
+[4.855s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/lib/pkgconfig/ros2_arduino_bridge.pc'
+[4.855s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages'
+[4.855s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_arduino_bridge', 'pythonpath')
+[4.856s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/share/ros2_arduino_bridge/hook/pythonpath.ps1'
+[4.857s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/share/ros2_arduino_bridge/hook/pythonpath.dsv'
+[4.857s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/share/ros2_arduino_bridge/hook/pythonpath.sh'
+[4.859s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/bin'
+[4.859s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_arduino_bridge)
+[4.859s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/share/ros2_arduino_bridge/package.ps1'
+[4.860s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/share/ros2_arduino_bridge/package.dsv'
+[4.861s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/share/ros2_arduino_bridge/package.sh'
+[4.862s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/share/ros2_arduino_bridge/package.bash'
+[4.863s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/share/ros2_arduino_bridge/package.zsh'
+[4.864s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/share/colcon-core/packages/ros2_arduino_bridge)
+[4.868s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/rf2o_laser_odometry' with build type 'ament_cmake'
+[4.868s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/rf2o_laser_odometry'
+[4.869s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.869s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.888s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/rf2o_laser_odometry -- -j4 -l4
+[5.240s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/rf2o_laser_odometry -- -j4 -l4
+[5.242s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/rf2o_laser_odometry
+[5.461s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rf2o_laser_odometry)
+[5.461s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/rf2o_laser_odometry
+[5.462s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry' for CMake module files
+[5.463s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry' for CMake config files
+[5.463s] Level 1:colcon.colcon_core.shell:create_environment_hook('rf2o_laser_odometry', 'cmake_prefix_path')
+[5.463s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/hook/cmake_prefix_path.ps1'
+[5.464s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/hook/cmake_prefix_path.dsv'
+[5.465s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/hook/cmake_prefix_path.sh'
+[5.466s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/lib'
+[5.466s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/bin'
+[5.466s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/lib/pkgconfig/rf2o_laser_odometry.pc'
+[5.466s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/lib/python3.12/site-packages'
+[5.467s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/bin'
+[5.467s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.ps1'
+[5.468s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.dsv'
+[5.469s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.sh'
+[5.470s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.bash'
+[5.471s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.zsh'
+[5.471s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/share/colcon-core/packages/rf2o_laser_odometry)
+[5.473s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rf2o_laser_odometry)
+[5.473s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry' for CMake module files
+[5.474s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry' for CMake config files
+[5.474s] Level 1:colcon.colcon_core.shell:create_environment_hook('rf2o_laser_odometry', 'cmake_prefix_path')
+[5.474s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/hook/cmake_prefix_path.ps1'
+[5.475s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/hook/cmake_prefix_path.dsv'
+[5.475s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/hook/cmake_prefix_path.sh'
+[5.477s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/lib'
+[5.477s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/bin'
+[5.477s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/lib/pkgconfig/rf2o_laser_odometry.pc'
+[5.477s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/lib/python3.12/site-packages'
+[5.478s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/bin'
+[5.478s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.ps1'
+[5.479s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.dsv'
+[5.480s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.sh'
+[5.481s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.bash'
+[5.481s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.zsh'
+[5.482s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry/share/colcon-core/packages/rf2o_laser_odometry)
+[5.484s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/ros2_mpu6050' with build type 'ament_cmake'
+[5.484s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/ros2_mpu6050'
+[5.484s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.484s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.497s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_mpu6050': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_mpu6050 -- -j4 -l4
+[5.700s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/keyboard_vel_control': PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/keyboard_vel_control build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control/install.log --single-version-externally-managed install_data
+[5.736s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/lidar_filter': PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/lidar_filter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_filter build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/lidar_filter/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/lidar_filter/install.log --single-version-externally-managed install_data
+[5.756s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry' for CMake module files
+[5.757s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_odometry' returned '0': PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/frob_odometry build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/install.log --single-version-externally-managed install_data
+[5.757s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry' for CMake config files
+[5.758s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib'
+[5.759s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/bin'
+[5.759s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/pkgconfig/frob_odometry.pc'
+[5.759s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages'
+[5.759s] Level 1:colcon.colcon_core.shell:create_environment_hook('frob_odometry', 'pythonpath')
+[5.762s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/hook/pythonpath.ps1'
+[5.765s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/hook/pythonpath.dsv'
+[5.766s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/hook/pythonpath.sh'
+[5.767s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/bin'
+[5.768s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(frob_odometry)
+[5.771s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/package.ps1'
+[5.772s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/package.dsv'
+[5.773s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/package.sh'
+[5.774s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/package.bash'
+[5.775s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/package.zsh'
+[5.776s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/colcon-core/packages/frob_odometry)
+[5.777s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/lerobot-ros-moveit/so101_hardware' with build type 'ament_cmake'
+[5.777s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/lerobot-ros-moveit/so101_hardware'
+[5.777s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.777s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.795s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware -- -j4 -l4
+[5.860s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_mpu6050' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_mpu6050 -- -j4 -l4
+[5.860s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_mpu6050': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_mpu6050
+[6.093s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_mpu6050)
+[6.093s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050' for CMake module files
+[6.094s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050' for CMake config files
+[6.094s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_mpu6050', 'cmake_prefix_path')
+[6.095s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/share/ros2_mpu6050/hook/cmake_prefix_path.ps1'
+[6.096s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_mpu6050' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/ros2_mpu6050
+[6.096s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/share/ros2_mpu6050/hook/cmake_prefix_path.dsv'
+[6.097s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/share/ros2_mpu6050/hook/cmake_prefix_path.sh'
+[6.098s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/lib'
+[6.098s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/bin'
+[6.098s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/lib/pkgconfig/ros2_mpu6050.pc'
+[6.099s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/lib/python3.12/site-packages'
+[6.099s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/bin'
+[6.099s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/share/ros2_mpu6050/package.ps1'
+[6.100s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/share/ros2_mpu6050/package.dsv'
+[6.101s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/share/ros2_mpu6050/package.sh'
+[6.102s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/share/ros2_mpu6050/package.bash'
+[6.102s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/share/ros2_mpu6050/package.zsh'
+[6.103s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/share/colcon-core/packages/ros2_mpu6050)
+[6.104s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_mpu6050)
+[6.104s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050' for CMake module files
+[6.105s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050' for CMake config files
+[6.105s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_mpu6050', 'cmake_prefix_path')
+[6.105s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/share/ros2_mpu6050/hook/cmake_prefix_path.ps1'
+[6.106s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/share/ros2_mpu6050/hook/cmake_prefix_path.dsv'
+[6.107s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/share/ros2_mpu6050/hook/cmake_prefix_path.sh'
+[6.108s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/lib'
+[6.108s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/bin'
+[6.108s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/lib/pkgconfig/ros2_mpu6050.pc'
+[6.109s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/lib/python3.12/site-packages'
+[6.109s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/bin'
+[6.109s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/share/ros2_mpu6050/package.ps1'
+[6.110s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/share/ros2_mpu6050/package.dsv'
+[6.111s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/share/ros2_mpu6050/package.sh'
+[6.112s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/share/ros2_mpu6050/package.bash'
+[6.113s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/share/ros2_mpu6050/package.zsh'
+[6.113s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050/share/colcon-core/packages/ros2_mpu6050)
+[6.114s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/lerobot-ros-moveit/so101_moveit' with build type 'ament_cmake'
+[6.115s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/lerobot-ros-moveit/so101_moveit'
+[6.115s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.115s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.122s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware -- -j4 -l4
+[6.124s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware
+[6.133s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_moveit': CMAKE_PREFIX_PATH=/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware:/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050:/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_moveit -- -j4 -l4
+[6.349s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(so101_hardware)
+[6.349s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware' for CMake module files
+[6.350s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware' for CMake config files
+[6.350s] Level 1:colcon.colcon_core.shell:create_environment_hook('so101_hardware', 'cmake_prefix_path')
+[6.351s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/hook/cmake_prefix_path.ps1'
+[6.352s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_hardware
+[6.352s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/hook/cmake_prefix_path.dsv'
+[6.353s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/hook/cmake_prefix_path.sh'
+[6.354s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/lib'
+[6.354s] Level 1:colcon.colcon_core.shell:create_environment_hook('so101_hardware', 'ld_library_path_lib')
+[6.354s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/hook/ld_library_path_lib.ps1'
+[6.355s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/hook/ld_library_path_lib.dsv'
+[6.359s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/hook/ld_library_path_lib.sh'
+[6.363s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/bin'
+[6.363s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/lib/pkgconfig/so101_hardware.pc'
+[6.363s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/lib/python3.12/site-packages'
+[6.363s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/bin'
+[6.364s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/package.ps1'
+[6.365s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/package.dsv'
+[6.368s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/package.sh'
+[6.369s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/package.bash'
+[6.369s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/package.zsh'
+[6.370s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/colcon-core/packages/so101_hardware)
+[6.372s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(so101_hardware)
+[6.372s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware' for CMake module files
+[6.373s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware' for CMake config files
+[6.373s] Level 1:colcon.colcon_core.shell:create_environment_hook('so101_hardware', 'cmake_prefix_path')
+[6.373s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/hook/cmake_prefix_path.ps1'
+[6.374s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/hook/cmake_prefix_path.dsv'
+[6.375s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/hook/cmake_prefix_path.sh'
+[6.376s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/lib'
+[6.376s] Level 1:colcon.colcon_core.shell:create_environment_hook('so101_hardware', 'ld_library_path_lib')
+[6.377s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/hook/ld_library_path_lib.ps1'
+[6.377s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/hook/ld_library_path_lib.dsv'
+[6.378s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/hook/ld_library_path_lib.sh'
+[6.379s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/bin'
+[6.379s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/lib/pkgconfig/so101_hardware.pc'
+[6.379s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/lib/python3.12/site-packages'
+[6.380s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/bin'
+[6.381s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/package.ps1'
+[6.383s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/package.dsv'
+[6.384s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/package.sh'
+[6.385s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/package.bash'
+[6.386s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/so101_hardware/package.zsh'
+[6.386s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/share/colcon-core/packages/so101_hardware)
+[6.388s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_bringup' with build type 'ament_python'
+[6.388s] Level 1:colcon.colcon_core.shell:create_environment_hook('frob_bringup', 'ament_prefix_path')
+[6.389s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/share/frob_bringup/hook/ament_prefix_path.ps1'
+[6.390s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/share/frob_bringup/hook/ament_prefix_path.dsv'
+[6.391s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/share/frob_bringup/hook/ament_prefix_path.sh'
+[6.392s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.392s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.401s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_moveit' returned '0': CMAKE_PREFIX_PATH=/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware:/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050:/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --build /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_moveit -- -j4 -l4
+[6.401s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_moveit': CMAKE_PREFIX_PATH=/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware:/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050:/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_moveit
+[6.818s] WARNING:colcon.colcon_ros.task.ament_python.build:Package 'frob_bringup' doesn't explicitly install a marker in the package index (colcon-ros currently does it implicitly but that fallback will be removed in the future)
+[6.819s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_bringup'
+[6.819s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.819s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.826s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter' for CMake module files
+[6.827s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/lidar_filter' returned '0': PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/lidar_filter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_filter build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/lidar_filter/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/lidar_filter/install.log --single-version-externally-managed install_data
+[6.828s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter' for CMake config files
+[6.828s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/lib'
+[6.829s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/bin'
+[6.829s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/lib/pkgconfig/lidar_filter.pc'
+[6.829s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/lib/python3.12/site-packages'
+[6.829s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar_filter', 'pythonpath')
+[6.829s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/share/lidar_filter/hook/pythonpath.ps1'
+[6.830s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/share/lidar_filter/hook/pythonpath.dsv'
+[6.831s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/share/lidar_filter/hook/pythonpath.sh'
+[6.832s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/bin'
+[6.832s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lidar_filter)
+[6.833s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/share/lidar_filter/package.ps1'
+[6.833s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/share/lidar_filter/package.dsv'
+[6.834s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/share/lidar_filter/package.sh'
+[6.835s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/share/lidar_filter/package.bash'
+[6.836s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/share/lidar_filter/package.zsh'
+[6.837s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/share/colcon-core/packages/lidar_filter)
+[6.839s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(so101_moveit)
+[6.839s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit' for CMake module files
+[6.840s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_moveit' returned '0': CMAKE_PREFIX_PATH=/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware:/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050:/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy /home/pi/.local/bin/cmake --install /home/pi/Frob_robot/ros2/src/ros2_ws/build/so101_moveit
+[6.840s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit' for CMake config files
+[6.841s] Level 1:colcon.colcon_core.shell:create_environment_hook('so101_moveit', 'cmake_prefix_path')
+[6.841s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/share/so101_moveit/hook/cmake_prefix_path.ps1'
+[6.841s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/share/so101_moveit/hook/cmake_prefix_path.dsv'
+[6.842s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/share/so101_moveit/hook/cmake_prefix_path.sh'
+[6.843s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/bin'
+[6.843s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/lib/pkgconfig/so101_moveit.pc'
+[6.844s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/lib/python3.12/site-packages'
+[6.844s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/bin'
+[6.844s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/share/so101_moveit/package.ps1'
+[6.845s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/share/so101_moveit/package.dsv'
+[6.846s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/share/so101_moveit/package.sh'
+[6.847s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/share/so101_moveit/package.bash'
+[6.847s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/share/so101_moveit/package.zsh'
+[6.848s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/share/colcon-core/packages/so101_moveit)
+[6.849s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(so101_moveit)
+[6.850s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit' for CMake module files
+[6.850s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit' for CMake config files
+[6.851s] Level 1:colcon.colcon_core.shell:create_environment_hook('so101_moveit', 'cmake_prefix_path')
+[6.851s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/share/so101_moveit/hook/cmake_prefix_path.ps1'
+[6.852s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/share/so101_moveit/hook/cmake_prefix_path.dsv'
+[6.852s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/share/so101_moveit/hook/cmake_prefix_path.sh'
+[6.853s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/bin'
+[6.853s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/lib/pkgconfig/so101_moveit.pc'
+[6.854s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/lib/python3.12/site-packages'
+[6.854s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/bin'
+[6.855s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/share/so101_moveit/package.ps1'
+[6.855s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/share/so101_moveit/package.dsv'
+[6.856s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/share/so101_moveit/package.sh'
+[6.857s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/share/so101_moveit/package.bash'
+[6.857s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/share/so101_moveit/package.zsh'
+[6.858s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit/share/colcon-core/packages/so101_moveit)
+[6.859s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control' for CMake module files
+[6.861s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control' for CMake config files
+[6.861s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/keyboard_vel_control' returned '0': PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/keyboard_vel_control build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/keyboard_vel_control/install.log --single-version-externally-managed install_data
+[6.862s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/lib'
+[6.862s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/bin'
+[6.862s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/lib/pkgconfig/keyboard_vel_control.pc'
+[6.862s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/lib/python3.12/site-packages'
+[6.862s] Level 1:colcon.colcon_core.shell:create_environment_hook('keyboard_vel_control', 'pythonpath')
+[6.863s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/share/keyboard_vel_control/hook/pythonpath.ps1'
+[6.863s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/share/keyboard_vel_control/hook/pythonpath.dsv'
+[6.864s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/share/keyboard_vel_control/hook/pythonpath.sh'
+[6.865s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/bin'
+[6.865s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(keyboard_vel_control)
+[6.866s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/share/keyboard_vel_control/package.ps1'
+[6.866s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/share/keyboard_vel_control/package.dsv'
+[6.867s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/share/keyboard_vel_control/package.sh'
+[6.868s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/share/keyboard_vel_control/package.bash'
+[6.868s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/share/keyboard_vel_control/package.zsh'
+[6.870s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/share/colcon-core/packages/keyboard_vel_control)
+[7.542s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_bringup': AMENT_PREFIX_PATH=/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050:/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy CMAKE_PREFIX_PATH=/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050:/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor LD_LIBRARY_PATH=/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/frob_bringup build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_bringup/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_bringup/install.log --single-version-externally-managed install_data
+[8.224s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup' for CMake module files
+[8.225s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_bringup' returned '0': AMENT_PREFIX_PATH=/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup:/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050:/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control:/opt/ros/jazzy CMAKE_PREFIX_PATH=/home/pi/Frob_robot/ros2/src/ros2_ws/install/sllidar_ros2:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_moveit:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_description:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_mpu6050:/home/pi/Frob_robot/ros2/src/ros2_ws/install/rf2o_laser_odometry:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor LD_LIBRARY_PATH=/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib:/home/pi/Frob_robot/ros2/src/ros2_ws/install/so101_hardware/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/lidar_filter/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/keyboard_vel_control/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_description/lib/python3.12/site-packages:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_control/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/frob_bringup build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_bringup/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_bringup/install.log --single-version-externally-managed install_data
+[8.225s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup' for CMake config files
+[8.226s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/lib'
+[8.226s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/bin'
+[8.226s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/lib/pkgconfig/frob_bringup.pc'
+[8.226s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/lib/python3.12/site-packages'
+[8.227s] Level 1:colcon.colcon_core.shell:create_environment_hook('frob_bringup', 'pythonpath')
+[8.227s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/share/frob_bringup/hook/pythonpath.ps1'
+[8.227s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/share/frob_bringup/hook/pythonpath.dsv'
+[8.228s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/share/frob_bringup/hook/pythonpath.sh'
+[8.229s] Level 1:colcon.colcon_core.environment:checking '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/bin'
+[8.230s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(frob_bringup)
+[8.230s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/share/frob_bringup/package.ps1'
+[8.231s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/share/frob_bringup/package.dsv'
+[8.231s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/share/frob_bringup/package.sh'
+[8.232s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/share/frob_bringup/package.bash'
+[8.233s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/share/frob_bringup/package.zsh'
+[8.234s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/share/colcon-core/packages/frob_bringup)
+[8.235s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[8.236s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[8.236s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[8.236s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[8.245s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[8.245s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[8.245s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[8.245s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[8.246s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[8.247s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[8.247s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/local_setup.ps1'
+[8.248s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/pi/Frob_robot/ros2/src/ros2_ws/install/_local_setup_util_ps1.py'
+[8.250s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/setup.ps1'
+[8.252s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/local_setup.sh'
+[8.252s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/pi/Frob_robot/ros2/src/ros2_ws/install/_local_setup_util_sh.py'
+[8.253s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/setup.sh'
+[8.255s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/local_setup.bash'
+[8.256s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/setup.bash'
+[8.258s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/local_setup.zsh'
+[8.259s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/Frob_robot/ros2/src/ros2_ws/install/setup.zsh'

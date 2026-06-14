@@ -1,0 +1,1 @@
+/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_typesupport_fastrtps_cpp/frob_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h

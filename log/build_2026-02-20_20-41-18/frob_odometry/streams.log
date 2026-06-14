@@ -1,0 +1,29 @@
+[1.420s] Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_odometry': PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/frob_odometry build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/install.log --single-version-externally-managed install_data
+[1.963s] running egg_info
+[1.995s] writing ../../build/frob_odometry/frob_odometry.egg-info/PKG-INFO
+[1.997s] writing dependency_links to ../../build/frob_odometry/frob_odometry.egg-info/dependency_links.txt
+[1.997s] writing entry points to ../../build/frob_odometry/frob_odometry.egg-info/entry_points.txt
+[1.997s] writing requirements to ../../build/frob_odometry/frob_odometry.egg-info/requires.txt
+[1.998s] writing top-level names to ../../build/frob_odometry/frob_odometry.egg-info/top_level.txt
+[2.071s] reading manifest file '../../build/frob_odometry/frob_odometry.egg-info/SOURCES.txt'
+[2.073s] writing manifest file '../../build/frob_odometry/frob_odometry.egg-info/SOURCES.txt'
+[2.073s] running build
+[2.073s] running build_py
+[2.076s] copying frob_odometry/old_odometry.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/build/lib/frob_odometry
+[2.077s] copying frob_odometry/odom.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/build/lib/frob_odometry
+[2.078s] copying frob_odometry/__init__.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/build/lib/frob_odometry
+[2.078s] running install
+[2.087s] running install_lib
+[2.123s] running install_data
+[2.123s] copying resource/frob_odometry -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/ament_index/resource_index/packages
+[2.124s] copying package.xml -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry
+[2.124s] copying launch/odometry.launch.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/launch
+[2.125s] copying config/odometry_params.yaml -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/config
+[2.126s] copying config/ekf.yaml -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/share/frob_odometry/config
+[2.126s] running install_egg_info
+[2.158s] removing '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages/frob_odometry-0.0.0-py3.12.egg-info' (and everything under it)
+[2.158s] Copying ../../build/frob_odometry/frob_odometry.egg-info to /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages/frob_odometry-0.0.0-py3.12.egg-info
+[2.160s] running install_scripts
+[2.231s] Installing odometry_publisher script to /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/frob_odometry
+[2.235s] writing list of installed files to '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/install.log'
+[2.397s] Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_odometry' returned '0': PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_odometry/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/frob_odometry build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_odometry/install.log --single-version-externally-managed install_data

@@ -1,0 +1,28 @@
+[1.670s] Invoking command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_navigation': PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/frob_navigation build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_navigation/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_navigation/install.log --single-version-externally-managed install_data
+[2.164s] running egg_info
+[2.198s] writing ../../build/frob_navigation/frob_navigation.egg-info/PKG-INFO
+[2.201s] writing dependency_links to ../../build/frob_navigation/frob_navigation.egg-info/dependency_links.txt
+[2.202s] writing requirements to ../../build/frob_navigation/frob_navigation.egg-info/requires.txt
+[2.202s] writing top-level names to ../../build/frob_navigation/frob_navigation.egg-info/top_level.txt
+[2.274s] reading manifest file '../../build/frob_navigation/frob_navigation.egg-info/SOURCES.txt'
+[2.278s] writing manifest file '../../build/frob_navigation/frob_navigation.egg-info/SOURCES.txt'
+[2.278s] running build
+[2.279s] running build_py
+[2.282s] copying frob_navigation/__init__.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_navigation/build/lib/frob_navigation
+[2.282s] running install
+[2.293s] running install_lib
+[2.326s] running install_data
+[2.328s] copying resource/frob_navigation -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/ament_index/resource_index/packages
+[2.329s] copying package.xml -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/frob_navigation
+[2.329s] copying launch/slam.launch.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/frob_navigation/launch
+[2.330s] copying launch/navigation.launch.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/frob_navigation/launch
+[2.331s] copying config/nav2_params.yaml -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/frob_navigation/config
+[2.332s] copying config/slam_toolbox_params.yaml -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/frob_navigation/config
+[2.333s] copying maps/map.yaml -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/frob_navigation/maps
+[2.334s] copying maps/map.pgm -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/share/frob_navigation/maps
+[2.340s] running install_egg_info
+[2.369s] removing '/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/lib/python3.12/site-packages/frob_navigation-0.0.0-py3.12.egg-info' (and everything under it)
+[2.369s] Copying ../../build/frob_navigation/frob_navigation.egg-info to /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/lib/python3.12/site-packages/frob_navigation-0.0.0-py3.12.egg-info
+[2.371s] running install_scripts
+[2.441s] writing list of installed files to '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_navigation/install.log'
+[2.900s] Invoked command in '/home/pi/Frob_robot/ros2/src/ros2_ws/src/frob_navigation' returned '0': PYTHONPATH=/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/frob_navigation build --build-base /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_navigation/build install --record /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_navigation/install.log --single-version-externally-managed install_data

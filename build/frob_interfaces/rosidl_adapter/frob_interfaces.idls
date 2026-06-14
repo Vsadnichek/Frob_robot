@@ -1,0 +1,6 @@
+/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces:srv/Turn.idl
+/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces:srv/Forward.idl
+/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces:msg/LineDetection.idl
+/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces:msg/SignDetection.idl
+/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces:msg/IntersectionDetection.idl
+/home/vsadnik/ros2_ws/frob_robot/build/frob_interfaces/rosidl_adapter/frob_interfaces:msg/ObstacleDetection.idl

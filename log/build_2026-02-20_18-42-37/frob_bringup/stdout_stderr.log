@@ -1,0 +1,31 @@
+running egg_info
+creating ../../build/frob_bringup/frob_bringup.egg-info
+writing ../../build/frob_bringup/frob_bringup.egg-info/PKG-INFO
+writing dependency_links to ../../build/frob_bringup/frob_bringup.egg-info/dependency_links.txt
+writing entry points to ../../build/frob_bringup/frob_bringup.egg-info/entry_points.txt
+writing requirements to ../../build/frob_bringup/frob_bringup.egg-info/requires.txt
+writing top-level names to ../../build/frob_bringup/frob_bringup.egg-info/top_level.txt
+writing manifest file '../../build/frob_bringup/frob_bringup.egg-info/SOURCES.txt'
+reading manifest file '../../build/frob_bringup/frob_bringup.egg-info/SOURCES.txt'
+writing manifest file '../../build/frob_bringup/frob_bringup.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_bringup/build/lib/frob_bringup
+copying frob_bringup/__init__.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_bringup/build/lib/frob_bringup
+copying frob_bringup/cmd_vel_teleop.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_bringup/build/lib/frob_bringup
+running install
+running install_lib
+creating /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/lib/python3.12/site-packages/frob_bringup
+copying /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_bringup/build/lib/frob_bringup/__init__.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/lib/python3.12/site-packages/frob_bringup
+copying /home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_bringup/build/lib/frob_bringup/cmd_vel_teleop.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/lib/python3.12/site-packages/frob_bringup
+byte-compiling /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/lib/python3.12/site-packages/frob_bringup/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/lib/python3.12/site-packages/frob_bringup/cmd_vel_teleop.py to cmd_vel_teleop.cpython-312.pyc
+running install_data
+copying package.xml -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/share/frob_bringup
+creating /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/share/frob_bringup/launch
+copying launch/bringup.launch.py -> /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/share/frob_bringup/launch
+running install_egg_info
+Copying ../../build/frob_bringup/frob_bringup.egg-info to /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/lib/python3.12/site-packages/frob_bringup-0.1.0-py3.12.egg-info
+running install_scripts
+Installing keyboard_teleop script to /home/pi/Frob_robot/ros2/src/ros2_ws/install/frob_bringup/lib/frob_bringup
+writing list of installed files to '/home/pi/Frob_robot/ros2/src/ros2_ws/build/frob_bringup/install.log'

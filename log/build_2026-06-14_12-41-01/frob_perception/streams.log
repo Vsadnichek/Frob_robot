@@ -1,0 +1,44 @@
+[0.819s] Invoking command in '/home/vsadnik/ros2_ws/frob_robot/build/frob_perception': AMENT_PREFIX_PATH=/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/vsadnik/ros2_ws/frob_robot/build/frob_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vsadnik/ros2_ws/frob_robot/install/frob_perception/lib/python3.12/site-packages:/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/vsadnik/ros2_ws/frob_robot/build/frob_perception/build --no-deps symlink_data
+[0.889s] /usr/lib/python3/dist-packages/setuptools/dist.py:744: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[0.889s] !!
+[0.889s] 
+[0.889s]         ********************************************************************************
+[0.889s]         Usage of dash-separated 'script-dir' will not be supported in future
+[0.890s]         versions. Please use the underscore name 'script_dir' instead.
+[0.890s] 
+[0.890s]         This deprecation is overdue, please update your project and remove deprecated
+[0.890s]         calls to avoid build errors in the future.
+[0.890s] 
+[0.890s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[0.890s]         ********************************************************************************
+[0.890s] 
+[0.890s] !!
+[0.890s]   opt = self.warn_dash_deprecation(opt, section)
+[1.010s] running develop
+[1.130s] running egg_info
+[1.130s] creating frob_perception.egg-info
+[1.141s] writing frob_perception.egg-info/PKG-INFO
+[1.141s] writing dependency_links to frob_perception.egg-info/dependency_links.txt
+[1.141s] writing entry points to frob_perception.egg-info/entry_points.txt
+[1.142s] writing requirements to frob_perception.egg-info/requires.txt
+[1.142s] writing top-level names to frob_perception.egg-info/top_level.txt
+[1.142s] writing manifest file 'frob_perception.egg-info/SOURCES.txt'
+[1.164s] reading manifest file 'frob_perception.egg-info/SOURCES.txt'
+[1.165s] writing manifest file 'frob_perception.egg-info/SOURCES.txt'
+[1.177s] running build_ext
+[1.177s] Creating /home/vsadnik/ros2_ws/frob_robot/install/frob_perception/lib/python3.12/site-packages/frob-perception.egg-link (link to .)
+[1.178s] Installing camera_node script to /home/vsadnik/ros2_ws/frob_robot/install/frob_perception/lib/frob_perception
+[1.178s] Installing perception_node script to /home/vsadnik/ros2_ws/frob_robot/install/frob_perception/lib/frob_perception
+[1.178s] 
+[1.178s] Installed /home/vsadnik/ros2_ws/frob_robot/build/frob_perception
+[1.178s] running symlink_data
+[1.178s] creating /home/vsadnik/ros2_ws/frob_robot/install/frob_perception/share/ament_index
+[1.178s] creating /home/vsadnik/ros2_ws/frob_robot/install/frob_perception/share/ament_index/resource_index
+[1.178s] creating /home/vsadnik/ros2_ws/frob_robot/install/frob_perception/share/ament_index/resource_index/packages
+[1.178s] symbolically linking /home/vsadnik/ros2_ws/frob_robot/build/frob_perception/resource/frob_perception -> /home/vsadnik/ros2_ws/frob_robot/install/frob_perception/share/ament_index/resource_index/packages
+[1.178s] symbolically linking /home/vsadnik/ros2_ws/frob_robot/build/frob_perception/package.xml -> /home/vsadnik/ros2_ws/frob_robot/install/frob_perception/share/frob_perception
+[1.178s] creating /home/vsadnik/ros2_ws/frob_robot/install/frob_perception/share/frob_perception/config
+[1.178s] symbolically linking /home/vsadnik/ros2_ws/frob_robot/build/frob_perception/config/perception_params.yaml -> /home/vsadnik/ros2_ws/frob_robot/install/frob_perception/share/frob_perception/config
+[1.178s] creating /home/vsadnik/ros2_ws/frob_robot/install/frob_perception/share/frob_perception/launch
+[1.178s] symbolically linking /home/vsadnik/ros2_ws/frob_robot/build/frob_perception/launch/perception.launch.py -> /home/vsadnik/ros2_ws/frob_robot/install/frob_perception/share/frob_perception/launch
+[1.196s] Invoked command in '/home/vsadnik/ros2_ws/frob_robot/build/frob_perception' returned '0': AMENT_PREFIX_PATH=/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/vsadnik/ros2_ws/frob_robot/build/frob_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vsadnik/ros2_ws/frob_robot/install/frob_perception/lib/python3.12/site-packages:/home/vsadnik/ros2_ws/frob_robot/install/frob_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/vsadnik/ros2_ws/frob_robot/build/frob_perception/build --no-deps symlink_data
