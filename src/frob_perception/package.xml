@@ -10,8 +10,6 @@
   <depend>rclpy</depend>
   <depend>sensor_msgs</depend>
   <depend>cv_bridge</depend>
-  <depend>frob_interfaces</depend>
-  <depend>numpy</depend>
   <depend>python3-opencv</depend>
   <exec_depend>ros2launch</exec_depend>
 

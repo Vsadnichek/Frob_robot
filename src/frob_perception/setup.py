@@ -22,7 +22,6 @@ setup(
     entry_points={
         'console_scripts': [
             'camera_node = frob_perception.camera_node:main',
-            'perception_node = frob_perception.perception_node:main',
         ],
     },
 )

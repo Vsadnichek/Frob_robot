@@ -26,16 +26,7 @@ def generate_launch_description():
         parameters=[config_file, {'device': camera_device}],
     )
 
-    perception_node = Node(
-        package='frob_perception',
-        executable='perception_node',
-        name='perception_node',
-        output='screen',
-        parameters=[config_file],
-    )
-
     return LaunchDescription([
         camera_arg,
         camera_node,
-        perception_node,
     ])
