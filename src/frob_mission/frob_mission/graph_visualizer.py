@@ -78,10 +78,12 @@ class GraphVisualizer(Node):
         )
 
     def path_callback(self, msg):
-        self.path = list(msg.data)
-        self.get_logger().info(
-            f'Path received: {" -> ".join(str(n) for n in self.path)}'
-        )
+        new_path = list(msg.data)
+        if new_path != self.path:
+            self.path = new_path
+            self.get_logger().info(
+                f'Path received: {" -> ".join(str(n) for n in self.path)}'
+            )
 
     def odom_callback(self, msg):
         self.current_odom = msg

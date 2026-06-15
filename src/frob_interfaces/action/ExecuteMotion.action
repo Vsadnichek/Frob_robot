@@ -1,6 +1,13 @@
-string command     # "forward" or "rotate"
-float32 value       # distance in meters for forward, angle in radians for rotate
+# Goal - list of commands to execute sequentially
+string[] commands    # "forward", "right_turn", "left_turn", "u_turn"
+float32[] values     # distance (m) for forward, arc radius (m) for turns
 ---
+# Result
 bool success
+string message
+int32 completed_steps
 ---
-float32 progress    # 0.0..1.0
+# Feedback
+float32 progress     # Progress of current command (0.0..1.0)
+int32 current_step   # Current step index (0-based)
+string current_command

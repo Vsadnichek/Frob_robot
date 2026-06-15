@@ -8,7 +8,6 @@ from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
 from sensor_msgs.msg import Imu
 from frob_interfaces.action import ExecuteMotion
-import numpy as np
 
 
 class MotionExecutor(Node):
@@ -66,42 +65,85 @@ class MotionExecutor(Node):
             self.get_logger().info('IMU yaw source active')
 
     def execute_callback(self, goal_handle):
-        command = goal_handle.request.command
-        value = goal_handle.request.value
+        commands = goal_handle.request.commands
+        values = goal_handle.request.values
+        total = len(commands)
+
+        if total != len(values):
+            goal_handle.abort()
+            result = ExecuteMotion.Result()
+            result.success = False
+            result.message = 'commands and values length mismatch'
+            result.completed_steps = 0
+            return result
+
+        self.get_logger().info(
+            f'Executing mission: {total} commands'
+        )
 
         feedback_msg = ExecuteMotion.Feedback()
-        self.get_logger().info(f'Executing: {command}({value:.3f})')
 
-        if command == 'forward':
-            return self._execute_forward(value, goal_handle, feedback_msg)
+        for i, (cmd, val) in enumerate(zip(commands, values)):
+            feedback_msg.current_step = i
+            feedback_msg.current_command = cmd
+            feedback_msg.progress = 0.0
+            goal_handle.publish_feedback(feedback_msg)
 
-        if command == 'right_turn':
-            return self._execute_arc(-math.pi / 2, value, goal_handle, feedback_msg)
+            self.get_logger().info(
+                f'Step {i + 1}/{total}: {cmd}({val:.3f})'
+            )
 
-        if command == 'left_turn':
-            return self._execute_arc(math.pi / 2, value, goal_handle, feedback_msg)
+            if cmd == 'forward':
+                ok = self._execute_forward(
+                    val, goal_handle, feedback_msg)
+            elif cmd == 'right_turn':
+                ok = self._execute_arc(
+                    -math.pi / 2, val, goal_handle, feedback_msg)
+            elif cmd == 'left_turn':
+                ok = self._execute_arc(
+                    math.pi / 2, val, goal_handle, feedback_msg)
+            elif cmd == 'u_turn':
+                ok = self._execute_arc(
+                    math.pi, val, goal_handle, feedback_msg)
+            else:
+                self.get_logger().error(f'Unknown command: {cmd}')
+                goal_handle.abort()
+                result = ExecuteMotion.Result()
+                result.success = False
+                result.message = f'Unknown command: {cmd}'
+                result.completed_steps = i
+                return result
 
-        if command == 'u_turn':
-            return self._execute_arc(math.pi, value, goal_handle, feedback_msg)
+            if not ok:
+                goal_handle.abort()
+                result = ExecuteMotion.Result()
+                result.success = False
+                result.message = f'Failed at step {i}: {cmd}({val:.3f})'
+                result.completed_steps = i
+                return result
 
-        self.get_logger().error(f'Unknown command: {command}')
-        goal_handle.abort()
+        goal_handle.succeed()
         result = ExecuteMotion.Result()
-        result.success = False
+        result.success = True
+        result.message = 'All commands completed'
+        result.completed_steps = total
+        self.get_logger().info('Mission complete')
         return result
 
     def _execute_forward(self, distance, goal_handle, feedback_msg):
         rate = self.create_rate(50)
 
+        waited = 0
         while self.odom is None and rclpy.ok():
             self.get_logger().info('Waiting for odometry...', throttle_duration_sec=1.0)
             rate.sleep()
+            waited += 0.02
+            if waited > 10.0:
+                self.get_logger().error('Timeout waiting for odometry')
+                return False
 
         if not rclpy.ok():
-            goal_handle.abort()
-            result = ExecuteMotion.Result()
-            result.success = False
-            return result
+            return False
 
         start_x = self.odom.pose.pose.position.x
         start_y = self.odom.pose.pose.position.y
@@ -111,9 +153,7 @@ class MotionExecutor(Node):
             if goal_handle.is_cancel_requested:
                 self._stop()
                 goal_handle.canceled()
-                result = ExecuteMotion.Result()
-                result.success = False
-                return result
+                return False
 
             dx = self.odom.pose.pose.position.x - start_x
             dy = self.odom.pose.pose.position.y - start_y
@@ -135,30 +175,30 @@ class MotionExecutor(Node):
             rate.sleep()
 
         self._stop()
-        goal_handle.succeed()
-        result = ExecuteMotion.Result()
-        result.success = True
         self.get_logger().info('Forward complete')
-        return result
+        return True
 
     def _ensure_yaw(self, rate):
+        waited = 0
         while not self.yaw_initialized and rclpy.ok():
             if self.odom is not None:
+                self.yaw = self._quat_to_yaw(self.odom.pose.pose.orientation)
                 self.yaw_initialized = True
                 self.get_logger().info('Using odometry for yaw (IMU not available)')
                 break
             self.get_logger().info('Waiting for odometry/IMU...', throttle_duration_sec=1.0)
             rate.sleep()
+            waited += 0.02
+            if waited > 10.0:
+                self.get_logger().error('Timeout waiting for yaw source')
+                return False
         return rclpy.ok() and self.yaw_initialized
 
     def _execute_arc(self, angle, radius, goal_handle, feedback_msg):
         rate = self.create_rate(50)
 
         if not self._ensure_yaw(rate):
-            goal_handle.abort()
-            result = ExecuteMotion.Result()
-            result.success = False
-            return result
+            return False
 
         start_yaw = self.yaw
         target_yaw = self._normalize(start_yaw + angle)
@@ -172,9 +212,7 @@ class MotionExecutor(Node):
             if goal_handle.is_cancel_requested:
                 self._stop()
                 goal_handle.canceled()
-                result = ExecuteMotion.Result()
-                result.success = False
-                return result
+                return False
 
             error = self._normalize(target_yaw - self.yaw)
             abs_angle = abs(angle)
@@ -192,11 +230,8 @@ class MotionExecutor(Node):
             rate.sleep()
 
         self._stop()
-        goal_handle.succeed()
-        result = ExecuteMotion.Result()
-        result.success = True
         self.get_logger().info('Arc complete')
-        return result
+        return True
 
     def _stop(self):
         self.cmd_vel_pub.publish(Twist())

@@ -6,7 +6,6 @@ import yaml
 import rclpy
 from rclpy.node import Node
 from rclpy.action import ActionClient
-from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 from frob_interfaces.action import ExecuteMotion
 from std_msgs.msg import Int32MultiArray
 from ament_index_python.packages import get_package_share_directory
@@ -76,21 +75,57 @@ class GraphNavigator(Node):
             self.get_logger().error('No path found — aborting')
             return
 
+        self._repub_timer = self.create_timer(2.0, self._republish_path)
+
         if not self.execute:
             self.get_logger().info('Planning-only mode: path published. Spinning...')
             return
 
         self._action_client = ActionClient(
-            self, ExecuteMotion, 'execute_motion',
-            callback_group=MutuallyExclusiveCallbackGroup()
+            self, ExecuteMotion, 'execute_motion'
+        )
+        self._mission_timer = self.create_timer(1.0, self._wait_and_send_mission)
+
+    def _wait_and_send_mission(self):
+        if not self._action_client.wait_for_server(timeout_sec=0.5):
+            self.get_logger().info('Waiting for motion_executor...', throttle_duration_sec=3.0)
+            return
+
+        self._mission_timer.cancel()
+
+        goal_msg = ExecuteMotion.Goal()
+        goal_msg.commands = [cmd for cmd, _ in self._planned_commands]
+        goal_msg.values = [float(val) for _, val in self._planned_commands]
+
+        self.get_logger().info(
+            f'Sending mission: {len(goal_msg.commands)} commands'
         )
 
-        self.get_logger().info('Waiting for motion_executor action server...')
-        while not self._action_client.wait_for_server(timeout_sec=1.0):
-            self.get_logger().info('Still waiting for motion_executor...')
-        self.get_logger().info('Action server connected')
+        send_future = self._action_client.send_goal_async(goal_msg)
 
-        self._execute_mission()
+        def _on_goal_response(future):
+            goal_handle = future.result()
+            if goal_handle is None or not goal_handle.accepted:
+                self.get_logger().error('Mission goal rejected')
+                return
+            self.get_logger().info('Mission accepted, executing...')
+            result_future = goal_handle.get_result_async()
+            result_future.add_done_callback(self._on_mission_result)
+
+        send_future.add_done_callback(_on_goal_response)
+
+    def _on_mission_result(self, future):
+        result = future.result()
+        if result is None:
+            self.get_logger().error('Mission result is None')
+            return
+        if result.result.success:
+            self.get_logger().info('MISSION COMPLETE')
+        else:
+            self.get_logger().error(
+                f'Mission failed: {result.result.message} '
+                f'(completed {result.result.completed_steps} steps)'
+            )
 
     def _plan_and_publish(self):
         blocked_edges = set()
@@ -126,6 +161,12 @@ class GraphNavigator(Node):
 
         self._planned_path = path
         self._planned_commands = commands
+
+    def _republish_path(self):
+        if self._planned_path:
+            msg = Int32MultiArray()
+            msg.data = [int(n) for n in self._planned_path]
+            self.path_pub.publish(msg)
 
     def dijkstra(self, start, target, blocked_edges=None):
         if blocked_edges is None:
@@ -222,46 +263,6 @@ class GraphNavigator(Node):
 
         dist = math.sqrt(dx * dx + dy * dy)
         return ('forward', dist)
-
-    def _execute_mission(self):
-        if not self._planned_commands:
-            self.get_logger().error('No planned commands to execute')
-            return
-
-        for i, (cmd, val) in enumerate(self._planned_commands):
-            self.get_logger().info(
-                f'Step {i + 1}/{len(self._planned_commands)}: {cmd}({round(val, 3)})'
-            )
-            success = self._send_action(cmd, val)
-            if not success:
-                self.get_logger().error('Motion execution failed')
-                return
-
-        self.get_logger().info('MISSION COMPLETE')
-
-    def _send_action(self, command, value):
-        goal_msg = ExecuteMotion.Goal()
-        goal_msg.command = command
-        goal_msg.value = float(value)
-
-        future = self._action_client.send_goal_async(goal_msg)
-        rclpy.spin_until_future_complete(self, future)
-        goal_handle = future.result()
-
-        if not goal_handle.accepted:
-            self.get_logger().error('Goal rejected')
-            return False
-
-        result_future = goal_handle.get_result_async()
-        rclpy.spin_until_future_complete(self, result_future)
-        result = result_future.result()
-
-        if result.result.success:
-            self.get_logger().info(f'  {command} completed')
-            return True
-        else:
-            self.get_logger().error(f'  {command} failed')
-            return False
 
     @staticmethod
     def _normalize(angle):
