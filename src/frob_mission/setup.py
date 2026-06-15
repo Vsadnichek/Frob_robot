@@ -11,7 +11,14 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/config', ['config/graph.yaml', 'config/mission_params.yaml']),
-        ('share/' + package_name + '/launch', ['launch/mission.launch.py']),
+        ('share/' + package_name + '/launch', [
+            'launch/mission.launch.py',
+            'launch/simulation.launch.py',
+        ]),
+        ('share/' + package_name + '/worlds', [
+            'worlds/city_polygon.sdf',
+            'worlds/city_polygon_tb4.sdf',
+        ]),
     ],
     install_requires=['setuptools', 'numpy'],
     zip_safe=True,
@@ -23,6 +30,7 @@ setup(
         'console_scripts': [
             'graph_navigator = frob_mission.graph_navigator:main',
             'motion_executor = frob_mission.motion_executor:main',
+            'topic_relay = frob_mission.topic_relay:main',
         ],
     },
 )

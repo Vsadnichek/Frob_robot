@@ -38,6 +38,7 @@ class MotionExecutor(Node):
 
         self.odom = None
         self.yaw = 0.0
+        self.imu_available = False
         self.yaw_initialized = False
 
         self.odom_sub = self.create_subscription(
@@ -47,15 +48,22 @@ class MotionExecutor(Node):
 
         self.get_logger().info('Motion executor ready')
 
-    def odom_callback(self, msg):
-        self.odom = msg
-
-    def imu_callback(self, msg):
-        q = msg.orientation
+    def _quat_to_yaw(self, q):
         siny = 2.0 * (q.w * q.z + q.x * q.y)
         cosy = 1.0 - 2.0 * (q.y * q.y + q.z * q.z)
-        self.yaw = math.atan2(siny, cosy)
-        self.yaw_initialized = True
+        return math.atan2(siny, cosy)
+
+    def odom_callback(self, msg):
+        self.odom = msg
+        if not self.imu_available:
+            self.yaw = self._quat_to_yaw(msg.pose.pose.orientation)
+
+    def imu_callback(self, msg):
+        self.yaw = self._quat_to_yaw(msg.orientation)
+        self.imu_available = True
+        if not self.yaw_initialized:
+            self.yaw_initialized = True
+            self.get_logger().info('IMU yaw source active')
 
     def execute_callback(self, goal_handle):
         command = goal_handle.request.command
@@ -133,7 +141,11 @@ class MotionExecutor(Node):
         rate = self.create_rate(50)
 
         while not self.yaw_initialized and rclpy.ok():
-            self.get_logger().info('Waiting for IMU...', throttle_duration_sec=1.0)
+            if self.odom is not None:
+                self.yaw_initialized = True
+                self.get_logger().info('Using odometry for yaw (IMU not available)')
+                break
+            self.get_logger().info('Waiting for odometry/IMU...', throttle_duration_sec=1.0)
             rate.sleep()
 
         if not rclpy.ok():

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.7">
+  <world name="city_polygon">
+    <physics type="ode">
+      <max_step_size>0.003</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    <plugin name="gz::sim::systems::Physics" filename="gz-sim-physics-system"/>
+    <plugin name="gz::sim::systems::UserCommands" filename="gz-sim-user-commands-system"/>
+    <plugin name="gz::sim::systems::SceneBroadcaster" filename="gz-sim-scene-broadcaster-system"/>
+    <plugin name="gz::sim::systems::Contact" filename="gz-sim-contact-system"/>
+
+    <scene>
+      <ambient>1 1 1 1</ambient>
+      <background>0.3 0.7 0.9 1</background>
+      <shadows>0</shadows>
+      <grid>false</grid>
+    </scene>
+
+    <!-- ===== Ground plane ===== -->
+    <model name="ground_plane">
+      <static>true</static>
+      <pose>2.0 2.0 0.0 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>5 5</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.3 0.35 0.3 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>5 5</size>
+            </plane>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- ===== External walls (4) ===== -->
+    <model name="wall_bottom">
+      <static>true</static>
+      <link name="link">
+        <pose>2.0 -0.05 0.3 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>4.0 0.1 0.6</size></box></geometry>
+          <material>
+            <ambient>0.6 0.55 0.45 1</ambient>
+            <diffuse>0.7 0.65 0.55 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>4.0 0.1 0.6</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="wall_top">
+      <static>true</static>
+      <link name="link">
+        <pose>2.0 4.05 0.3 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>4.0 0.1 0.6</size></box></geometry>
+          <material>
+            <ambient>0.6 0.55 0.45 1</ambient>
+            <diffuse>0.7 0.65 0.55 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>4.0 0.1 0.6</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="wall_left">
+      <static>true</static>
+      <link name="link">
+        <pose>-0.05 2.0 0.3 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>0.1 4.0 0.6</size></box></geometry>
+          <material>
+            <ambient>0.6 0.55 0.45 1</ambient>
+            <diffuse>0.7 0.65 0.55 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.1 4.0 0.6</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="wall_right">
+      <static>true</static>
+      <link name="link">
+        <pose>4.05 2.0 0.3 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>0.1 4.0 0.6</size></box></geometry>
+          <material>
+            <ambient>0.6 0.55 0.45 1</ambient>
+            <diffuse>0.7 0.65 0.55 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.1 4.0 0.6</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- ===== 5x5 Grid lines ===== -->
+    <model name="grid_lines">
+      <static>true</static>
+      <link name="link">
+        <!-- Horizontal lines at y = 0.0, 0.8, 1.6, 2.4, 3.2, 4.0 -->
+        <visual name="h_y0">
+          <pose>2.0 0.0 0.003 0 0 0</pose>
+          <geometry><box><size>4.0 0.015 0.005</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <visual name="h_y080">
+          <pose>2.0 0.8 0.003 0 0 0</pose>
+          <geometry><box><size>4.0 0.015 0.005</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <visual name="h_y160">
+          <pose>2.0 1.6 0.003 0 0 0</pose>
+          <geometry><box><size>4.0 0.015 0.005</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <visual name="h_y240">
+          <pose>2.0 2.4 0.003 0 0 0</pose>
+          <geometry><box><size>4.0 0.015 0.005</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <visual name="h_y320">
+          <pose>2.0 3.2 0.003 0 0 0</pose>
+          <geometry><box><size>4.0 0.015 0.005</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <visual name="h_y400">
+          <pose>2.0 4.0 0.003 0 0 0</pose>
+          <geometry><box><size>4.0 0.015 0.005</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <!-- Vertical lines at x = 0.0, 0.8, 1.6, 2.4, 3.2, 4.0 -->
+        <visual name="v_x0">
+          <pose>0.0 2.0 0.003 0 0 0</pose>
+          <geometry><box><size>0.015 4.0 0.005</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <visual name="v_x080">
+          <pose>0.8 2.0 0.003 0 0 0</pose>
+          <geometry><box><size>0.015 4.0 0.005</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <visual name="v_x160">
+          <pose>1.6 2.0 0.003 0 0 0</pose>
+          <geometry><box><size>0.015 4.0 0.005</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <visual name="v_x240">
+          <pose>2.4 2.0 0.003 0 0 0</pose>
+          <geometry><box><size>0.015 4.0 0.005</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <visual name="v_x320">
+          <pose>3.2 2.0 0.003 0 0 0</pose>
+          <geometry><box><size>0.015 4.0 0.005</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <visual name="v_x400">
+          <pose>4.0 2.0 0.003 0 0 0</pose>
+          <geometry><box><size>0.015 4.0 0.005</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ===== Buildings (4) ===== -->
+    <!-- Cell (col=2, row=2): center (1.2, 1.2) -->
+    <model name="building_22">
+      <static>true</static>
+      <link name="link">
+        <pose>1.2 1.2 0.3 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>0.5 0.5 0.6</size></box></geometry>
+          <material>
+            <ambient>0.7 0.1 0.1 1</ambient>
+            <diffuse>0.8 0.2 0.2 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.5 0.5 0.6</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Cell (col=2, row=4): center (1.2, 2.8) -->
+    <model name="building_24">
+      <static>true</static>
+      <link name="link">
+        <pose>1.2 2.8 0.3 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>0.5 0.5 0.6</size></box></geometry>
+          <material>
+            <ambient>0.7 0.1 0.1 1</ambient>
+            <diffuse>0.8 0.2 0.2 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.5 0.5 0.6</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Cell (col=4, row=2): center (2.8, 1.2) -->
+    <model name="building_42">
+      <static>true</static>
+      <link name="link">
+        <pose>2.8 1.2 0.3 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>0.5 0.5 0.6</size></box></geometry>
+          <material>
+            <ambient>0.7 0.1 0.1 1</ambient>
+            <diffuse>0.8 0.2 0.2 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.5 0.5 0.6</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Cell (col=4, row=4): center (2.8, 2.8) -->
+    <model name="building_44">
+      <static>true</static>
+      <link name="link">
+        <pose>2.8 2.8 0.3 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>0.5 0.5 0.6</size></box></geometry>
+          <material>
+            <ambient>0.7 0.1 0.1 1</ambient>
+            <diffuse>0.8 0.2 0.2 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.5 0.5 0.6</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- ===== Graph node markers (48 nodes from graph.yaml) ===== -->
+    <model name="node_markers">
+      <static>true</static>
+      <link name="link">
+        <!-- All coordinates from graph.yaml: nodes section -->
+        <visual name="node_13"><pose>0.2 0.8 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_14"><pose>0.2 1.6 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_17"><pose>0.2 2.4 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_18"><pose>0.2 3.2 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_23"><pose>0.6 0.8 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_24"><pose>0.6 1.6 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_27"><pose>0.6 2.4 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_28"><pose>0.6 3.2 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_31"><pose>0.8 0.2 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_32"><pose>0.8 0.6 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_35"><pose>0.8 1.8 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_36"><pose>0.8 2.2 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_39"><pose>0.8 3.4 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_41"><pose>1.6 0.2 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_42"><pose>1.6 0.6 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_45"><pose>1.6 1.8 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_46"><pose>1.6 2.2 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_49"><pose>1.6 3.4 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_53"><pose>1.8 0.8 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_54"><pose>1.8 1.6 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_57"><pose>1.8 2.4 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_58"><pose>1.8 3.2 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_63"><pose>2.2 0.8 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_64"><pose>2.2 1.6 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_67"><pose>2.2 2.4 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_68"><pose>2.2 3.2 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_71"><pose>2.4 0.2 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_72"><pose>2.4 0.6 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_75"><pose>2.4 1.8 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_76"><pose>2.4 2.2 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_79"><pose>2.4 3.4 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_81"><pose>3.2 0.2 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_82"><pose>3.2 0.6 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_85"><pose>3.2 1.8 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_86"><pose>3.2 2.2 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_89"><pose>3.2 3.4 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_93"><pose>3.4 0.8 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_94"><pose>3.4 1.6 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_97"><pose>3.4 2.4 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_98"><pose>3.4 3.2 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_103"><pose>3.8 0.8 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_104"><pose>3.8 1.6 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_107"><pose>3.8 2.4 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_108"><pose>3.8 3.2 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_310"><pose>0.8 3.8 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_410"><pose>1.6 3.8 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_710"><pose>2.4 3.8 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+        <visual name="node_810"><pose>3.2 3.8 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>
