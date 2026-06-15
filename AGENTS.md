@@ -9,32 +9,20 @@ stops at pickup zones, and finishes at the drop-off zone.
 - **Workspace**: `~/ros2_ws/frob_robot`
 - **ROS2 distro**: Jazzy
 - **Robot**: Differential drive (21×21 cm base, 2 wheels + 2 casters), Arduino Mega, YDLIDAR X4, MPU6050 IMU, USB camera
-- **PC build**: `colcon build --packages-skip ros2_mpu6050` (no I2C on PC)
-- **Simulation**: Gazebo Harmonic (`gz-sim8`) via `ros_gz_sim`, TurtleBot 4 model, custom city polygon world
+- **PC build**: `colcon build --symlink-install`
+- **Simulation**: Gazebo Harmonic (`gz-sim8`) via `ros_gz_sim`, TurtleBot 4 model (scaled ×0.453), custom city polygon world
 
 ---
 
-## Package Map (14 packages in `src/`)
+## Package Map (3 packages in `src/`)
 
 | Package | Type | Role | Status |
 |---------|------|------|--------|
-| `frob_interfaces` | CMake | Custom `.msg`, `.srv`, `.action` | Active |
+| `frob_interfaces` | CMake | Custom `.action` for motion commands | Active |
 | `frob_mission` | Python | **Graph planning, motion execution, visualization, simulation** | **Active** |
-| `frob_bringup` | Python | Master launch for all hardware drivers | Inactive (real robot only) |
-| `frob_control` | Python | Joystick teleop | Inactive |
-| `frob_description` | Python | URDF, TF tree, RViz configs | Inactive |
-| `frob_navigation` | Python | Nav2 / SLAM launch + configs | Inactive |
-| `frob_odometry` | Python | Wheel encoder odometry + EKF | Inactive (real robot only) |
 | `frob_perception` | Python | USB camera driver (V4L2 + compressed) | Inactive |
-| `keyboard_vel_control` | Python | Keyboard teleop (alternative) | Inactive |
-| `lidar_filter` | Python | Filters LiDAR points near robot body | Inactive |
-| `rf2o_laser_odometry` | CMake | Laser-based odometry (optional) | Inactive |
-| `ros2_arduino_bridge` | Python | Serial bridge to Arduino (motors/encoders) | Inactive (real robot only) |
-| `ros2_mpu6050` | CMake | MPU6050 IMU driver (I2C, Pi only) | Inactive (real robot only) |
-| `sllidar_ros2` | CMake | YDLIDAR X4 driver | Inactive (real robot only) |
 
 **Active packages for current development**: `frob_mission` (all logic), `frob_interfaces` (types).
-All other packages are hardware drivers or future features — not needed for path planning + simulation.
 
 ### External Dependencies (apt-installed)
 
@@ -99,32 +87,19 @@ Logic:
 
 ### Command Model — Arc-based Turns
 
-The robot moves along arcs (not rotate-in-place). Each edge in the graph is classified
-relative to the robot's current heading `h`:
+The robot moves along arcs (not rotate-in-place). Commands are **pre-annotated**
+in the graph — `graph_navigator` reads the command type directly from the node's
+`forward`/`right_turn`/`left_turn`/`u_turn` lists without heading-based classification.
 
-| Command | Condition (rel = h − edge_angle) | Value field | Effect |
-|---------|------|-------------|--------|
-| `forward` | rel ∈ [−30°, 30°] | distance (m) | Drive straight |
-| `right_turn` | rel ∈ [30°, 150°] | arc radius R (m) | CW quarter-circle arc of radius R. Displaces robot (R forward, R right), heading −90° |
-| `left_turn` | rel ∈ [−150°, −30°] | arc radius R (m) | CCW quarter-circle arc of radius R. Displaces robot (R forward, R left), heading +90° |
-| `u_turn` | rel ∈ [−105°, −75°] AND dy_local ≈ 0 | arc radius R (m) | CCW half-circle arc. Displaces (0, 2R left), heading +180° |
+| Command | Value (hardcoded) | Effect |
+|---------|-------------------|--------|
+| `forward` | 0.8 m | Drive straight one cell |
+| `right_turn` | 0.2 m radius | CW quarter-circle arc. Displaces robot (R forward, R right), heading −90° |
+| `left_turn` | 0.6 m radius | CCW quarter-circle arc. Displaces robot (R forward, R left), heading +90° |
+| `u_turn` | 0.2 m radius | CCW half-circle arc. Displaces (0, 2R left), heading +180° |
 
-Local frame components for R computation:
-```
-dx_local = dx * sin(h) - dy * cos(h)    # lateral (right positive)
-dy_local = dx * cos(h) + dy * sin(h)    # forward
-R = abs(dx_local)
-```
-
-**Heading tracking** in `_plan_motion`:
-- `forward` → heading unchanged
-- `right_turn` → heading −= π/2
-- `left_turn` → heading += π/2
-- `u_turn` → heading += π
-
-`initial_heading` is auto-computed from the first edge of the Dijkstra path
-(`atan2(dy, dx)` from `start_node` to the second node). The robot is expected to be
-placed facing the first edge direction at the start node.
+Values are defined in `FIXED_VALUES` dict in `graph_navigator.py` — not stored in `graph.yaml`.  
+Heading tracking in `_plan_motion` is used for fallback computation only.
 
 ### Parameters
 
@@ -134,7 +109,6 @@ placed facing the first edge direction at the start node.
 | `start_node` | `13` | `start_node:=` | Start graph node ID (23 in simulation — TB4 spawn) |
 | `target_node` | `108` | `target_node:=` | Destination graph node ID |
 | `initial_heading` | `0.0` | `initial_heading:=` | Override auto-computed heading (rad) |
-| `turn_threshold` | `0.08` | — | Min angle diff for turn detection (rad, ≈4.6°) |
 | `execute` | `True` | `execute:=False` | If False, publish path only (planning mode) |
 
 ### Topics
@@ -149,10 +123,13 @@ late-connecting subscribers (`graph_visualizer`) can catch it.
 
 ### Algorithm
 
-1. Loads graph from `config/graph.yaml` (48 nodes, 92 directed edges)
-2. Runs Dijkstra with Euclidean edge weights
+1. Loads graph from `config/graph.yaml` (48 nodes, 92 directed edges).
+   Each node has `forward`, `right_turn`, `left_turn`, `u_turn` lists of target nodes
+   with pre-computed command values.
+2. Runs Dijkstra on the combined adjacency (union of all four command fields)
 3. Publishes planned node IDs to `/path`
-4. Plans motion commands using the arc-based turn model (see above)
+4. Plans motion commands by looking up each edge in the node's command annotations
+   (reads `forward`/`right_turn`/etc. directly — no heading-based computation needed)
 5. If `execute=True`: waits for action server, sends all commands as a single action goal
 6. Logs "MISSION COMPLETE" on success, aborts on any failure
 
@@ -376,7 +353,7 @@ Pure city polygon without robot. Contains:
 
 ### `city_polygon_tb4.sdf` (`worlds/city_polygon_tb4.sdf`)
 Same as `city_polygon.sdf` + embedded TurtleBot 4 robot model:
-- `<scale>0.68 0.68 0.68</scale>` — scales TB4 from 31cm → ~21cm width
+- `<scale>0.453 0.453 0.453</scale>` — scales TB4 from 31cm → ~14cm width
 - `<pose>0.6 0.8 0.01 0 0 1.5708</pose>` — spawn at node 23 (0.6, 0.8), facing north
 - Full SDF generated from `nav2_minimal_tb4_description` URDF via `gz sdf -p`
 
@@ -385,6 +362,28 @@ Same as `city_polygon.sdf` + embedded TurtleBot 4 robot model:
 ## Navigation Graph
 
 File: `src/frob_mission/config/graph.yaml`. **48 nodes, 92 directed edges**.
+
+Each node stores its coordinates and four command-annotated adjacency lists:
+
+```yaml
+nodes:
+  23:
+    x: 0.6
+    y: 0.8
+    forward: [24]
+    right_turn: []
+    left_turn: [13]
+    u_turn: []
+```
+
+- `forward` — straight-line movement
+- `right_turn` — CW quarter-circle arc
+- `left_turn` — CCW quarter-circle arc
+- `u_turn` — CCW half-circle arc
+
+Edges are pre-annotated with command types. The motion planner reads the command
+directly from the graph without heading-based classification. Values are defined
+in `FIXED_VALUES` dict in `graph_navigator.py` — not stored in `graph.yaml`.
 
 Coordinate system: meters from left-bottom corner (0,0) of 4×4m polygon.
 
@@ -453,9 +452,9 @@ Special: IDs ending in `10` (e.g., `310`) → Y=10 (3.8m). Otherwise last digit 
 ## Build & Run
 
 ```bash
-# Build (PC, skip I2C):
+# Build (PC):
 cd ~/ros2_ws
-colcon build --packages-skip ros2_mpu6050 --symlink-install
+colcon build --symlink-install
 source install/setup.zsh
 
 # Show planned path in RViz (no robot):

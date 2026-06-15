@@ -11,6 +11,14 @@ from std_msgs.msg import Int32MultiArray
 from ament_index_python.packages import get_package_share_directory
 
 
+FIXED_VALUES = {
+    'forward': 0.8,
+    'right_turn': 0.2,
+    'left_turn': 0.6,
+    'u_turn': 0.2,
+}
+
+
 class GraphNavigator(Node):
     def __init__(self):
         super().__init__('graph_navigator')
@@ -29,7 +37,7 @@ class GraphNavigator(Node):
 
         start_node = self.get_parameter('start_node').value
         target_node = self.get_parameter('target_node').value
-        self.initial_heading = self.get_parameter('initial_heading').value
+        self.initial_heading_param = self.get_parameter('initial_heading').value
         self.turn_threshold = self.get_parameter('turn_threshold').value
         self.execute = self.get_parameter('execute').value
 
@@ -37,15 +45,23 @@ class GraphNavigator(Node):
             config = yaml.safe_load(f)
 
         self.nodes = {}
-        for node_id, coords in config['nodes'].items():
-            self.nodes[int(node_id)] = (coords['x'], coords['y'])
-
         self.edges = {}
-        for src, dst in config['edges']:
-            s, d = int(src), int(dst)
-            if s not in self.edges:
-                self.edges[s] = []
-            self.edges[s].append(d)
+        self.cmd_lookup = {}
+
+        for node_id, entry in config['nodes'].items():
+            nid = int(node_id)
+            self.nodes[nid] = (entry['x'], entry['y'])
+            self.edges[nid] = []
+            self.cmd_lookup[nid] = {}
+
+            for cmd in ('forward', 'right_turn', 'left_turn', 'u_turn'):
+                targets = entry.get(cmd, [])
+                if targets is None:
+                    targets = []
+                for t in targets:
+                    tid = t if isinstance(t, int) else (t['node'] if isinstance(t, dict) else int(t))
+                    self.edges[nid].append(tid)
+                    self.cmd_lookup[nid][tid] = cmd
 
         if start_node < 0:
             start_node = config.get('start_node', 13)
@@ -55,9 +71,9 @@ class GraphNavigator(Node):
         self.start_node = start_node
         self.target_node = target_node
 
+        edge_count = sum(len(v) for v in self.edges.values())
         self.get_logger().info(
-            f'Graph loaded: {len(self.nodes)} nodes, '
-            f'{sum(len(v) for v in self.edges.values())} edges'
+            f'Graph loaded: {len(self.nodes)} nodes, {edge_count} edges'
         )
         self.get_logger().info(
             f'Start: {self.start_node}, Target: {self.target_node}, '
@@ -97,9 +113,19 @@ class GraphNavigator(Node):
         goal_msg.commands = [cmd for cmd, _ in self._planned_commands]
         goal_msg.values = [float(val) for _, val in self._planned_commands]
 
+        self.get_logger().info('=== MISSION PLAN ===')
+        path_str = ' -> '.join(str(n) for n in self._planned_path)
+        self.get_logger().info(f'Path: {path_str}')
+        for i, (cmd, val) in enumerate(self._planned_commands):
+            self.get_logger().info(
+                f'  Step {i + 1}/{len(self._planned_commands)}: {cmd}({round(val, 3)})'
+            )
+        total_dist = sum(v for c, v in self._planned_commands if c == 'forward')
+        turns = [c for c, _ in self._planned_commands if c != 'forward']
         self.get_logger().info(
-            f'Sending mission: {len(goal_msg.commands)} commands'
+            f'Total: {total_dist:.1f} m, {len(turns)} turns'
         )
+        self.get_logger().info('=====================')
 
         send_future = self._action_client.send_goal_async(goal_msg)
 
@@ -144,20 +170,22 @@ class GraphNavigator(Node):
         msg.data = [int(n) for n in path]
         self.path_pub.publish(msg)
 
-        if len(path) >= 2:
+        heading = self.initial_heading_param
+        if self.initial_heading_param == 0.0 and len(path) >= 2:
             ax, ay = self.nodes[path[0]]
             bx, by = self.nodes[path[1]]
-            self.initial_heading = math.atan2(by - ay, bx - ax)
+            heading = math.atan2(by - ay, bx - ax)
             self.get_logger().info(
-                f'Auto initial_heading={self.initial_heading:.3f} rad '
+                f'Auto initial_heading={heading:.3f} rad '
                 f'(from first edge {path[0]}->{path[1]})'
             )
 
-        commands = self._plan_motion(path)
-        cmd_str = ', '.join(
-            f'{c}({round(v, 3)})' for c, v in commands
-        )
-        self.get_logger().info(f'Commands ({len(commands)}): {cmd_str}')
+        commands = self._plan_motion(path, heading)
+        self.get_logger().info(f'Commands ({len(commands)}):')
+        for i, (cmd, val) in enumerate(commands):
+            self.get_logger().info(
+                f'  Step {i + 1}/{len(commands)}: {cmd}({round(val, 3)})'
+            )
 
         self._planned_path = path
         self._planned_commands = commands
@@ -207,70 +235,60 @@ class GraphNavigator(Node):
         path.reverse()
         return path
 
-    def _plan_motion(self, path):
+    def _plan_motion(self, path, heading):
         commands = []
-        heading = self.initial_heading
 
         for i in range(len(path) - 1):
             a = path[i]
             b = path[i + 1]
-            ax, ay = self.nodes[a]
-            bx, by = self.nodes[b]
 
-            dx = bx - ax
-            dy = by - ay
-            edge_angle = math.atan2(dy, dx)
+            cmd, val = self._get_command(a, b, heading)
 
-            cos_h = math.cos(heading)
-            sin_h = math.sin(heading)
-            dx_local = dx * sin_h - dy * cos_h
-            dy_local = dx * cos_h + dy * sin_h
-
-            rel = self._normalize(heading - edge_angle)
-
-            cmd, val = self._classify_command(rel, dx_local, dy_local, dx, dy)
             commands.append((cmd, val))
 
             if cmd == 'forward':
                 pass
             elif cmd == 'right_turn':
-                heading = self._normalize(heading - math.pi / 2)
+                heading = math.atan2(
+                    math.sin(heading - math.pi / 2),
+                    math.cos(heading - math.pi / 2))
             elif cmd == 'left_turn':
-                heading = self._normalize(heading + math.pi / 2)
+                heading = math.atan2(
+                    math.sin(heading + math.pi / 2),
+                    math.cos(heading + math.pi / 2))
             elif cmd == 'u_turn':
-                heading = self._normalize(heading + math.pi)
+                heading = math.atan2(
+                    math.sin(heading + math.pi),
+                    math.cos(heading + math.pi))
 
         return commands
 
-    def _classify_command(self, rel, dx_local, dy_local, dx, dy):
+    def _get_command(self, a, b, heading):
+        cmd = self.cmd_lookup.get(a, {}).get(b)
+        if cmd is not None:
+            return (cmd, FIXED_VALUES[cmd])
+
+        # Fallback — compute command from heading
+        ax, ay = self.nodes[a]
+        bx, by = self.nodes[b]
+        dx = bx - ax
+        dy = by - ay
+        edge_angle = math.atan2(dy, dx)
+        rel = math.atan2(
+            math.sin(heading - edge_angle),
+            math.cos(heading - edge_angle))
         rel_deg = math.degrees(rel)
 
-        if -30.0 <= rel_deg <= 30.0:
-            dist = math.sqrt(dx * dx + dy * dy)
-            return ('forward', dist)
+        if -30 <= rel_deg <= 30:
+            return ('forward', FIXED_VALUES['forward'])
+        if 30 <= rel_deg <= 150:
+            return ('right_turn', FIXED_VALUES['right_turn'])
+        if -150 <= rel_deg <= -30:
+            return ('left_turn', FIXED_VALUES['left_turn'])
+        if abs(rel_deg) >= 150:
+            return ('u_turn', FIXED_VALUES['u_turn'])
 
-        if -105.0 <= rel_deg <= -75.0 and abs(dy_local) < 1e-6:
-            r = abs(dx_local)
-            return ('u_turn', r)
-
-        if 30.0 <= rel_deg <= 150.0:
-            r = abs(dx_local)
-            return ('right_turn', r)
-
-        if -150.0 <= rel_deg <= -30.0:
-            r = abs(dx_local)
-            return ('left_turn', r)
-
-        dist = math.sqrt(dx * dx + dy * dy)
-        return ('forward', dist)
-
-    @staticmethod
-    def _normalize(angle):
-        while angle > math.pi:
-            angle -= 2.0 * math.pi
-        while angle < -math.pi:
-            angle += 2.0 * math.pi
-        return angle
+        return ('forward', FIXED_VALUES['forward'])
 
 
 def main(args=None):

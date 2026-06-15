@@ -42,15 +42,19 @@ class GraphVisualizer(Node):
             config = yaml.safe_load(f)
 
         self.nodes = {}
-        for node_id, coords in config['nodes'].items():
-            self.nodes[int(node_id)] = (coords['x'], coords['y'])
-
         self.edges = {}
-        for src, dst in config['edges']:
-            s, d = int(src), int(dst)
-            if s not in self.edges:
-                self.edges[s] = []
-            self.edges[s].append(d)
+
+        for node_id, entry in config['nodes'].items():
+            nid = int(node_id)
+            self.nodes[nid] = (entry['x'], entry['y'])
+            self.edges[nid] = []
+            for cmd in ('forward', 'right_turn', 'left_turn', 'u_turn'):
+                targets = entry.get(cmd, [])
+                if targets is None:
+                    targets = []
+                for t in targets:
+                    tid = t['node'] if isinstance(t, dict) else int(t)
+                    self.edges[nid].append(tid)
 
         self.publish_rate = self.get_parameter('publish_rate').value
         self.frame_id = self.get_parameter('frame_id').value

@@ -315,7 +315,7 @@
   
 <!-- ===== TurtleBot4 robot (scaled, spawned at node 23) ===== -->
     <model name='turtlebot4'>
-        <scale>0.68 0.68 0.68</scale>
+        <scale>0.453 0.453 0.453</scale>
         <pose>0.6 0.8 0.01 0 0 1.5708</pose>
         <link name='base_link'>
           <inertial>
