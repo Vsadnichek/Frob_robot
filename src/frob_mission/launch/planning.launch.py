@@ -12,19 +12,9 @@ def generate_launch_description():
 
     start_node = LaunchConfiguration('start_node', default='13')
     target_node = LaunchConfiguration('target_node', default='108')
-    initial_heading = LaunchConfiguration('initial_heading', default='0.0')
 
     start_arg = DeclareLaunchArgument('start_node', default_value='13')
     target_arg = DeclareLaunchArgument('target_node', default_value='108')
-    heading_arg = DeclareLaunchArgument('initial_heading', default_value='0.0')
-
-    motion_executor = Node(
-        package='frob_mission',
-        executable='motion_executor',
-        name='motion_executor',
-        output='screen',
-        parameters=[config_file],
-    )
 
     graph_navigator = Node(
         package='frob_mission',
@@ -34,7 +24,7 @@ def generate_launch_description():
         parameters=[config_file, {
             'start_node': start_node,
             'target_node': target_node,
-            'initial_heading': initial_heading,
+            'execute': False,
         }],
     )
 
@@ -48,8 +38,6 @@ def generate_launch_description():
     return LaunchDescription([
         start_arg,
         target_arg,
-        heading_arg,
-        motion_executor,
         graph_navigator,
         graph_visualizer,
     ])

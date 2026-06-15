@@ -145,6 +145,14 @@ def generate_launch_description():
             'initial_heading': initial_heading,
         }])
 
+    graph_visualizer_node = Node(
+        condition=with_mission,
+        package='frob_mission',
+        executable='graph_visualizer',
+        name='graph_visualizer',
+        output='screen',
+        parameters=[{'use_sim_time': True}])
+
     return LaunchDescription([
         declare_mode,
         declare_world,
@@ -160,4 +168,5 @@ def generate_launch_description():
         relay_imu,
         motion_executor_node,
         graph_navigator_node,
+        graph_visualizer_node,
     ])

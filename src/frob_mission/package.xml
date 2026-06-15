@@ -13,6 +13,8 @@
   <depend>sensor_msgs</depend>
   <depend>frob_interfaces</depend>
   <depend>numpy</depend>
+  <depend>visualization_msgs</depend>
+  <depend>std_msgs</depend>
   <exec_depend>ros2launch</exec_depend>
 
   <export>

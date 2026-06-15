@@ -13,6 +13,7 @@ setup(
         ('share/' + package_name + '/config', ['config/graph.yaml', 'config/mission_params.yaml']),
         ('share/' + package_name + '/launch', [
             'launch/mission.launch.py',
+            'launch/planning.launch.py',
             'launch/simulation.launch.py',
         ]),
         ('share/' + package_name + '/worlds', [
@@ -29,6 +30,7 @@ setup(
     entry_points={
         'console_scripts': [
             'graph_navigator = frob_mission.graph_navigator:main',
+            'graph_visualizer = frob_mission.graph_visualizer:main',
             'motion_executor = frob_mission.motion_executor:main',
             'topic_relay = frob_mission.topic_relay:main',
         ],

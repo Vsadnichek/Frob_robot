@@ -69,21 +69,25 @@ class MotionExecutor(Node):
         command = goal_handle.request.command
         value = goal_handle.request.value
 
-        self.get_logger().info(f'Executing: {command} {value:.3f}')
-
         feedback_msg = ExecuteMotion.Feedback()
+        self.get_logger().info(f'Executing: {command}({value:.3f})')
 
         if command == 'forward':
-            result = self._execute_forward(value, goal_handle, feedback_msg)
-        elif command == 'rotate':
-            result = self._execute_rotate(value, goal_handle, feedback_msg)
-        else:
-            self.get_logger().error(f'Unknown command: {command}')
-            goal_handle.abort()
-            result = ExecuteMotion.Result()
-            result.success = False
-            return result
+            return self._execute_forward(value, goal_handle, feedback_msg)
 
+        if command == 'right_turn':
+            return self._execute_arc(-math.pi / 2, value, goal_handle, feedback_msg)
+
+        if command == 'left_turn':
+            return self._execute_arc(math.pi / 2, value, goal_handle, feedback_msg)
+
+        if command == 'u_turn':
+            return self._execute_arc(math.pi, value, goal_handle, feedback_msg)
+
+        self.get_logger().error(f'Unknown command: {command}')
+        goal_handle.abort()
+        result = ExecuteMotion.Result()
+        result.success = False
         return result
 
     def _execute_forward(self, distance, goal_handle, feedback_msg):
@@ -137,9 +141,7 @@ class MotionExecutor(Node):
         self.get_logger().info('Forward complete')
         return result
 
-    def _execute_rotate(self, angle, goal_handle, feedback_msg):
-        rate = self.create_rate(50)
-
+    def _ensure_yaw(self, rate):
         while not self.yaw_initialized and rclpy.ok():
             if self.odom is not None:
                 self.yaw_initialized = True
@@ -147,16 +149,25 @@ class MotionExecutor(Node):
                 break
             self.get_logger().info('Waiting for odometry/IMU...', throttle_duration_sec=1.0)
             rate.sleep()
+        return rclpy.ok() and self.yaw_initialized
 
-        if not rclpy.ok():
+    def _execute_arc(self, angle, radius, goal_handle, feedback_msg):
+        rate = self.create_rate(50)
+
+        if not self._ensure_yaw(rate):
             goal_handle.abort()
             result = ExecuteMotion.Result()
             result.success = False
             return result
 
-        target_yaw = self._normalize(self.yaw + angle)
-        rate = self.create_rate(50)
+        start_yaw = self.yaw
+        target_yaw = self._normalize(start_yaw + angle)
 
+        angular_vel = self.forward_speed / radius
+        if angle < 0:
+            angular_vel = -angular_vel
+
+        rate = self.create_rate(50)
         while rclpy.ok():
             if goal_handle.is_cancel_requested:
                 self._stop()
@@ -166,6 +177,7 @@ class MotionExecutor(Node):
                 return result
 
             error = self._normalize(target_yaw - self.yaw)
+            abs_angle = abs(angle)
             progress = 1.0 - abs(error / angle) if abs(angle) > 0.01 else 1.0
             feedback_msg.progress = min(1.0, max(0.0, progress))
             goal_handle.publish_feedback(feedback_msg)
@@ -173,13 +185,9 @@ class MotionExecutor(Node):
             if abs(error) < self.rotate_tolerance:
                 break
 
-            angular = np.clip(self.kp_angular * error,
-                              -self.rotate_speed, self.rotate_speed)
-            if abs(angular) < 0.1:
-                angular = 0.1 * (1 if error > 0 else -1)
-
             twist = Twist()
-            twist.angular.z = angular
+            twist.linear.x = self.forward_speed
+            twist.angular.z = angular_vel
             self.cmd_vel_pub.publish(twist)
             rate.sleep()
 
@@ -187,7 +195,7 @@ class MotionExecutor(Node):
         goal_handle.succeed()
         result = ExecuteMotion.Result()
         result.success = True
-        self.get_logger().info('Rotate complete')
+        self.get_logger().info('Arc complete')
         return result
 
     def _stop(self):
