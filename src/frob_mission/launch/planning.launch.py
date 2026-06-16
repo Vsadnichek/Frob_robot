@@ -34,6 +34,9 @@ def generate_launch_description():
         executable='graph_visualizer',
         name='graph_visualizer',
         output='screen',
+        parameters=[{
+            'start_node': start_node,
+        }],
     )
 
     rviz = Node(

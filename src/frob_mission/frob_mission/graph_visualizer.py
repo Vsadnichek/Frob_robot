@@ -32,6 +32,7 @@ class GraphVisualizer(Node):
         self.declare_parameter('graph_file', '')
         self.declare_parameter('publish_rate', 1.0)
         self.declare_parameter('frame_id', 'odom')
+        self.declare_parameter('start_node', -1)
 
         graph_file = self.get_parameter('graph_file').value
         if not graph_file:
@@ -55,6 +56,32 @@ class GraphVisualizer(Node):
                 for t in targets:
                     tid = t['node'] if isinstance(t, dict) else int(t)
                     self.edges[nid].append(tid)
+
+        start_node = self.get_parameter('start_node').value
+        if start_node < 0:
+            start_node = config.get('start_node', 13)
+        self._start_node = int(start_node)
+
+        node_data = config['nodes'].get(self._start_node)
+        if node_data:
+            self._origin_x = node_data['x']
+            self._origin_y = node_data['y']
+            self._origin_heading = node_data.get('suggested_heading', 0.0) + math.pi / 2
+        else:
+            self._origin_x = 0.0
+            self._origin_y = 0.0
+            self._origin_heading = 0.0
+            self.get_logger().warn(
+                f'Start node {self._start_node} not found in graph, '
+                f'using (0,0,0) as odom origin')
+
+        self._cos_h = math.cos(-self._origin_heading)
+        self._sin_h = math.sin(-self._origin_heading)
+
+        self.get_logger().info(
+            f'Odom origin: world ({self._origin_x:.2f}, {self._origin_y:.2f}), '
+            f'heading {math.degrees(self._origin_heading):.1f}° '
+            f'(user: {math.degrees(node_data.get("suggested_heading", 0.0)):.1f}°)')
 
         self.publish_rate = self.get_parameter('publish_rate').value
         self.frame_id = self.get_parameter('frame_id').value
@@ -117,8 +144,16 @@ class GraphVisualizer(Node):
 
         self.marker_pub.publish(marker_array)
 
+    def _world_to_odom(self, wx, wy):
+        dx = wx - self._origin_x
+        dy = wy - self._origin_y
+        ox = self._cos_h * dx - self._sin_h * dy
+        oy = self._sin_h * dx + self._cos_h * dy
+        return ox, oy
+
     def _add_node_markers(self, array, stamp, path_set, start_id, target_id):
         for node_id, (x, y) in self.nodes.items():
+            ox, oy = self._world_to_odom(x, y)
             marker = Marker()
             marker.header.frame_id = self.frame_id
             marker.header.stamp = stamp
@@ -127,8 +162,8 @@ class GraphVisualizer(Node):
             marker.type = Marker.SPHERE
             marker.action = Marker.ADD
 
-            marker.pose.position.x = x
-            marker.pose.position.y = y
+            marker.pose.position.x = ox
+            marker.pose.position.y = oy
             marker.pose.position.z = 0.02
 
             s = 0.06
@@ -149,6 +184,7 @@ class GraphVisualizer(Node):
 
     def _add_label_markers(self, array, stamp, path_set, start_id, target_id):
         for node_id, (x, y) in self.nodes.items():
+            ox, oy = self._world_to_odom(x, y)
             marker = Marker()
             marker.header.frame_id = self.frame_id
             marker.header.stamp = stamp
@@ -157,8 +193,8 @@ class GraphVisualizer(Node):
             marker.type = Marker.TEXT_VIEW_FACING
             marker.action = Marker.ADD
 
-            marker.pose.position.x = x
-            marker.pose.position.y = y
+            marker.pose.position.x = ox
+            marker.pose.position.y = oy
             marker.pose.position.z = 0.09
             marker.scale.z = 0.07
 
@@ -181,6 +217,8 @@ class GraphVisualizer(Node):
             for dst in dsts:
                 sx, sy = self.nodes[src]
                 dx, dy = self.nodes[dst]
+                sox, soy = self._world_to_odom(sx, sy)
+                dox, doy = self._world_to_odom(dx, dy)
 
                 marker = Marker()
                 marker.header.frame_id = self.frame_id
@@ -192,8 +230,8 @@ class GraphVisualizer(Node):
                 marker.action = Marker.ADD
 
                 marker.points = [
-                    Point(x=sx, y=sy, z=0.01),
-                    Point(x=dx, y=dy, z=0.01),
+                    Point(x=sox, y=soy, z=0.01),
+                    Point(x=dox, y=doy, z=0.01),
                 ]
 
                 marker.scale.x = 0.01

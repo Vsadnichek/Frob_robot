@@ -18,6 +18,8 @@ FIXED_VALUES = {
     'u_turn': 0.2,
 }
 
+HEADING_OFFSET = math.pi / 2
+
 
 class GraphNavigator(Node):
     def __init__(self):
@@ -179,10 +181,10 @@ class GraphNavigator(Node):
         if self.initial_heading_param == 0.0:
             start_nid = path[0]
             if start_nid in self._suggested_headings:
-                heading = self._suggested_headings[start_nid]
+                heading = self._suggested_headings[start_nid] + HEADING_OFFSET
                 self.get_logger().info(
                     f'Auto initial_heading={heading:.3f} rad '
-                    f'(suggested for node {start_nid})'
+                    f'(from suggested for node {start_nid})'
                 )
             elif len(path) >= 2:
                 ax, ay = self.nodes[path[0]]
@@ -192,6 +194,8 @@ class GraphNavigator(Node):
                     f'Auto initial_heading={heading:.3f} rad '
                     f'(from first edge {path[0]}->{path[1]})'
                 )
+        else:
+            heading = heading + HEADING_OFFSET
 
         commands = self._plan_motion(path, heading)
         self.get_logger().info(f'Commands ({len(commands)}):')

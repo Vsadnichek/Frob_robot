@@ -163,7 +163,10 @@ def generate_launch_description():
         executable='graph_visualizer',
         name='graph_visualizer',
         output='screen',
-        parameters=[{'use_sim_time': True}])
+        parameters=[{
+            'use_sim_time': True,
+            'start_node': start_node,
+        }])
 
     # ---- RViz2 (mission mode only) ----
     rviz_config = os.path.join(pkg_frob_mission, 'config', 'planning.rviz')

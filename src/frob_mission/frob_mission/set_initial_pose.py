@@ -29,7 +29,7 @@ class SetInitialPose(Node):
 
         self._x = node_data['x']
         self._y = node_data['y']
-        self._heading = node_data.get('suggested_heading', 0.0)
+        self._heading = node_data.get('suggested_heading', 0.0) + math.pi / 2
         self._retry_count = 0
         self._max_retries = 30
         self._timer = None
