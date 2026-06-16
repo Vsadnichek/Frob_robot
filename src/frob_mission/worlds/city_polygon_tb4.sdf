@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <sdf version="1.7">
   <world name="city_polygon">
     <physics type="ode">
       <max_step_size>0.003</max_step_size>
       <real_time_factor>1.0</real_time_factor>
     </physics>
-    <plugin name="gz::sim::systems::Physics" filename="gz-sim-physics-system"/>
-    <plugin name="gz::sim::systems::UserCommands" filename="gz-sim-user-commands-system"/>
-    <plugin name="gz::sim::systems::SceneBroadcaster" filename="gz-sim-scene-broadcaster-system"/>
-    <plugin name="gz::sim::systems::Contact" filename="gz-sim-contact-system"/>
+    <plugin name="gz::sim::systems::Physics" filename="gz-sim-physics-system" />
+    <plugin name="gz::sim::systems::UserCommands" filename="gz-sim-user-commands-system" />
+    <plugin name="gz::sim::systems::SceneBroadcaster" filename="gz-sim-scene-broadcaster-system" />
+    <plugin name="gz::sim::systems::Contact" filename="gz-sim-contact-system" />
 
     <scene>
       <ambient>1 1 1 1</ambient>
@@ -17,7 +17,7 @@
       <grid>false</grid>
     </scene>
 
-    <!-- ===== Ground plane ===== -->
+    
     <model name="ground_plane">
       <static>true</static>
       <pose>2.0 2.0 0.0 0 0 0</pose>
@@ -45,7 +45,7 @@
       </link>
     </model>
 
-    <!-- ===== External walls (4) ===== -->
+    
     <model name="wall_bottom">
       <static>true</static>
       <link name="link">
@@ -114,11 +114,11 @@
       </link>
     </model>
 
-    <!-- ===== 5x5 Grid lines ===== -->
+    
     <model name="grid_lines">
       <static>true</static>
       <link name="link">
-        <!-- Horizontal lines at y = 0.0, 0.8, 1.6, 2.4, 3.2, 4.0 -->
+        
         <visual name="h_y0">
           <pose>2.0 0.0 0.003 0 0 0</pose>
           <geometry><box><size>4.0 0.015 0.005</size></box></geometry>
@@ -149,7 +149,7 @@
           <geometry><box><size>4.0 0.015 0.005</size></box></geometry>
           <material><ambient>0.8 0.8 0.8 1</ambient></material>
         </visual>
-        <!-- Vertical lines at x = 0.0, 0.8, 1.6, 2.4, 3.2, 4.0 -->
+        
         <visual name="v_x0">
           <pose>0.0 2.0 0.003 0 0 0</pose>
           <geometry><box><size>0.015 4.0 0.005</size></box></geometry>
@@ -183,8 +183,8 @@
       </link>
     </model>
 
-    <!-- ===== Buildings (4) ===== -->
-    <!-- Cell (col=2, row=2): center (1.2, 1.2) -->
+    
+    
     <model name="building_22">
       <static>true</static>
       <link name="link">
@@ -202,7 +202,7 @@
       </link>
     </model>
 
-    <!-- Cell (col=2, row=4): center (1.2, 2.8) -->
+    
     <model name="building_24">
       <static>true</static>
       <link name="link">
@@ -220,7 +220,7 @@
       </link>
     </model>
 
-    <!-- Cell (col=4, row=2): center (2.8, 1.2) -->
+    
     <model name="building_42">
       <static>true</static>
       <link name="link">
@@ -238,7 +238,7 @@
       </link>
     </model>
 
-    <!-- Cell (col=4, row=4): center (2.8, 2.8) -->
+    
     <model name="building_44">
       <static>true</static>
       <link name="link">
@@ -256,11 +256,11 @@
       </link>
     </model>
 
-    <!-- ===== Graph node markers (48 nodes from graph.yaml) ===== -->
+    
     <model name="node_markers">
       <static>true</static>
       <link name="link">
-        <!-- All coordinates from graph.yaml: nodes section -->
+        
         <visual name="node_13"><pose>0.2 0.8 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
         <visual name="node_14"><pose>0.2 1.6 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
         <visual name="node_17"><pose>0.2 2.4 0.008 0 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.008</length></cylinder></geometry><material><ambient>0.1 0.8 0.1 1</ambient></material></visual>
@@ -313,55 +313,54 @@
     </model>
 
   
-<!-- ===== TurtleBot4 robot (scaled, spawned at node 23) ===== -->
-    <model name='turtlebot4'>
-        <scale>0.453 0.453 0.453</scale>
+
+    <model name="turtlebot4">
         <pose>0.6 0.8 0.01 0 0 1.5708</pose>
-        <link name='base_link'>
+        <link name="base_link">
           <inertial>
-            <pose>0.021662306010537251 0 0.076455324181928963 0 0 0</pose>
-            <mass>2.7900999999999998</mass>
+            <pose>0.009813024622773375 0.0 0.034634261854413824 0 0 0</pose>
+            <mass>0.2593667947977</mass>
             <inertia>
-              <ixx>0.02058138776665927</ixx>
-              <ixy>-1.3313148e-06</ixy>
-              <ixz>0.00019985470845578551</ixz>
-              <iyy>0.018845258876082391</iyy>
-              <iyz>5.6439879000000002e-06</iyz>
-              <izz>0.037346416003323127</izz>
+              <ixx>0.0003926138945793126</ixx>
+              <ixy>-2.5396377273733327e-08</ixy>
+              <ixz>3.8124608664119943e-06</ixz>
+              <iyy>0.00035949521798913384</iyy>
+              <iyz>1.07665629524126e-07</iyz>
+              <izz>0.000712426295149867</izz>
             </inertia>
           </inertial>
-          <collision name='base_link_fixed_joint_lump__create3_base_collision_collision'>
-            <pose>0 0 0.049200000000000008 0 0 1.5707963267948959</pose>
+          <collision name="base_link_fixed_joint_lump__create3_base_collision_collision">
+            <pose>0.0 0.0 0.022287600000000005 0 0 1.5707963267948959</pose>
             <geometry>
               <cylinder>
-                <length>0.059999999999999998</length>
-                <radius>0.16400000000000001</radius>
+                <length>0.02718</length>
+                <radius>0.07429200000000001</radius>
               </cylinder>
             </geometry>
           </collision>
-          <collision name='base_link_fixed_joint_lump__bumper_collision_1'>
-            <pose>0 0 0.039200000000000013 0 0 0</pose>
+          <collision name="base_link_fixed_joint_lump__bumper_collision_1">
+            <pose>0.0 0.0 0.017757600000000005 0 0 0</pose>
             <geometry>
               <mesh>
-                <scale>1 1 1</scale>
+                <scale>0.453 0.453 0.453</scale>
                 <uri>model://nav2_minimal_tb4_description/meshes/bumper_collision.dae</uri>
               </mesh>
             </geometry>
           </collision>
-          <collision name='base_link_fixed_joint_lump__shell_collision_collision_2'>
-            <pose>0 0 0.094200000000000006 0 0 0</pose>
+          <collision name="base_link_fixed_joint_lump__shell_collision_collision_2">
+            <pose>0.0 0.0 0.042672600000000005 0 0 0</pose>
             <geometry>
               <mesh>
-                <scale>1 1 1</scale>
+                <scale>0.453 0.453 0.453</scale>
                 <uri>model://nav2_minimal_tb4_description/meshes/shell_collision.dae</uri>
               </mesh>
             </geometry>
           </collision>
-          <visual name='base_link_visual'>
-            <pose>0 0 0.039200000000000013 0 0 1.5707963267948959</pose>
+          <visual name="base_link_visual">
+            <pose>0.0 0.0 0.017757600000000005 0 0 1.5707963267948959</pose>
             <geometry>
               <mesh>
-                <scale>1 1 1</scale>
+                <scale>0.453 0.453 0.453</scale>
                 <uri>model://nav2_minimal_tb4_description/meshes/body_visual.dae</uri>
               </mesh>
             </geometry>
@@ -371,28 +370,28 @@
               <emissive>0 0 0 1</emissive>
             </material>
           </visual>
-          <visual name='base_link_fixed_joint_lump__base_footprint_visual_1'>
-            <pose>0 0 0 0 0 0</pose>
+          <visual name="base_link_fixed_joint_lump__base_footprint_visual_1">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <box>
-                <size>0.001 0.001 0.001</size>
+                <size>0.000453 0.000453 0.000453</size>
               </box>
             </geometry>
           </visual>
-          <visual name='base_link_fixed_joint_lump__bumper_visual_2'>
-            <pose>0 0 0.039200000000000013 0 0 0</pose>
+          <visual name="base_link_fixed_joint_lump__bumper_visual_2">
+            <pose>0.0 0.0 0.017757600000000005 0 0 0</pose>
             <geometry>
               <mesh>
-                <scale>1 1 1</scale>
+                <scale>0.453 0.453 0.453</scale>
                 <uri>model://nav2_minimal_tb4_description/meshes/bumper_visual.dae</uri>
               </mesh>
             </geometry>
           </visual>
-          <visual name='base_link_fixed_joint_lump__shell_link_visual_3'>
-            <pose>0 0 0.094200000000000006 1.5707963267948959 -5.5511151231257827e-17 1.5707963267948959</pose>
+          <visual name="base_link_fixed_joint_lump__shell_link_visual_3">
+            <pose>0.0 0.0 0.042672600000000005 1.5707963267948959 -5.5511151231257827e-17 1.5707963267948959</pose>
             <geometry>
               <mesh>
-                <scale>1 1 1</scale>
+                <scale>0.453 0.453 0.453</scale>
                 <uri>model://nav2_minimal_tb4_description/meshes/shell.dae</uri>
               </mesh>
             </geometry>
@@ -403,8 +402,8 @@
             </material>
           </visual>
         </link>
-        <joint name='front_caster_joint' type='fixed'>
-          <pose relative_to='base_link'>0.125 0 0.013899999999999999 -1.5707963267948959 0 0</pose>
+        <joint name="front_caster_joint" type="fixed">
+          <pose relative_to="base_link">0.056625 0.0 0.0062967 -1.5707963267948959 0 0</pose>
           <parent>base_link</parent>
           <child>front_caster_link</child>
           <axis>
@@ -427,25 +426,25 @@
             </ode>
           </physics>
         </joint>
-        <link name='front_caster_link'>
-          <pose relative_to='front_caster_joint'>0 0 0 0 0 0</pose>
+        <link name="front_caster_link">
+          <pose relative_to="front_caster_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.01</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.00092959677</mass>
             <inertia>
-              <ixx>3.9999999999999998e-07</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>3.9999999999999998e-07</iyy>
-              <iyz>0</iyz>
-              <izz>3.9999999999999998e-07</izz>
+              <ixx>7.630464942997201e-09</ixx>
+              <ixy>0.0</ixy>
+              <ixz>0.0</ixz>
+              <iyy>7.630464942997201e-09</iyy>
+              <iyz>0.0</iyz>
+              <izz>7.630464942997201e-09</izz>
             </inertia>
           </inertial>
-          <collision name='front_caster_link_collision'>
-            <pose>0 0 0 0 0 0</pose>
+          <collision name="front_caster_link_collision">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <sphere>
-                <radius>0.01</radius>
+                <radius>0.00453</radius>
               </sphere>
             </geometry>
             <surface>
@@ -463,11 +462,11 @@
               </friction>
             </surface>
           </collision>
-          <visual name='front_caster_link_visual'>
-            <pose>0 0 0 0 0 0</pose>
+          <visual name="front_caster_link_visual">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <sphere>
-                <radius>0.01</radius>
+                <radius>0.00453</radius>
               </sphere>
             </geometry>
             <material>
@@ -480,8 +479,8 @@
             </material>
           </visual>
         </link>
-        <joint name='front_left_bottom_weight_block_joint' type='fixed'>
-          <pose relative_to='base_link'>0.060052670000000002 0.087588410000000005 0.097885460000000007 0 0 0</pose>
+        <joint name="front_left_bottom_weight_block_joint" type="fixed">
+          <pose relative_to="base_link">0.02720385951 0.039677549730000004 0.044342113380000006 0 0 0</pose>
           <parent>base_link</parent>
           <child>front_left_bottom_weight_block</child>
           <axis>
@@ -504,25 +503,25 @@
             </ode>
           </physics>
         </joint>
-        <link name='front_left_bottom_weight_block'>
-          <pose relative_to='front_left_bottom_weight_block_joint'>0 0 0 0 0 0</pose>
+        <link name="front_left_bottom_weight_block">
+          <pose relative_to="front_left_bottom_weight_block_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0.10000000000000001 0 0 0 0 0</pose>
-            <mass>0.060999999999999999</mass>
+            <pose>0.04530000000000001 0.0 0.0 0 0 0</pose>
+            <mass>0.005670540297</mass>
             <inertia>
-              <ixx>9.3481999999999997e-06</ixx>
-              <ixy>-3.3743399999999999e-06</ixy>
-              <ixz>0</ixz>
-              <iyy>4.3638200000000002e-06</iyy>
-              <iyz>0</iyz>
-              <izz>1.288852e-05</izz>
+              <ixx>1.783277809503161e-07</ixx>
+              <ixy>-6.436945768938294e-08</ixy>
+              <ixz>0.0</ixz>
+              <iyy>8.324493881887513e-08</iyy>
+              <iyz>0.0</iyz>
+              <izz>2.458635000677957e-07</izz>
             </inertia>
           </inertial>
-          <visual name='front_left_bottom_weight_block_visual'>
-            <pose>0 0 0 0 0 0</pose>
+          <visual name="front_left_bottom_weight_block_visual">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <mesh>
-                <scale>1 1 1</scale>
+                <scale>0.453 0.453 0.453</scale>
                 <uri>model://nav2_minimal_tb4_description/meshes/weight_block.dae</uri>
               </mesh>
             </geometry>
@@ -533,8 +532,8 @@
             </material>
           </visual>
         </link>
-        <joint name='front_left_top_weight_block_joint' type='fixed'>
-          <pose relative_to='base_link'>0.060052670000000002 0.087588410000000005 0.10688546 0 0 0</pose>
+        <joint name="front_left_top_weight_block_joint" type="fixed">
+          <pose relative_to="base_link">0.02720385951 0.039677549730000004 0.04841911338 0 0 0</pose>
           <parent>base_link</parent>
           <child>front_left_top_weight_block</child>
           <axis>
@@ -557,25 +556,25 @@
             </ode>
           </physics>
         </joint>
-        <link name='front_left_top_weight_block'>
-          <pose relative_to='front_left_top_weight_block_joint'>0 0 0 0 0 0</pose>
+        <link name="front_left_top_weight_block">
+          <pose relative_to="front_left_top_weight_block_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0.10000000000000001 0 0 0 0 0</pose>
-            <mass>0.060999999999999999</mass>
+            <pose>0.04530000000000001 0.0 0.0 0 0 0</pose>
+            <mass>0.005670540297</mass>
             <inertia>
-              <ixx>9.3481999999999997e-06</ixx>
-              <ixy>-3.3743399999999999e-06</ixy>
-              <ixz>0</ixz>
-              <iyy>4.3638200000000002e-06</iyy>
-              <iyz>0</iyz>
-              <izz>1.288852e-05</izz>
+              <ixx>1.783277809503161e-07</ixx>
+              <ixy>-6.436945768938294e-08</ixy>
+              <ixz>0.0</ixz>
+              <iyy>8.324493881887513e-08</iyy>
+              <iyz>0.0</iyz>
+              <izz>2.458635000677957e-07</izz>
             </inertia>
           </inertial>
-          <visual name='front_left_top_weight_block_visual'>
-            <pose>0 0 0 0 0 0</pose>
+          <visual name="front_left_top_weight_block_visual">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <mesh>
-                <scale>1 1 1</scale>
+                <scale>0.453 0.453 0.453</scale>
                 <uri>model://nav2_minimal_tb4_description/meshes/weight_block.dae</uri>
               </mesh>
             </geometry>
@@ -586,8 +585,8 @@
             </material>
           </visual>
         </link>
-        <joint name='front_right_bottom_weight_block_joint' type='fixed'>
-          <pose relative_to='base_link'>0.060052670000000002 -0.087588410000000005 0.097885460000000007 3.1415926535897931 0 0</pose>
+        <joint name="front_right_bottom_weight_block_joint" type="fixed">
+          <pose relative_to="base_link">0.02720385951 -0.039677549730000004 0.044342113380000006 3.1415926535897931 0 0</pose>
           <parent>base_link</parent>
           <child>front_right_bottom_weight_block</child>
           <axis>
@@ -610,25 +609,25 @@
             </ode>
           </physics>
         </joint>
-        <link name='front_right_bottom_weight_block'>
-          <pose relative_to='front_right_bottom_weight_block_joint'>0 0 0 0 0 0</pose>
+        <link name="front_right_bottom_weight_block">
+          <pose relative_to="front_right_bottom_weight_block_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0.10000000000000001 0 0 0 0 0</pose>
-            <mass>0.060999999999999999</mass>
+            <pose>0.04530000000000001 0.0 0.0 0 0 0</pose>
+            <mass>0.005670540297</mass>
             <inertia>
-              <ixx>9.3481999999999997e-06</ixx>
-              <ixy>-3.3743399999999999e-06</ixy>
-              <ixz>0</ixz>
-              <iyy>4.3638200000000002e-06</iyy>
-              <iyz>0</iyz>
-              <izz>1.288852e-05</izz>
+              <ixx>1.783277809503161e-07</ixx>
+              <ixy>-6.436945768938294e-08</ixy>
+              <ixz>0.0</ixz>
+              <iyy>8.324493881887513e-08</iyy>
+              <iyz>0.0</iyz>
+              <izz>2.458635000677957e-07</izz>
             </inertia>
           </inertial>
-          <visual name='front_right_bottom_weight_block_visual'>
-            <pose>0 0 0 0 0 0</pose>
+          <visual name="front_right_bottom_weight_block_visual">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <mesh>
-                <scale>1 1 1</scale>
+                <scale>0.453 0.453 0.453</scale>
                 <uri>model://nav2_minimal_tb4_description/meshes/weight_block.dae</uri>
               </mesh>
             </geometry>
@@ -639,8 +638,8 @@
             </material>
           </visual>
         </link>
-        <joint name='front_right_top_weight_block_joint' type='fixed'>
-          <pose relative_to='base_link'>0.060052670000000002 -0.087588410000000005 0.10688546 3.1415926535897931 0 0</pose>
+        <joint name="front_right_top_weight_block_joint" type="fixed">
+          <pose relative_to="base_link">0.02720385951 -0.039677549730000004 0.04841911338 3.1415926535897931 0 0</pose>
           <parent>base_link</parent>
           <child>front_right_top_weight_block</child>
           <axis>
@@ -663,25 +662,25 @@
             </ode>
           </physics>
         </joint>
-        <link name='front_right_top_weight_block'>
-          <pose relative_to='front_right_top_weight_block_joint'>0 0 0 0 0 0</pose>
+        <link name="front_right_top_weight_block">
+          <pose relative_to="front_right_top_weight_block_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0.10000000000000001 0 0 0 0 0</pose>
-            <mass>0.060999999999999999</mass>
+            <pose>0.04530000000000001 0.0 0.0 0 0 0</pose>
+            <mass>0.005670540297</mass>
             <inertia>
-              <ixx>9.3481999999999997e-06</ixx>
-              <ixy>-3.3743399999999999e-06</ixy>
-              <ixz>0</ixz>
-              <iyy>4.3638200000000002e-06</iyy>
-              <iyz>0</iyz>
-              <izz>1.288852e-05</izz>
+              <ixx>1.783277809503161e-07</ixx>
+              <ixy>-6.436945768938294e-08</ixy>
+              <ixz>0.0</ixz>
+              <iyy>8.324493881887513e-08</iyy>
+              <iyz>0.0</iyz>
+              <izz>2.458635000677957e-07</izz>
             </inertia>
           </inertial>
-          <visual name='front_right_top_weight_block_visual'>
-            <pose>0 0 0 0 0 0</pose>
+          <visual name="front_right_top_weight_block_visual">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <mesh>
-                <scale>1 1 1</scale>
+                <scale>0.453 0.453 0.453</scale>
                 <uri>model://nav2_minimal_tb4_description/meshes/weight_block.dae</uri>
               </mesh>
             </geometry>
@@ -692,8 +691,8 @@
             </material>
           </visual>
         </link>
-        <joint name='imu_joint' type='fixed'>
-          <pose relative_to='base_link'>0.050612999999999998 0.043672999999999997 0.084400000000000003 0 0 0</pose>
+        <joint name="imu_joint" type="fixed">
+          <pose relative_to="base_link">0.022927689 0.019783869 0.0382332 0 0 0</pose>
           <parent>base_link</parent>
           <child>imu_link</child>
           <axis>
@@ -716,40 +715,40 @@
             </ode>
           </physics>
         </joint>
-        <link name='imu_link'>
-          <pose relative_to='imu_joint'>0 0 0 0 0 0</pose>
+        <link name="imu_link">
+          <pose relative_to="imu_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.01</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.00092959677</mass>
             <inertia>
-              <ixx>1.666666666666667e-07</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>1.666666666666667e-07</iyy>
-              <iyz>0</iyz>
-              <izz>1.666666666666667e-07</izz>
+              <ixx>3.1793603929155014e-09</ixx>
+              <ixy>0.0</ixy>
+              <ixz>0.0</ixz>
+              <iyy>3.1793603929155014e-09</iyy>
+              <iyz>0.0</iyz>
+              <izz>3.1793603929155014e-09</izz>
             </inertia>
           </inertial>
-          <sensor name='imu' type='imu'>
+          <sensor name="imu" type="imu">
             <always_on>true</always_on>
             <update_rate>200</update_rate>
             <topic>imu</topic>
             <imu>
               <angular_velocity>
                 <x>
-                  <noise type='gaussian'>
+                  <noise type="gaussian">
                     <mean>0</mean>
                     <stddev>0</stddev>
                   </noise>
                 </x>
                 <y>
-                  <noise type='gaussian'>
+                  <noise type="gaussian">
                     <mean>0</mean>
                     <stddev>0</stddev>
                   </noise>
                 </y>
                 <z>
-                  <noise type='gaussian'>
+                  <noise type="gaussian">
                     <mean>0</mean>
                     <stddev>0</stddev>
                   </noise>
@@ -757,19 +756,19 @@
               </angular_velocity>
               <linear_acceleration>
                 <x>
-                  <noise type='gaussian'>
+                  <noise type="gaussian">
                     <mean>0</mean>
                     <stddev>0</stddev>
                   </noise>
                 </x>
                 <y>
-                  <noise type='gaussian'>
+                  <noise type="gaussian">
                     <mean>0</mean>
                     <stddev>0</stddev>
                   </noise>
                 </y>
                 <z>
-                  <noise type='gaussian'>
+                  <noise type="gaussian">
                     <mean>0</mean>
                     <stddev>0</stddev>
                   </noise>
@@ -778,8 +777,8 @@
             </imu>
           </sensor>
         </link>
-        <joint name='left_wheel_joint' type='revolute'>
-          <pose relative_to='base_link'>0 0.11650000000000001 0.040200000000000007 -1.5707963267948959 0 0</pose>
+        <joint name="left_wheel_joint" type="revolute">
+          <pose relative_to="base_link">0.0 0.0527745 0.018210600000000004 -1.5707963267948959 0 0</pose>
           <parent>base_link</parent>
           <child>left_wheel</child>
           <axis>
@@ -794,26 +793,26 @@
             </dynamics>
           </axis>
         </joint>
-        <link name='left_wheel'>
-          <pose relative_to='left_wheel_joint'>0 0 0 0 0 0</pose>
+        <link name="left_wheel">
+          <pose relative_to="left_wheel_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.20000000000000001</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.018591935400000002</mass>
             <inertia>
-              <ixx>6.7653125000000013e-05</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>6.7653125000000013e-05</iyy>
-              <iyz>0</iyz>
-              <izz>0.00012780625000000001</izz>
+              <ixx>1.290561996491769e-06</ixx>
+              <ixy>0.0</ixy>
+              <ixz>0.0</ixz>
+              <iyy>1.290561996491769e-06</iyy>
+              <iyz>0.0</iyz>
+              <izz>2.4380527753023403e-06</izz>
             </inertia>
           </inertial>
-          <collision name='left_wheel_collision'>
-            <pose>0 0 0 0 0 0</pose>
+          <collision name="left_wheel_collision">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <cylinder>
-                <length>0.014999999999999999</length>
-                <radius>0.035749999999999997</radius>
+                <length>0.006795</length>
+                <radius>0.01619475</radius>
               </cylinder>
             </geometry>
             <surface>
@@ -833,12 +832,12 @@
               </friction>
             </surface>
           </collision>
-          <visual name='left_wheel_visual'>
-            <pose>0 0 0 0 0 0</pose>
+          <visual name="left_wheel_visual">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <cylinder>
-                <length>0.014999999999999999</length>
-                <radius>0.035749999999999997</radius>
+                <length>0.006795</length>
+                <radius>0.01619475</radius>
               </cylinder>
             </geometry>
             <material>
@@ -851,8 +850,8 @@
             </material>
           </visual>
         </link>
-        <joint name='right_wheel_joint' type='revolute'>
-          <pose relative_to='base_link'>0 -0.11650000000000001 0.040200000000000007 -1.5707963267948959 0 0</pose>
+        <joint name="right_wheel_joint" type="revolute">
+          <pose relative_to="base_link">0.0 -0.0527745 0.018210600000000004 -1.5707963267948959 0 0</pose>
           <parent>base_link</parent>
           <child>right_wheel</child>
           <axis>
@@ -867,26 +866,26 @@
             </dynamics>
           </axis>
         </joint>
-        <link name='right_wheel'>
-          <pose relative_to='right_wheel_joint'>0 0 0 0 0 0</pose>
+        <link name="right_wheel">
+          <pose relative_to="right_wheel_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.20000000000000001</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.018591935400000002</mass>
             <inertia>
-              <ixx>6.7653125000000013e-05</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>6.7653125000000013e-05</iyy>
-              <iyz>0</iyz>
-              <izz>0.00012780625000000001</izz>
+              <ixx>1.290561996491769e-06</ixx>
+              <ixy>0.0</ixy>
+              <ixz>0.0</ixz>
+              <iyy>1.290561996491769e-06</iyy>
+              <iyz>0.0</iyz>
+              <izz>2.4380527753023403e-06</izz>
             </inertia>
           </inertial>
-          <collision name='right_wheel_collision'>
-            <pose>0 0 0 0 0 0</pose>
+          <collision name="right_wheel_collision">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <cylinder>
-                <length>0.014999999999999999</length>
-                <radius>0.035749999999999997</radius>
+                <length>0.006795</length>
+                <radius>0.01619475</radius>
               </cylinder>
             </geometry>
             <surface>
@@ -906,12 +905,12 @@
               </friction>
             </surface>
           </collision>
-          <visual name='right_wheel_visual'>
-            <pose>0 0 0 0 0 0</pose>
+          <visual name="right_wheel_visual">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <cylinder>
-                <length>0.014999999999999999</length>
-                <radius>0.035749999999999997</radius>
+                <length>0.006795</length>
+                <radius>0.01619475</radius>
               </cylinder>
             </geometry>
             <material>
@@ -924,8 +923,8 @@
             </material>
           </visual>
         </link>
-        <joint name='front_left_tower_standoff_joint' type='fixed'>
-          <pose relative_to='base_link'>0.030630000000000001 0.11430999999999999 0.24177000000000001 0 0 0</pose>
+        <joint name="front_left_tower_standoff_joint" type="fixed">
+          <pose relative_to="base_link">0.013875390000000001 0.05178243 0.10952181000000001 0 0 0</pose>
           <parent>base_link</parent>
           <child>front_left_tower_standoff</child>
           <axis>
@@ -948,42 +947,42 @@
             </ode>
           </physics>
         </joint>
-        <link name='front_left_tower_standoff'>
-          <pose relative_to='front_left_tower_standoff_joint'>0 0 0 0 0 0</pose>
+        <link name="front_left_tower_standoff">
+          <pose relative_to="front_left_tower_standoff_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.26000000000000001</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.024169516020000004</mass>
             <inertia>
-              <ixx>1.9604e-07</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>5.2623130000000003e-05</iyy>
-              <iyz>0</iyz>
-              <izz>5.2623130000000003e-05</izz>
+              <ixx>3.739690868562929e-09</ixx>
+              <ixy>0.0</ixy>
+              <ixz>0.0</ixz>
+              <iyy>1.003847371639461e-06</iyy>
+              <iyz>0.0</iyz>
+              <izz>1.003847371639461e-06</izz>
             </inertia>
           </inertial>
-          <collision name='front_left_tower_standoff_collision'>
-            <pose>0 0 0 0 0 0</pose>
+          <collision name="front_left_tower_standoff_collision">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <cylinder>
-                <length>0.20499999999999999</length>
-                <radius>0.0060000000000000001</radius>
+                <length>0.092865</length>
+                <radius>0.002718</radius>
               </cylinder>
             </geometry>
             <surface>
               <contact>
-                <ode/>
+                <ode />
               </contact>
               <friction>
-                <ode/>
+                <ode />
               </friction>
             </surface>
           </collision>
-          <visual name='front_left_tower_standoff_visual'>
-            <pose>0 0 0 0 1.5707963267948966 0</pose>
+          <visual name="front_left_tower_standoff_visual">
+            <pose>0.0 0.0 0.0 0 1.5707963267948966 0</pose>
             <geometry>
               <mesh>
-                <scale>1 1 1</scale>
+                <scale>0.453 0.453 0.453</scale>
                 <uri>model://nav2_minimal_tb4_description/meshes/tower_standoff.dae</uri>
               </mesh>
             </geometry>
@@ -994,8 +993,8 @@
             </material>
           </visual>
         </link>
-        <joint name='front_right_tower_standoff_joint' type='fixed'>
-          <pose relative_to='base_link'>0.030630000000000001 -0.11430999999999999 0.24177000000000001 0 0 0</pose>
+        <joint name="front_right_tower_standoff_joint" type="fixed">
+          <pose relative_to="base_link">0.013875390000000001 -0.05178243 0.10952181000000001 0 0 0</pose>
           <parent>base_link</parent>
           <child>front_right_tower_standoff</child>
           <axis>
@@ -1018,42 +1017,42 @@
             </ode>
           </physics>
         </joint>
-        <link name='front_right_tower_standoff'>
-          <pose relative_to='front_right_tower_standoff_joint'>0 0 0 0 0 0</pose>
+        <link name="front_right_tower_standoff">
+          <pose relative_to="front_right_tower_standoff_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.26000000000000001</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.024169516020000004</mass>
             <inertia>
-              <ixx>1.9604e-07</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>5.2623130000000003e-05</iyy>
-              <iyz>0</iyz>
-              <izz>5.2623130000000003e-05</izz>
+              <ixx>3.739690868562929e-09</ixx>
+              <ixy>0.0</ixy>
+              <ixz>0.0</ixz>
+              <iyy>1.003847371639461e-06</iyy>
+              <iyz>0.0</iyz>
+              <izz>1.003847371639461e-06</izz>
             </inertia>
           </inertial>
-          <collision name='front_right_tower_standoff_collision'>
-            <pose>0 0 0 0 0 0</pose>
+          <collision name="front_right_tower_standoff_collision">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <cylinder>
-                <length>0.20499999999999999</length>
-                <radius>0.0060000000000000001</radius>
+                <length>0.092865</length>
+                <radius>0.002718</radius>
               </cylinder>
             </geometry>
             <surface>
               <contact>
-                <ode/>
+                <ode />
               </contact>
               <friction>
-                <ode/>
+                <ode />
               </friction>
             </surface>
           </collision>
-          <visual name='front_right_tower_standoff_visual'>
-            <pose>0 0 0 0 1.5707963267948966 0</pose>
+          <visual name="front_right_tower_standoff_visual">
+            <pose>0.0 0.0 0.0 0 1.5707963267948966 0</pose>
             <geometry>
               <mesh>
-                <scale>1 1 1</scale>
+                <scale>0.453 0.453 0.453</scale>
                 <uri>model://nav2_minimal_tb4_description/meshes/tower_standoff.dae</uri>
               </mesh>
             </geometry>
@@ -1064,8 +1063,8 @@
             </material>
           </visual>
         </link>
-        <joint name='oakd_camera_bracket_joint' type='fixed'>
-          <pose relative_to='base_link'>-0.11799999999999999 0 0.14677000000000001 0 0 0</pose>
+        <joint name="oakd_camera_bracket_joint" type="fixed">
+          <pose relative_to="base_link">-0.053454 0.0 0.06648681000000001 0 0 0</pose>
           <parent>base_link</parent>
           <child>oakd_camera_bracket</child>
           <axis>
@@ -1088,25 +1087,25 @@
             </ode>
           </physics>
         </joint>
-        <link name='oakd_camera_bracket'>
-          <pose relative_to='oakd_camera_bracket_joint'>0 0 0 0 0 0</pose>
+        <link name="oakd_camera_bracket">
+          <pose relative_to="oakd_camera_bracket_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.033000000000000002</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.0030676693410000002</mass>
             <inertia>
-              <ixx>5.7918099999999997e-05</ixx>
-              <ixy>0</ixy>
-              <ixz>9.0679e-06</ixz>
-              <iyy>5.5978499999999999e-05</iyy>
-              <iyz>0</iyz>
-              <izz>1.4095500000000001e-05</izz>
+              <ixx>1.1048550790375155e-06</ixx>
+              <ixy>0.0</ixy>
+              <ixz>1.7298073264151082e-07</ixz>
+              <iyy>1.0678549545289221e-06</iyy>
+              <iyz>0.0</iyz>
+              <izz>2.6888804651004266e-07</izz>
             </inertia>
           </inertial>
-          <visual name='oakd_camera_bracket_visual'>
-            <pose>0 0 0 0 0 0</pose>
+          <visual name="oakd_camera_bracket_visual">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <mesh>
-                <scale>1 1 1</scale>
+                <scale>0.453 0.453 0.453</scale>
                 <uri>model://nav2_minimal_tb4_description/meshes/camera_bracket.dae</uri>
               </mesh>
             </geometry>
@@ -1117,8 +1116,8 @@
             </material>
           </visual>
         </link>
-        <joint name='oakd_joint' type='fixed'>
-          <pose relative_to='oakd_camera_bracket'>0.058400000000000001 0 0.096759999999999999 0 0 0</pose>
+        <joint name="oakd_joint" type="fixed">
+          <pose relative_to="oakd_camera_bracket">0.0264552 0.0 0.04383228 0 0 0</pose>
           <parent>oakd_camera_bracket</parent>
           <child>oakd_link</child>
           <axis>
@@ -1141,40 +1140,40 @@
             </ode>
           </physics>
         </joint>
-        <link name='oakd_link'>
-          <pose relative_to='oakd_joint'>0 0 0 0 0 0</pose>
+        <link name="oakd_link">
+          <pose relative_to="oakd_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.060999999999999999</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.005670540297</mass>
             <inertia>
-              <ixx>2.02475e-06</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>1.5273200000000001e-05</iyy>
-              <iyz>0</iyz>
-              <izz>1.6055359999999999e-05</izz>
+              <ixx>3.862445973333396e-08</ixx>
+              <ixy>0.0</ixy>
+              <ixz>0.0</ixz>
+              <iyy>2.913540429184622e-07</iyy>
+              <iyz>0.0</iyz>
+              <izz>3.0627465406799885e-07</izz>
             </inertia>
           </inertial>
-          <collision name='oakd_link_collision'>
-            <pose>-0.010999999999999999 0 -0.0050000000000000001 0 0 0</pose>
+          <collision name="oakd_link_collision">
+            <pose>-0.004983 0.0 -0.002265 0 0 0</pose>
             <geometry>
               <box>
-                <size>0.022499999999999999 0.096999999999999989 0.029999999999999999</size>
+                <size>0.0101925 0.043940999999999994 0.01359</size>
               </box>
             </geometry>
           </collision>
-          <visual name='oakd_link_visual'>
-            <pose>0 0 0 0 0 0</pose>
+          <visual name="oakd_link_visual">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <mesh>
-                <scale>1 1 1</scale>
+                <scale>0.453 0.453 0.453</scale>
                 <uri>model://nav2_minimal_tb4_description/meshes/oakd_pro.dae</uri>
               </mesh>
             </geometry>
           </visual>
         </link>
-        <joint name='oakd_imu_joint' type='fixed'>
-          <pose relative_to='oakd_link'>0 0 0 -1.5707963267948959 -5.5511151231257827e-17 -1.5707963267948959</pose>
+        <joint name="oakd_imu_joint" type="fixed">
+          <pose relative_to="oakd_link">0.0 0.0 0.0 -1.5707963267948959 -5.5511151231257827e-17 -1.5707963267948959</pose>
           <parent>oakd_link</parent>
           <child>oakd_imu_frame</child>
           <axis>
@@ -1197,23 +1196,23 @@
             </ode>
           </physics>
         </joint>
-        <link name='oakd_imu_frame'>
-          <pose relative_to='oakd_imu_joint'>0 0 0 0 0 0</pose>
+        <link name="oakd_imu_frame">
+          <pose relative_to="oakd_imu_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.01</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.00092959677</mass>
             <inertia>
-              <ixx>1.666666666666667e-07</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>1.666666666666667e-07</iyy>
-              <iyz>0</iyz>
-              <izz>1.666666666666667e-07</izz>
+              <ixx>3.1793603929155014e-09</ixx>
+              <ixy>0.0</ixy>
+              <ixz>0.0</ixz>
+              <iyy>3.1793603929155014e-09</iyy>
+              <iyz>0.0</iyz>
+              <izz>3.1793603929155014e-09</izz>
             </inertia>
           </inertial>
         </link>
-        <joint name='oakd_left_camera_joint' type='fixed'>
-          <pose relative_to='oakd_link'>0 0.037499999999999999 0 0 0 0</pose>
+        <joint name="oakd_left_camera_joint" type="fixed">
+          <pose relative_to="oakd_link">0.0 0.0169875 0.0 0 0 0</pose>
           <parent>oakd_link</parent>
           <child>oakd_left_camera_frame</child>
           <axis>
@@ -1236,23 +1235,23 @@
             </ode>
           </physics>
         </joint>
-        <link name='oakd_left_camera_frame'>
-          <pose relative_to='oakd_left_camera_joint'>0 0 0 0 0 0</pose>
+        <link name="oakd_left_camera_frame">
+          <pose relative_to="oakd_left_camera_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.01</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.00092959677</mass>
             <inertia>
-              <ixx>1.666666666666667e-07</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>1.666666666666667e-07</iyy>
-              <iyz>0</iyz>
-              <izz>1.666666666666667e-07</izz>
+              <ixx>3.1793603929155014e-09</ixx>
+              <ixy>0.0</ixy>
+              <ixz>0.0</ixz>
+              <iyy>3.1793603929155014e-09</iyy>
+              <iyz>0.0</iyz>
+              <izz>3.1793603929155014e-09</izz>
             </inertia>
           </inertial>
         </link>
-        <joint name='oakd_left_camera_optical_joint' type='fixed'>
-          <pose relative_to='oakd_left_camera_frame'>0 0 0 -1.5707963267948959 -5.5511151231257827e-17 -1.5707963267948959</pose>
+        <joint name="oakd_left_camera_optical_joint" type="fixed">
+          <pose relative_to="oakd_left_camera_frame">0.0 0.0 0.0 -1.5707963267948959 -5.5511151231257827e-17 -1.5707963267948959</pose>
           <parent>oakd_left_camera_frame</parent>
           <child>oakd_left_camera_optical_frame</child>
           <axis>
@@ -1275,23 +1274,23 @@
             </ode>
           </physics>
         </joint>
-        <link name='oakd_left_camera_optical_frame'>
-          <pose relative_to='oakd_left_camera_optical_joint'>0 0 0 0 0 0</pose>
+        <link name="oakd_left_camera_optical_frame">
+          <pose relative_to="oakd_left_camera_optical_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.01</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.00092959677</mass>
             <inertia>
-              <ixx>1.666666666666667e-07</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>1.666666666666667e-07</iyy>
-              <iyz>0</iyz>
-              <izz>1.666666666666667e-07</izz>
+              <ixx>3.1793603929155014e-09</ixx>
+              <ixy>0.0</ixy>
+              <ixz>0.0</ixz>
+              <iyy>3.1793603929155014e-09</iyy>
+              <iyz>0.0</iyz>
+              <izz>3.1793603929155014e-09</izz>
             </inertia>
           </inertial>
         </link>
-        <joint name='oakd_rgb_camera_joint' type='fixed'>
-          <pose relative_to='oakd_link'>0 0 0 0 0 0</pose>
+        <joint name="oakd_rgb_camera_joint" type="fixed">
+          <pose relative_to="oakd_link">0.0 0.0 0.0 0 0 0</pose>
           <parent>oakd_link</parent>
           <child>oakd_rgb_camera_frame</child>
           <axis>
@@ -1314,21 +1313,21 @@
             </ode>
           </physics>
         </joint>
-        <link name='oakd_rgb_camera_frame'>
-          <pose relative_to='oakd_rgb_camera_joint'>0 0 0 0 0 0</pose>
+        <link name="oakd_rgb_camera_frame">
+          <pose relative_to="oakd_rgb_camera_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.01</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.00092959677</mass>
             <inertia>
-              <ixx>1.666666666666667e-07</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>1.666666666666667e-07</iyy>
-              <iyz>0</iyz>
-              <izz>1.666666666666667e-07</izz>
+              <ixx>3.1793603929155014e-09</ixx>
+              <ixy>0.0</ixy>
+              <ixz>0.0</ixz>
+              <iyy>3.1793603929155014e-09</iyy>
+              <iyz>0.0</iyz>
+              <izz>3.1793603929155014e-09</izz>
             </inertia>
           </inertial>
-          <sensor name='rgbd_camera' type='rgbd_camera'>
+          <sensor name="rgbd_camera" type="rgbd_camera">
             <always_on>true</always_on>
             <camera>
               <horizontal_fov>1.25</horizontal_fov>
@@ -1347,8 +1346,8 @@
             <topic>rgbd_camera</topic>
           </sensor>
         </link>
-        <joint name='oakd_rgb_camera_optical_joint' type='fixed'>
-          <pose relative_to='oakd_rgb_camera_frame'>0 0 0 -1.5707963267948959 -5.5511151231257827e-17 -1.5707963267948959</pose>
+        <joint name="oakd_rgb_camera_optical_joint" type="fixed">
+          <pose relative_to="oakd_rgb_camera_frame">0.0 0.0 0.0 -1.5707963267948959 -5.5511151231257827e-17 -1.5707963267948959</pose>
           <parent>oakd_rgb_camera_frame</parent>
           <child>oakd_rgb_camera_optical_frame</child>
           <axis>
@@ -1371,23 +1370,23 @@
             </ode>
           </physics>
         </joint>
-        <link name='oakd_rgb_camera_optical_frame'>
-          <pose relative_to='oakd_rgb_camera_optical_joint'>0 0 0 0 0 0</pose>
+        <link name="oakd_rgb_camera_optical_frame">
+          <pose relative_to="oakd_rgb_camera_optical_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.01</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.00092959677</mass>
             <inertia>
-              <ixx>1.666666666666667e-07</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>1.666666666666667e-07</iyy>
-              <iyz>0</iyz>
-              <izz>1.666666666666667e-07</izz>
+              <ixx>3.1793603929155014e-09</ixx>
+              <ixy>0.0</ixy>
+              <ixz>0.0</ixz>
+              <iyy>3.1793603929155014e-09</iyy>
+              <iyz>0.0</iyz>
+              <izz>3.1793603929155014e-09</izz>
             </inertia>
           </inertial>
         </link>
-        <joint name='oakd_right_camera_joint' type='fixed'>
-          <pose relative_to='oakd_link'>0 -0.037499999999999999 0 0 0 0</pose>
+        <joint name="oakd_right_camera_joint" type="fixed">
+          <pose relative_to="oakd_link">0.0 -0.0169875 0.0 0 0 0</pose>
           <parent>oakd_link</parent>
           <child>oakd_right_camera_frame</child>
           <axis>
@@ -1410,23 +1409,23 @@
             </ode>
           </physics>
         </joint>
-        <link name='oakd_right_camera_frame'>
-          <pose relative_to='oakd_right_camera_joint'>0 0 0 0 0 0</pose>
+        <link name="oakd_right_camera_frame">
+          <pose relative_to="oakd_right_camera_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.01</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.00092959677</mass>
             <inertia>
-              <ixx>1.666666666666667e-07</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>1.666666666666667e-07</iyy>
-              <iyz>0</iyz>
-              <izz>1.666666666666667e-07</izz>
+              <ixx>3.1793603929155014e-09</ixx>
+              <ixy>0.0</ixy>
+              <ixz>0.0</ixz>
+              <iyy>3.1793603929155014e-09</iyy>
+              <iyz>0.0</iyz>
+              <izz>3.1793603929155014e-09</izz>
             </inertia>
           </inertial>
         </link>
-        <joint name='oakd_right_camera_optical_joint' type='fixed'>
-          <pose relative_to='oakd_right_camera_frame'>0 0 0 -1.5707963267948959 -5.5511151231257827e-17 -1.5707963267948959</pose>
+        <joint name="oakd_right_camera_optical_joint" type="fixed">
+          <pose relative_to="oakd_right_camera_frame">0.0 0.0 0.0 -1.5707963267948959 -5.5511151231257827e-17 -1.5707963267948959</pose>
           <parent>oakd_right_camera_frame</parent>
           <child>oakd_right_camera_optical_frame</child>
           <axis>
@@ -1449,23 +1448,23 @@
             </ode>
           </physics>
         </joint>
-        <link name='oakd_right_camera_optical_frame'>
-          <pose relative_to='oakd_right_camera_optical_joint'>0 0 0 0 0 0</pose>
+        <link name="oakd_right_camera_optical_frame">
+          <pose relative_to="oakd_right_camera_optical_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.01</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.00092959677</mass>
             <inertia>
-              <ixx>1.666666666666667e-07</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>1.666666666666667e-07</iyy>
-              <iyz>0</iyz>
-              <izz>1.666666666666667e-07</izz>
+              <ixx>3.1793603929155014e-09</ixx>
+              <ixy>0.0</ixy>
+              <ixz>0.0</ixz>
+              <iyy>3.1793603929155014e-09</iyy>
+              <iyz>0.0</iyz>
+              <izz>3.1793603929155014e-09</izz>
             </inertia>
           </inertial>
         </link>
-        <joint name='rear_left_tower_standoff_joint' type='fixed'>
-          <pose relative_to='base_link'>-0.076069999999999999 0.090660000000000004 0.24177000000000001 0 0 0</pose>
+        <joint name="rear_left_tower_standoff_joint" type="fixed">
+          <pose relative_to="base_link">-0.03445971 0.041068980000000005 0.10952181000000001 0 0 0</pose>
           <parent>base_link</parent>
           <child>rear_left_tower_standoff</child>
           <axis>
@@ -1488,42 +1487,42 @@
             </ode>
           </physics>
         </joint>
-        <link name='rear_left_tower_standoff'>
-          <pose relative_to='rear_left_tower_standoff_joint'>0 0 0 0 0 0</pose>
+        <link name="rear_left_tower_standoff">
+          <pose relative_to="rear_left_tower_standoff_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.26000000000000001</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.024169516020000004</mass>
             <inertia>
-              <ixx>1.9604e-07</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>5.2623130000000003e-05</iyy>
-              <iyz>0</iyz>
-              <izz>5.2623130000000003e-05</izz>
+              <ixx>3.739690868562929e-09</ixx>
+              <ixy>0.0</ixy>
+              <ixz>0.0</ixz>
+              <iyy>1.003847371639461e-06</iyy>
+              <iyz>0.0</iyz>
+              <izz>1.003847371639461e-06</izz>
             </inertia>
           </inertial>
-          <collision name='rear_left_tower_standoff_collision'>
-            <pose>0 0 0 0 0 0</pose>
+          <collision name="rear_left_tower_standoff_collision">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <cylinder>
-                <length>0.20499999999999999</length>
-                <radius>0.0060000000000000001</radius>
+                <length>0.092865</length>
+                <radius>0.002718</radius>
               </cylinder>
             </geometry>
             <surface>
               <contact>
-                <ode/>
+                <ode />
               </contact>
               <friction>
-                <ode/>
+                <ode />
               </friction>
             </surface>
           </collision>
-          <visual name='rear_left_tower_standoff_visual'>
-            <pose>0 0 0 0 1.5707963267948966 0</pose>
+          <visual name="rear_left_tower_standoff_visual">
+            <pose>0.0 0.0 0.0 0 1.5707963267948966 0</pose>
             <geometry>
               <mesh>
-                <scale>1 1 1</scale>
+                <scale>0.453 0.453 0.453</scale>
                 <uri>model://nav2_minimal_tb4_description/meshes/tower_standoff.dae</uri>
               </mesh>
             </geometry>
@@ -1534,8 +1533,8 @@
             </material>
           </visual>
         </link>
-        <joint name='rear_right_tower_standoff_joint' type='fixed'>
-          <pose relative_to='base_link'>-0.076069999999999999 -0.090660000000000004 0.24177000000000001 0 0 0</pose>
+        <joint name="rear_right_tower_standoff_joint" type="fixed">
+          <pose relative_to="base_link">-0.03445971 -0.041068980000000005 0.10952181000000001 0 0 0</pose>
           <parent>base_link</parent>
           <child>rear_right_tower_standoff</child>
           <axis>
@@ -1558,42 +1557,42 @@
             </ode>
           </physics>
         </joint>
-        <link name='rear_right_tower_standoff'>
-          <pose relative_to='rear_right_tower_standoff_joint'>0 0 0 0 0 0</pose>
+        <link name="rear_right_tower_standoff">
+          <pose relative_to="rear_right_tower_standoff_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.26000000000000001</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.024169516020000004</mass>
             <inertia>
-              <ixx>1.9604e-07</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>5.2623130000000003e-05</iyy>
-              <iyz>0</iyz>
-              <izz>5.2623130000000003e-05</izz>
+              <ixx>3.739690868562929e-09</ixx>
+              <ixy>0.0</ixy>
+              <ixz>0.0</ixz>
+              <iyy>1.003847371639461e-06</iyy>
+              <iyz>0.0</iyz>
+              <izz>1.003847371639461e-06</izz>
             </inertia>
           </inertial>
-          <collision name='rear_right_tower_standoff_collision'>
-            <pose>0 0 0 0 0 0</pose>
+          <collision name="rear_right_tower_standoff_collision">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <cylinder>
-                <length>0.20499999999999999</length>
-                <radius>0.0060000000000000001</radius>
+                <length>0.092865</length>
+                <radius>0.002718</radius>
               </cylinder>
             </geometry>
             <surface>
               <contact>
-                <ode/>
+                <ode />
               </contact>
               <friction>
-                <ode/>
+                <ode />
               </friction>
             </surface>
           </collision>
-          <visual name='rear_right_tower_standoff_visual'>
-            <pose>0 0 0 0 1.5707963267948966 0</pose>
+          <visual name="rear_right_tower_standoff_visual">
+            <pose>0.0 0.0 0.0 0 1.5707963267948966 0</pose>
             <geometry>
               <mesh>
-                <scale>1 1 1</scale>
+                <scale>0.453 0.453 0.453</scale>
                 <uri>model://nav2_minimal_tb4_description/meshes/tower_standoff.dae</uri>
               </mesh>
             </geometry>
@@ -1604,8 +1603,8 @@
             </material>
           </visual>
         </link>
-        <joint name='rplidar_joint' type='fixed'>
-          <pose relative_to='base_link'>-0.040000000000000001 0 0.192915 0 0 1.5707963267948959</pose>
+        <joint name="rplidar_joint" type="fixed">
+          <pose relative_to="base_link">-0.01812 0.0 0.087390495 0 0 1.5707963267948959</pose>
           <parent>base_link</parent>
           <child>rplidar_link</child>
           <axis>
@@ -1628,41 +1627,41 @@
             </ode>
           </physics>
         </joint>
-        <link name='rplidar_link'>
-          <pose relative_to='rplidar_joint'>0 0 0 0 0 0</pose>
+        <link name="rplidar_link">
+          <pose relative_to="rplidar_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.17000000000000001</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.01580314509</mass>
             <inertia>
-              <ixx>0.0001926666666666667</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>0.00012241416666666671</iyy>
-              <iyz>0</iyz>
-              <izz>0.0002130808333333334</izz>
+              <ixx>3.6753406142103195e-06</ixx>
+              <ixy>0.0</ixy>
+              <ixz>0.0</ixz>
+              <iyy>2.3351925181905425e-06</iyy>
+              <iyz>0.0</iyz>
+              <izz>4.064764571936575e-06</izz>
             </inertia>
           </inertial>
-          <collision name='rplidar_link_collision'>
-            <pose>0 0.012999999999999999 -0.019 0 0 0</pose>
+          <collision name="rplidar_link_collision">
+            <pose>0.0 0.005889 -0.008607 0 0 0</pose>
             <geometry>
               <box>
-                <size>0.070999999999999994 0.10000000000000001 0.059999999999999998</size>
+                <size>0.032163 0.04530000000000001 0.02718</size>
               </box>
             </geometry>
             <surface>
               <contact>
-                <ode/>
+                <ode />
               </contact>
               <friction>
-                <ode/>
+                <ode />
               </friction>
             </surface>
           </collision>
-          <visual name='rplidar_link_visual'>
-            <pose>0 0 0 0 0 0</pose>
+          <visual name="rplidar_link_visual">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <mesh>
-                <scale>1 1 1</scale>
+                <scale>0.453 0.453 0.453</scale>
                 <uri>model://nav2_minimal_tb4_description/meshes/rplidar.dae</uri>
               </mesh>
             </geometry>
@@ -1672,7 +1671,7 @@
               <emissive>0 0 0 1</emissive>
             </material>
           </visual>
-          <sensor name='rplidar' type='gpu_lidar'>
+          <sensor name="rplidar" type="gpu_lidar">
             <update_rate>10</update_rate>
             <visualize>true</visualize>
             <always_on>true</always_on>
@@ -1695,8 +1694,8 @@
             <gz_frame_id>rplidar_link</gz_frame_id>
           </sensor>
         </link>
-        <joint name='tower_sensor_plate_joint' type='fixed'>
-          <pose relative_to='base_link'>0 0 0.34677000000000002 0 0 0</pose>
+        <joint name="tower_sensor_plate_joint" type="fixed">
+          <pose relative_to="base_link">0.0 0.0 0.15708681000000002 0 0 0</pose>
           <parent>base_link</parent>
           <child>tower_sensor_plate</child>
           <axis>
@@ -1719,42 +1718,42 @@
             </ode>
           </physics>
         </joint>
-        <link name='tower_sensor_plate'>
-          <pose relative_to='tower_sensor_plate_joint'>0 0 0 0 0 0</pose>
+        <link name="tower_sensor_plate">
+          <pose relative_to="tower_sensor_plate_joint">0.0 0.0 0.0 0 0 0</pose>
           <inertial>
-            <pose>0 0 0 0 0 0</pose>
-            <mass>0.33200000000000002</mass>
+            <pose>0.0 0.0 0.0 0 0 0</pose>
+            <mass>0.030862612764000003</mass>
             <inertia>
-              <ixx>0.00092982299000000002</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>0.00083033498000000005</iyy>
-              <iyz>0</iyz>
-              <izz>0.00175985947</izz>
+              <ixx>1.7737454320969595e-05</ixx>
+              <ixy>0.0</ixy>
+              <ixz>0.0</ixz>
+              <iyy>1.5839604889585708e-05</iyy>
+              <iyz>0.0</iyz>
+              <izz>3.3571364976091586e-05</izz>
             </inertia>
           </inertial>
-          <collision name='tower_sensor_plate_collision'>
-            <pose>0 0 0.001 0 0 0</pose>
+          <collision name="tower_sensor_plate_collision">
+            <pose>0.0 0.0 0.000453 0 0 0</pose>
             <geometry>
               <cylinder>
-                <length>0.0030000000000000001</length>
-                <radius>0.13700000000000001</radius>
+                <length>0.001359</length>
+                <radius>0.062061000000000005</radius>
               </cylinder>
             </geometry>
             <surface>
               <contact>
-                <ode/>
+                <ode />
               </contact>
               <friction>
-                <ode/>
+                <ode />
               </friction>
             </surface>
           </collision>
-          <visual name='tower_sensor_plate_visual'>
-            <pose>0 0 0 0 0 0</pose>
+          <visual name="tower_sensor_plate_visual">
+            <pose>0.0 0.0 0.0 0 0 0</pose>
             <geometry>
               <mesh>
-                <scale>1 1 1</scale>
+                <scale>0.453 0.453 0.453</scale>
                 <uri>model://nav2_minimal_tb4_description/meshes/tower_sensor_plate.dae</uri>
               </mesh>
             </geometry>
@@ -1765,11 +1764,11 @@
             </material>
           </visual>
         </link>
-        <plugin name='gz::sim::systems::DiffDrive' filename='gz-sim-diff-drive-system'>
+        <plugin name="gz::sim::systems::DiffDrive" filename="gz-sim-diff-drive-system">
           <left_joint>left_wheel_joint</left_joint>
           <right_joint>right_wheel_joint</right_joint>
-          <wheel_separation>0.233</wheel_separation>
-          <wheel_radius>0.03575</wheel_radius>
+          <wheel_separation>0.105549</wheel_separation>
+          <wheel_radius>0.01619475</wheel_radius>
           <max_linear_acceleration>2</max_linear_acceleration>
           <min_linear_acceleration>-2</min_linear_acceleration>
           <max_angular_acceleration>3</max_angular_acceleration>
@@ -1785,59 +1784,59 @@
           <child_frame_id>base_link</child_frame_id>
           <odom_publish_frequency>30</odom_publish_frequency>
         </plugin>
-        <plugin name='gz::sim::systems::JointStatePublisher' filename='gz-sim-joint-state-publisher-system'>
+        <plugin name="gz::sim::systems::JointStatePublisher" filename="gz-sim-joint-state-publisher-system">
           <joint_name>left_wheel_joint</joint_name>
           <joint_name>right_wheel_joint</joint_name>
           <topic>joint_states</topic>
           <update_rate>30</update_rate>
         </plugin>
-        <frame name='base_footprint_joint' attached_to='base_link'>
-          <pose>0 0 0 0 0 0</pose>
+        <frame name="base_footprint_joint" attached_to="base_link">
+          <pose>0.0 0.0 0.0 0 0 0</pose>
         </frame>
-        <frame name='base_footprint' attached_to='base_footprint_joint'>
-          <pose>0 0 0 0 0 0</pose>
+        <frame name="base_footprint" attached_to="base_footprint_joint">
+          <pose>0.0 0.0 0.0 0 0 0</pose>
         </frame>
-        <frame name='bump_front_center_joint' attached_to='base_link'>
-          <pose>0.17499999999999999 0 0.039 0 0 0</pose>
+        <frame name="bump_front_center_joint" attached_to="base_link">
+          <pose>0.079275 0.0 0.017667000000000002 0 0 0</pose>
         </frame>
-        <frame name='bump_front_center' attached_to='bump_front_center_joint'>
-          <pose>0 0 0 0 0 0</pose>
+        <frame name="bump_front_center" attached_to="bump_front_center_joint">
+          <pose>0.0 0.0 0.0 0 0 0</pose>
         </frame>
-        <frame name='bump_front_left_joint' attached_to='base_link'>
-          <pose>0.023449999999999999 -0.087499999999999994 0.025000000000000001 0 0 0.52359850000000008</pose>
+        <frame name="bump_front_left_joint" attached_to="base_link">
+          <pose>0.01062285 -0.0396375 0.011325000000000002 0 0 0.52359850000000008</pose>
         </frame>
-        <frame name='bump_front_left' attached_to='bump_front_left_joint'>
-          <pose>0 0 0 0 0 0</pose>
+        <frame name="bump_front_left" attached_to="bump_front_left_joint">
+          <pose>0.0 0.0 0.0 0 0 0</pose>
         </frame>
-        <frame name='bump_front_right_joint' attached_to='base_link'>
-          <pose>0.023449999999999999 0.087499999999999994 0.025000000000000001 0 0 -0.52359850000000008</pose>
+        <frame name="bump_front_right_joint" attached_to="base_link">
+          <pose>0.01062285 0.0396375 0.011325000000000002 0 0 -0.52359850000000008</pose>
         </frame>
-        <frame name='bump_front_right' attached_to='bump_front_right_joint'>
-          <pose>0 0 0 0 0 0</pose>
+        <frame name="bump_front_right" attached_to="bump_front_right_joint">
+          <pose>0.0 0.0 0.0 0 0 0</pose>
         </frame>
-        <frame name='bump_left_joint' attached_to='base_link'>
-          <pose>0.087499999999999994 -0.15154999999999999 0.025000000000000001 0 0 1.047193</pose>
+        <frame name="bump_left_joint" attached_to="base_link">
+          <pose>0.0396375 -0.06865215 0.011325000000000002 0 0 1.047193</pose>
         </frame>
-        <frame name='bump_left' attached_to='bump_left_joint'>
-          <pose>0 0 0 0 0 0</pose>
+        <frame name="bump_left" attached_to="bump_left_joint">
+          <pose>0.0 0.0 0.0 0 0 0</pose>
         </frame>
-        <frame name='bump_right_joint' attached_to='base_link'>
-          <pose>0.087499999999999994 0.15154999999999999 0.025000000000000001 0 0 -1.047193</pose>
+        <frame name="bump_right_joint" attached_to="base_link">
+          <pose>0.0396375 0.06865215 0.011325000000000002 0 0 -1.047193</pose>
         </frame>
-        <frame name='bump_right' attached_to='bump_right_joint'>
-          <pose>0 0 0 0 0 0</pose>
+        <frame name="bump_right" attached_to="bump_right_joint">
+          <pose>0.0 0.0 0.0 0 0 0</pose>
         </frame>
-        <frame name='bumper_joint' attached_to='base_link'>
-          <pose>0 0 0.039200000000000013 0 0 0</pose>
+        <frame name="bumper_joint" attached_to="base_link">
+          <pose>0.0 0.0 0.017757600000000005 0 0 0</pose>
         </frame>
-        <frame name='bumper' attached_to='bumper_joint'>
-          <pose>0 0 0 0 0 0</pose>
+        <frame name="bumper" attached_to="bumper_joint">
+          <pose>0.0 0.0 0.0 0 0 0</pose>
         </frame>
-        <frame name='shell_link_joint' attached_to='base_link'>
-          <pose>0 0 0.094200000000000006 0 0 0</pose>
+        <frame name="shell_link_joint" attached_to="base_link">
+          <pose>0.0 0.0 0.042672600000000005 0 0 0</pose>
         </frame>
-        <frame name='shell_link' attached_to='shell_link_joint'>
-          <pose>0 0 0 0 0 0</pose>
+        <frame name="shell_link" attached_to="shell_link_joint">
+          <pose>0.0 0.0 0.0 0 0 0</pose>
         </frame>
       </model>
 

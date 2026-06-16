@@ -153,6 +153,16 @@ def generate_launch_description():
         output='screen',
         parameters=[{'use_sim_time': True}])
 
+    # ---- RViz2 (mission mode only) ----
+    rviz_config = os.path.join(pkg_frob_mission, 'config', 'planning.rviz')
+    rviz_node = Node(
+        condition=with_mission,
+        package='rviz2',
+        executable='rviz2',
+        name='rviz2',
+        output='screen',
+        arguments=['-d', rviz_config])
+
     return LaunchDescription([
         declare_mode,
         declare_world,
@@ -169,4 +179,5 @@ def generate_launch_description():
         motion_executor_node,
         graph_navigator_node,
         graph_visualizer_node,
+        rviz_node,
     ])
