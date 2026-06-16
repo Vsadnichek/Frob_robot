@@ -10,7 +10,7 @@ stops at pickup zones, and finishes at the drop-off zone.
 - **ROS2 distro**: Jazzy
 - **Robot**: Differential drive (21×21 cm base, 2 wheels + 2 casters), Arduino Mega, YDLIDAR X4, MPU6050 IMU, USB camera
 - **PC build**: `colcon build --symlink-install`
-- **Simulation**: Gazebo Harmonic (`gz-sim8`) via `ros_gz_sim`, TurtleBot 4 model (scaled ×0.453), custom city polygon world
+- **Simulation**: Gazebo Harmonic (`gz-sim8`) via `ros_gz_sim`, TurtleBot 4 model (geometry scaled ×0.453 in SDF), custom city polygon world
 
 ---
 
@@ -49,14 +49,18 @@ stops at pickup zones, and finishes at the drop-off zone.
 │                  │ ──────────────────────────────▶ │  motion_executor  │
 └──────────────────┘                                  │                   │
                                                      │  Action server    │
-                                                     │  /cmd_vel (Twist) │
-                                                     └───────────────────┘
+┌──────────────────┐                                  │  /cmd_vel (Twist) │
+│ set_initial_pose │  set_pose service (Gazebo)       └───────────────────┘
+│ teleports robot  │ ──────────▶ [turtlebot4 model]
+│ to start_node    │
+└──────────────────┘
 ```
 
-Three nodes in `frob_mission`:
+Four nodes in `frob_mission`:
 1. **`graph_navigator`** — plans the route and feeds commands to the motion executor
 2. **`motion_executor`** — ActionServer, executes movement commands via closed-loop control
 3. **`graph_visualizer`** — displays the graph + planned path in RViz via MarkerArray
+4. **`set_initial_pose`** — teleports robot from spawn position to `start_node` via Gazebo service
 
 Communication: `graph_navigator` → `/path` topic → `graph_visualizer` (path display).  
 Commands: `graph_navigator` → `/execute_motion` action → `motion_executor`.
@@ -108,8 +112,18 @@ Heading tracking in `_plan_motion` is used for fallback computation only.
 | `graph_file` | `''` (auto) | — | Path to `graph.yaml` (auto from package share) |
 | `start_node` | `13` | `start_node:=` | Start graph node ID (23 in simulation — TB4 spawn) |
 | `target_node` | `108` | `target_node:=` | Destination graph node ID |
-| `initial_heading` | `0.0` | `initial_heading:=` | Override auto-computed heading (rad) |
+| `initial_heading` | `0.0` | `initial_heading:=` | Override auto-computed heading (rad). 0 = use `suggested_heading` from graph |
 | `execute` | `True` | `execute:=False` | If False, publish path only (planning mode) |
+
+### Initial Heading Resolution
+
+When `initial_heading` is 0.0 (default), the node reads `suggested_heading` from the
+start node's entry in `graph.yaml`. This heading is pre-computed based on the first
+outgoing edge (priority: forward > right_turn > left_turn > u_turn) and ensures the
+robot starts facing the correct direction for its first command.
+
+If the node has no `suggested_heading`, falls back to computing `atan2(dy, dx)` from
+the first edge of the planned path (legacy behavior).
 
 ### Topics
 
@@ -147,15 +161,20 @@ Closed-loop motion controller — ActionServer for `execute_motion`.
 | `rotate_speed` | `1.2` | `1.0` | Max angular speed (rad/s, unused for arcs) |
 | `forward_tolerance` | `0.02` | `0.02` | Distance tolerance (m) |
 | `rotate_tolerance` | `0.05` | `0.05` | Angle tolerance (rad) |
-| `kp_angular` | `2.5` | `2.0` | P-gain (unused for arcs) |
+| `kp_angular` | `2.5` | `2.0` | P-gain for heading correction during forward |
+| `kp_cross_track` | `1.0` | `1.0` | P-gain for cross-track error correction |
+| `settle_time` | `0.3` | `0.3` | Pause between commands (s), 0 to disable |
 
 ### Command Execution
 
 **`forward(distance)`** (50 Hz loop):
-- Records start position from `/odometry/filtered`
-- Computes `traveled = sqrt(dx²+dy²)`, stops within `forward_tolerance` of target
+- Records start position and heading from `/odometry/filtered`
+- Tracks `_target_heading` — the IDEAL heading the robot should maintain
+- Applies dual correction: `angular.z = kp_angular * yaw_error - kp_cross_track * cross_track`
+- `yaw_error` = difference between ideal heading and actual yaw
+- `cross_track` = perpendicular distance from intended straight line
 - Slowdown ramp when `remaining < 0.1m`
-- Publishes `Twist.linear.x` to `/cmd_vel`
+- Publishes `Twist.linear.x` and `Twist.angular.z` to `/cmd_vel`
 - Timeout: 10 seconds waiting for initial odometry
 
 **`right_turn(R)` / `left_turn(R)` / `u_turn(R)`** (arc execution, 50 Hz):
@@ -163,6 +182,13 @@ Closed-loop motion controller — ActionServer for `execute_motion`.
 - Publishes constant `Twist(linear.x=forward_speed, angular.z=ω)` to `/cmd_vel`
 - Stops when yaw reaches `target_yaw = start_yaw + angle` within `rotate_tolerance`
 - Angle: `right_turn` = −π/2, `left_turn` = +π/2, `u_turn` = +π
+- After completion, updates `_target_heading` to the IDEAL post-turn value
+  (`_target_heading += angle`), NOT the actual yaw — this chains ideal headings
+  through the sequence, preventing error accumulation
+
+**`_settle()`** — called after each command:
+- Sends zero Twist, waits `settle_time` seconds
+- Prevents residual motion from affecting the next command
 
 **Yaw source** (`_ensure_yaw`):
 - Priority: `/imu/mpu6050` (if available) → `/odometry/filtered` orientation
@@ -240,6 +266,23 @@ Used in simulation launch to map TB4 topics → frob_robot expected names:
 
 ---
 
+## 4. `set_initial_pose` (`frob_mission/set_initial_pose.py`)
+
+Teleports robot from hardcoded SDF spawn position (node 23) to the desired `start_node`.
+
+- Reads `graph.yaml` to get coordinates and `suggested_heading` for `start_node`
+- Calls Gazebo service `/world/city_polygon/set_pose` via `gz service` CLI
+- Retries up to 30 times with 2s interval (Gazebo may not be ready immediately)
+- Used in simulation with modes `tb4` and `mission`
+
+**Parameters:**
+
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `start_node` | `23` | Target graph node ID for teleport |
+
+---
+
 ## frob_mission Package — Launch Files
 
 ### `planning.launch.py` — Path Display Only (no robot)
@@ -249,12 +292,11 @@ Used in simulation launch to map TB4 topics → frob_robot expected names:
 | `start_node` | `13` | Start graph node ID |
 | `target_node` | `108` | Target graph node ID |
 
-Starts: `graph_navigator` (execute=False) + `graph_visualizer`.
+Starts: `graph_navigator` (execute=False) + `graph_visualizer` + `rviz2`.
 No Gazebo, no robot, no motion execution.
 
 ```bash
 ros2 launch frob_mission planning.launch.py start_node:=23 target_node:=108
-# In another terminal: rviz2 → Add /graph_markers MarkerArray → Fixed Frame = odom
 ```
 
 ### `mission.launch.py` — Real Robot Mission
@@ -278,17 +320,17 @@ ros2 launch frob_mission mission.launch.py start_node:=23 target_node:=108
 | `mode` | `mission` | `city`=polygon only, `tb4`=polygon+robot, `mission`=polygon+robot+mission |
 | `world` | `''` (auto) | Override SDF world path (auto-selected by mode if empty) |
 | `headless` | `false` | Run Gazebo without GUI |
-| `start_node` | `23` | Start graph node ID (mission mode only) |
+| `start_node` | `23` | Start graph node ID (mission mode only, also sets robot spawn) |
 | `target_node` | `108` | Target graph node ID (mission mode only) |
 | `initial_heading` | `0.0` | Initial robot heading (mission mode only) |
 
 **Mode behavior:**
 
-| `mode` | SDF used | Gazebo | Bridges | Relays | Mission nodes |
-|--------|----------|--------|---------|--------|---------------|
-| `city` | `city_polygon.sdf` | World only | clock | — | — |
-| `tb4` | `city_polygon_tb4.sdf` | World + TB4 | clock + tb4_bridge | odom, imu | — |
-| `mission` | `city_polygon_tb4.sdf` | World + TB4 | clock + tb4_bridge | odom, imu | motion_executor + graph_navigator + graph_visualizer |
+| `mode` | SDF used | Gazebo | Bridges | Relays | Mission nodes | RViz2 |
+|--------|----------|--------|---------|--------|---------------|-------|
+| `city` | `city_polygon.sdf` | World only | clock | — | — | — |
+| `tb4` | `city_polygon_tb4.sdf` | World + TB4 | clock + tb4_bridge | odom, imu | set_initial_pose | — |
+| `mission` | `city_polygon_tb4.sdf` | World + TB4 | clock + tb4_bridge | odom, imu | set_initial_pose + motion_executor + graph_navigator + graph_visualizer | Yes |
 
 **Topic mapping in simulation:**
 - `/odom` → `/odometry/filtered` (relay)
@@ -353,9 +395,12 @@ Pure city polygon without robot. Contains:
 
 ### `city_polygon_tb4.sdf` (`worlds/city_polygon_tb4.sdf`)
 Same as `city_polygon.sdf` + embedded TurtleBot 4 robot model:
-- `<scale>0.453 0.453 0.453</scale>` — scales TB4 from 31cm → ~14cm width
+- All geometry (meshes, primitives, poses, masses, inertias) directly scaled by factor 0.453
 - `<pose>0.6 0.8 0.01 0 0 1.5708</pose>` — spawn at node 23 (0.6, 0.8), facing north
-- Full SDF generated from `nav2_minimal_tb4_description` URDF via `gz sdf -p`
+- **Note**: `<scale>` at model level is invalid in SDF 1.7 and silently ignored by Gazebo;
+  scaling is applied directly to all geometry values
+- Full SDF generated from `nav2_minimal_tb4_description` URDF via `gz sdf -p`, then
+  post-processed to apply the 0.453 geometry scale
 
 ---
 
@@ -374,12 +419,16 @@ nodes:
     right_turn: []
     left_turn: [13]
     u_turn: []
+    suggested_heading: 1.570796
 ```
 
 - `forward` — straight-line movement
 - `right_turn` — CW quarter-circle arc
 - `left_turn` — CCW quarter-circle arc
 - `u_turn` — CCW half-circle arc
+- `suggested_heading` — recommended initial heading in radians (0=east, π/2=north).
+  Computed from the first outgoing edge (priority: forward > right_turn > left_turn > u_turn).
+  Used by `graph_navigator` for auto‑initialization and by `set_initial_pose` for spawn orientation.
 
 Edges are pre-annotated with command types. The motion planner reads the command
 directly from the graph without heading-based classification. Values are defined
@@ -442,9 +491,7 @@ Special: IDs ending in `10` (e.g., `310`) → Y=10 (3.8m). Otherwise last digit 
 4. **No dynamic re-planning** — Path computed once. No sign/obstacle integration.
    `blocked_edges` exists in Dijkstra but always `set()`.
 5. **No bus stop / parking logic** — Pause at pickup zones not implemented.
-6. **Robot pose hardcoded in SDF** — `city_polygon_tb4.sdf` has fixed spawn at
-   node 23. Dynamic spawn by `start_node` not yet implemented.
-7. **NVIDIA EGL warnings at Gazebo startup** — needs env vars (see simulation
+6. **NVIDIA EGL warnings at Gazebo startup** — needs env vars (see simulation
    section). Cosmetic, doesn't affect functionality.
 
 ---

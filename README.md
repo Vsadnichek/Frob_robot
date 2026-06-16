@@ -6,7 +6,7 @@
 
 - **ROS2**: Jazzy
 - **Робот**: дифференциальный привод (база 21×21 см), Arduino Mega, YDLIDAR X4, MPU6050 IMU, USB-камера
-- **Симуляция**: Gazebo Harmonic (`gz-sim8`), модель TurtleBot 4 (уменьшена в 0.453×), собственный мир с городским полигоном
+- **Симуляция**: Gazebo Harmonic (`gz-sim8`), модель TurtleBot 4 (геометрия уменьшена в 0.453×), собственный мир с городским полигоном
 
 ---
 
@@ -28,6 +28,9 @@
 от `start_node` до `target_node`, планирует команды движения по аннотациям рёбер
 графа и отправляет весь список команд одним action goal в `motion_executor`.
 
+Начальный курс определяется автоматически из поля `suggested_heading` стартового
+узла графа. Если параметр `initial_heading != 0`, используется переданное значение.
+
 **Параметры:**
 
 | Параметр | По умолч. | CLI | Описание |
@@ -35,7 +38,7 @@
 | `graph_file` | `''` (авто) | — | Путь к `graph.yaml` |
 | `start_node` | `13` | `start_node:=` | ID стартового узла |
 | `target_node` | `108` | `target_node:=` | ID целевого узла |
-| `initial_heading` | `0.0` | `initial_heading:=` | Переопределение курса (рад), 0 = автовычисление |
+| `initial_heading` | `0.0` | `initial_heading:=` | Переопределение курса (рад), 0 = авто из `suggested_heading` |
 | `execute` | `True` | `execute:=False` | `False` — только публикация пути (режим планирования) |
 
 **Топики:**
@@ -57,6 +60,16 @@
 Сервер экшенов, принимающий список команд движения и выполняющий их последовательно
 с замкнутым контуром управления по данным одометрии.
 
+**Управление при `forward`:**
+- Коррекция курса к целевому углу `_target_heading` (P-регулятор `kp_angular`)
+- Коррекция бокового смещения от прямой (cross-track error, P-регулятор `kp_cross_track`)
+- Замедление при подъезде к цели (`remaining < 0.1 м`)
+- `_target_heading` отслеживает идеальный курс через всю цепочку команд: после поворота
+  обновляется на идеальное значение (`предыдущий + угол`), а не на фактический yaw
+
+**Задержка между командами:** `settle_time` (по умолч. 0.3 с) — робот останавливается
+и ждёт перед началом следующей команды, чтобы исключить остаточное движение.
+
 **Параметры:**
 
 | Параметр | По умолч. | Описание |
@@ -64,6 +77,9 @@
 | `forward_speed` | `0.12` | Линейная скорость (м/с) |
 | `forward_tolerance` | `0.02` | Допуск по расстоянию для forward (м) |
 | `rotate_tolerance` | `0.05` | Допуск по углу для поворотов (рад) |
+| `kp_angular` | `2.5` | P-коэффициент коррекции курса |
+| `kp_cross_track` | `1.0` | P-коэффициент коррекции бокового смещения |
+| `settle_time` | `0.3` | Пауза между командами (с), 0 = отключено |
 
 **Топики:**
 
@@ -84,7 +100,7 @@
 ### `graph_visualizer` — Визуализация для RViz
 
 Публикует `MarkerArray` в `/graph_markers`: узлы графа, рёбра, планируемый путь,
-позиция робота.
+позиция робота (magenta-сфера, подписана на `/odometry/filtered`).
 
 **Параметры:**
 
@@ -101,6 +117,22 @@
 | Подписка | `/path` | `Int32MultiArray` | Планируемый путь от `graph_navigator` |
 | Подписка | `/odometry/filtered` | `Odometry` | Позиция робота |
 | Публикация | `/graph_markers` | `MarkerArray` | Граф + путь + робот |
+
+---
+
+### `set_initial_pose` — Телепорт робота
+
+Читает координаты и `suggested_heading` из `graph.yaml` для `start_node`, вызывает
+Gazebo-сервис `/world/city_polygon/set_pose` для перемещения робота в стартовую
+точку (с ретраями до 30 попыток). Работает при `mode=tb4` и `mode=mission`.
+
+Робот всегда спавнится в SDF на узле 23, затем эта нода перемещает его в `start_node`.
+
+**Параметры:**
+
+| Параметр | По умолч. | Описание |
+|----------|-----------|----------|
+| `start_node` | `23` | ID узла для телепорта |
 
 ---
 
@@ -150,7 +182,8 @@ string current_command
 
 Файл: `src/frob_mission/config/graph.yaml`. **48 узлов, 92 направленных ребра**.
 
-Каждая нода хранит координаты и четыре списка достижимых узлов с типом команды:
+Каждая нода хранит координаты, четыре списка достижимых узлов с типом команды,
+и вычисленное поле `suggested_heading` (рекомендуемый курс при старте из этой ноды):
 
 ```yaml
 nodes:
@@ -161,19 +194,22 @@ nodes:
     right_turn: []
     left_turn: [13]
     u_turn: []
+    suggested_heading: 1.570796
 ```
 
 - `forward` — движение прямо
 - `right_turn` — поворот направо (дуга CW)
 - `left_turn` — поворот налево (дуга CCW)
 - `u_turn` — разворот (полуокружность CCW)
+- `suggested_heading` — рекомендуемый курс в радианах (0 = восток, π/2 = север)
 
 Планировщик читает тип команды напрямую из аннотаций графа, без вычисления по курсу.
+`suggested_heading` вычислен по первому исходящему ребру с приоритетом: forward > right_turn > left_turn > u_turn.
 
 **Кодировка ID узлов**: `"XY"` где X и Y — индексы сетки (1–10):
 
 | Индекс | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-|-----------|---|---|---|---|---|---|---|---|---|----|
+|--------|---|---|---|---|---|---|---|---|---|----|
 | Метры  | 0.2 | 0.6 | 0.8 | 1.6 | 1.8 | 2.2 | 2.4 | 3.2 | 3.4 | 3.8 |
 
 ---
@@ -196,10 +232,10 @@ ros2 launch frob_mission mission.launch.py start_node:=23 target_node:=108
 ros2 launch frob_mission simulation.launch.py mode:=city
 
 # Симуляция — полигон + робот (без миссии):
-ros2 launch frob_mission simulation.launch.py mode:=tb4
+ros2 launch frob_mission simulation.launch.py mode:=tb4 start_node:=14
 
 # Симуляция — полная миссия:
-ros2 launch frob_mission simulation.launch.py mode:=mission start_node:=23 target_node:=108
+ros2 launch frob_mission simulation.launch.py mode:=mission start_node:=14 target_node:=108
 ```
 
 ### Аргументы симуляции
@@ -207,16 +243,15 @@ ros2 launch frob_mission simulation.launch.py mode:=mission start_node:=23 targe
 | Аргумент | По умолч. | Описание |
 |----------|-----------|----------|
 | `mode` | `mission` | `city` / `tb4` / `mission` |
-| `world` | `''` (авто) | Путь к SDF-миру |
 | `headless` | `false` | Gazebo без GUI |
-| `start_node` | `23` | Стартовый узел (mission) |
+| `start_node` | `23` | Стартовый узел (задаёт spawn + план) |
 | `target_node` | `108` | Целевой узел (mission) |
-| `initial_heading` | `0.0` | Начальный курс, рад (mission) |
+| `initial_heading` | `0.0` | Начальный курс, рад (0 = авто из `suggested_heading`) |
 
 ### RViz
 
-`planning.launch.py` автоматически запускает RViz с `Fixed Frame = odom` и подпиской
-на `/graph_markers`. Конфиг: `src/frob_mission/config/planning.rviz`.
+`simulation.launch.py` (mode=mission) и `planning.launch.py` автоматически запускают RViz
+с `Fixed Frame = odom` и подпиской на `/graph_markers`. Конфиг: `src/frob_mission/config/planning.rviz`.
 
 ### NVIDIA GPU
 

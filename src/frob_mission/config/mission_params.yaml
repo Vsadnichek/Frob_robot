@@ -12,3 +12,5 @@ motion_executor:
     forward_tolerance: 0.02
     rotate_tolerance: 0.05
     kp_angular: 2.5
+    settle_time: 0.3
+    kp_cross_track: 1.0

@@ -20,6 +20,7 @@ class MotionExecutor(Node):
         self.declare_parameter('rotate_tolerance', 0.05)
         self.declare_parameter('kp_angular', 2.0)
         self.declare_parameter('settle_time', 0.3)
+        self.declare_parameter('kp_cross_track', 1.0)
 
         self.forward_speed = self.get_parameter('forward_speed').value
         self.rotate_speed = self.get_parameter('rotate_speed').value
@@ -27,6 +28,7 @@ class MotionExecutor(Node):
         self.rotate_tolerance = self.get_parameter('rotate_tolerance').value
         self.kp_angular = self.get_parameter('kp_angular').value
         self.settle_time = self.get_parameter('settle_time').value
+        self.kp_cross_track = self.get_parameter('kp_cross_track').value
 
         self.cmd_vel_pub = self.create_publisher(Twist, '/cmd_vel', 10)
 
@@ -187,7 +189,10 @@ class MotionExecutor(Node):
                 speed = max(0.05, self.forward_speed * remaining / 0.1)
 
             yaw_error = self._normalize(self._target_heading - self.yaw)
-            angular_correction = self.kp_angular * yaw_error
+            cross_track = (-dx * math.sin(self._target_heading) +
+                           dy * math.cos(self._target_heading))
+            angular_correction = (self.kp_angular * yaw_error -
+                                  self.kp_cross_track * cross_track)
 
             twist = Twist()
             twist.linear.x = speed
@@ -197,10 +202,15 @@ class MotionExecutor(Node):
 
         self._stop()
         actual_yaw = self.yaw
+        dx_final = self.odom.pose.pose.position.x - start_x
+        dy_final = self.odom.pose.pose.position.y - start_y
+        cross_final = (-dx_final * math.sin(self._target_heading) +
+                       dy_final * math.cos(self._target_heading))
         self.get_logger().info(
             f'Forward complete (target heading: '
             f'{math.degrees(self._target_heading):.1f}°, '
-            f'actual: {math.degrees(actual_yaw):.1f}°)')
+            f'actual: {math.degrees(actual_yaw):.1f}°, '
+            f'cross-track: {cross_final:.3f}m)')
         return True
 
     def _ensure_yaw(self, rate):
