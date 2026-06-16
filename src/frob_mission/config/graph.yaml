@@ -7,6 +7,7 @@ nodes:
     left_turn:
     - 31
     u_turn: []
+    suggested_heading: -1.570796
   14:
     x: 0.2
     y: 1.6
@@ -16,6 +17,7 @@ nodes:
     left_turn: []
     u_turn:
     - 24
+    suggested_heading: -1.570796
   17:
     x: 0.2
     y: 2.4
@@ -25,6 +27,7 @@ nodes:
     left_turn:
     - 35
     u_turn: []
+    suggested_heading: -1.570796
   18:
     x: 0.2
     y: 3.2
@@ -34,6 +37,7 @@ nodes:
     left_turn: []
     u_turn:
     - 28
+    suggested_heading: -1.570796
   23:
     x: 0.6
     y: 0.8
@@ -43,6 +47,7 @@ nodes:
     left_turn: []
     u_turn:
     - 13
+    suggested_heading: 1.570796
   24:
     x: 0.6
     y: 1.6
@@ -52,6 +57,7 @@ nodes:
     - 35
     left_turn: []
     u_turn: []
+    suggested_heading: 1.570796
   27:
     x: 0.6
     y: 2.4
@@ -61,6 +67,7 @@ nodes:
     left_turn: []
     u_turn:
     - 17
+    suggested_heading: 1.570796
   28:
     x: 0.6
     y: 3.2
@@ -69,6 +76,7 @@ nodes:
     - 39
     left_turn: []
     u_turn: []
+    suggested_heading: 1.570796
   31:
     x: 0.8
     y: 0.2
@@ -78,6 +86,7 @@ nodes:
     left_turn: []
     u_turn:
     - 32
+    suggested_heading: 0.0
   32:
     x: 0.8
     y: 0.6
@@ -86,6 +95,7 @@ nodes:
     - 23
     left_turn: []
     u_turn: []
+    suggested_heading: 3.141593
   35:
     x: 0.8
     y: 1.8
@@ -95,6 +105,7 @@ nodes:
     left_turn: []
     u_turn:
     - 36
+    suggested_heading: 0.0
   36:
     x: 0.8
     y: 2.2
@@ -104,6 +115,7 @@ nodes:
     left_turn:
     - 14
     u_turn: []
+    suggested_heading: 3.141593
   39:
     x: 0.8
     y: 3.4
@@ -113,6 +125,7 @@ nodes:
     left_turn: []
     u_turn:
     - 310
+    suggested_heading: 0.0
   310:
     x: 0.8
     y: 3.8
@@ -121,6 +134,7 @@ nodes:
     left_turn:
     - 18
     u_turn: []
+    suggested_heading: 3.141593
   41:
     x: 1.6
     y: 0.2
@@ -130,6 +144,7 @@ nodes:
     left_turn:
     - 63
     u_turn: []
+    suggested_heading: 0.0
   42:
     x: 1.6
     y: 0.6
@@ -139,6 +154,7 @@ nodes:
     left_turn: []
     u_turn:
     - 41
+    suggested_heading: 3.141593
   45:
     x: 1.6
     y: 1.8
@@ -149,6 +165,7 @@ nodes:
     left_turn:
     - 67
     u_turn: []
+    suggested_heading: 0.0
   46:
     x: 1.6
     y: 2.2
@@ -158,6 +175,7 @@ nodes:
     left_turn: []
     u_turn:
     - 45
+    suggested_heading: 3.141593
   49:
     x: 1.6
     y: 3.4
@@ -167,6 +185,7 @@ nodes:
     - 58
     left_turn: []
     u_turn: []
+    suggested_heading: 0.0
   410:
     x: 1.6
     y: 3.8
@@ -176,6 +195,7 @@ nodes:
     left_turn: []
     u_turn:
     - 49
+    suggested_heading: 3.141593
   53:
     x: 1.8
     y: 0.8
@@ -185,6 +205,7 @@ nodes:
     left_turn:
     - 71
     u_turn: []
+    suggested_heading: -1.570796
   54:
     x: 1.8
     y: 1.6
@@ -194,6 +215,7 @@ nodes:
     left_turn: []
     u_turn:
     - 64
+    suggested_heading: -1.570796
   57:
     x: 1.8
     y: 2.4
@@ -204,6 +226,7 @@ nodes:
     left_turn:
     - 75
     u_turn: []
+    suggested_heading: -1.570796
   58:
     x: 1.8
     y: 3.2
@@ -213,6 +236,7 @@ nodes:
     left_turn: []
     u_turn:
     - 68
+    suggested_heading: -1.570796
   63:
     x: 2.2
     y: 0.8
@@ -222,6 +246,7 @@ nodes:
     left_turn: []
     u_turn:
     - 53
+    suggested_heading: 1.570796
   64:
     x: 2.2
     y: 1.6
@@ -232,6 +257,7 @@ nodes:
     left_turn:
     - 46
     u_turn: []
+    suggested_heading: 1.570796
   67:
     x: 2.2
     y: 2.4
@@ -241,6 +267,7 @@ nodes:
     left_turn: []
     u_turn:
     - 57
+    suggested_heading: 1.570796
   68:
     x: 2.2
     y: 3.2
@@ -250,6 +277,7 @@ nodes:
     left_turn:
     - 410
     u_turn: []
+    suggested_heading: 1.570796
   71:
     x: 2.4
     y: 0.2
@@ -259,6 +287,7 @@ nodes:
     left_turn: []
     u_turn:
     - 72
+    suggested_heading: 0.0
   72:
     x: 2.4
     y: 0.6
@@ -268,6 +297,7 @@ nodes:
     - 63
     left_turn: []
     u_turn: []
+    suggested_heading: 3.141593
   75:
     x: 2.4
     y: 1.8
@@ -277,6 +307,7 @@ nodes:
     left_turn: []
     u_turn:
     - 76
+    suggested_heading: 0.0
   76:
     x: 2.4
     y: 2.2
@@ -287,6 +318,7 @@ nodes:
     left_turn:
     - 54
     u_turn: []
+    suggested_heading: 3.141593
   79:
     x: 2.4
     y: 3.4
@@ -296,6 +328,7 @@ nodes:
     left_turn: []
     u_turn:
     - 710
+    suggested_heading: 0.0
   710:
     x: 2.4
     y: 3.8
@@ -305,6 +338,7 @@ nodes:
     left_turn:
     - 58
     u_turn: []
+    suggested_heading: 3.141593
   81:
     x: 3.2
     y: 0.2
@@ -313,6 +347,7 @@ nodes:
     left_turn:
     - 103
     u_turn: []
+    suggested_heading: 0.0
   82:
     x: 3.2
     y: 0.6
@@ -322,6 +357,7 @@ nodes:
     left_turn: []
     u_turn:
     - 81
+    suggested_heading: 3.141593
   85:
     x: 3.2
     y: 1.8
@@ -331,6 +367,7 @@ nodes:
     left_turn:
     - 107
     u_turn: []
+    suggested_heading: 0.0
   86:
     x: 3.2
     y: 2.2
@@ -340,6 +377,7 @@ nodes:
     left_turn: []
     u_turn:
     - 85
+    suggested_heading: 3.141593
   89:
     x: 3.2
     y: 3.4
@@ -348,6 +386,7 @@ nodes:
     - 98
     left_turn: []
     u_turn: []
+    suggested_heading: 0.0
   810:
     x: 3.2
     y: 3.8
@@ -357,6 +396,7 @@ nodes:
     left_turn: []
     u_turn:
     - 89
+    suggested_heading: 3.141593
   93:
     x: 3.4
     y: 0.8
@@ -365,6 +405,7 @@ nodes:
     - 82
     left_turn: []
     u_turn: []
+    suggested_heading: -1.570796
   94:
     x: 3.4
     y: 1.6
@@ -374,6 +415,7 @@ nodes:
     left_turn: []
     u_turn:
     - 104
+    suggested_heading: -1.570796
   97:
     x: 3.4
     y: 2.4
@@ -383,6 +425,7 @@ nodes:
     - 86
     left_turn: []
     u_turn: []
+    suggested_heading: -1.570796
   98:
     x: 3.4
     y: 3.2
@@ -392,6 +435,7 @@ nodes:
     left_turn: []
     u_turn:
     - 108
+    suggested_heading: -1.570796
   103:
     x: 3.8
     y: 0.8
@@ -401,6 +445,7 @@ nodes:
     left_turn: []
     u_turn:
     - 93
+    suggested_heading: 1.570796
   104:
     x: 3.8
     y: 1.6
@@ -410,6 +455,7 @@ nodes:
     left_turn:
     - 86
     u_turn: []
+    suggested_heading: 1.570796
   107:
     x: 3.8
     y: 2.4
@@ -419,6 +465,7 @@ nodes:
     left_turn: []
     u_turn:
     - 97
+    suggested_heading: 1.570796
   108:
     x: 3.8
     y: 3.2
@@ -427,6 +474,7 @@ nodes:
     left_turn:
     - 810
     u_turn: []
+    suggested_heading: 1.570796
 start_node: 13
 target_node: 108
 initial_heading: 0.0

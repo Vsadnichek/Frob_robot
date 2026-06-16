@@ -33,6 +33,7 @@ setup(
             'graph_visualizer = frob_mission.graph_visualizer:main',
             'motion_executor = frob_mission.motion_executor:main',
             'topic_relay = frob_mission.topic_relay:main',
+            'set_initial_pose = frob_mission.set_initial_pose:main',
         ],
     },
 )

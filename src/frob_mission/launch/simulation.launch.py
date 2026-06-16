@@ -120,6 +120,18 @@ def generate_launch_description():
         arguments=['/imu', '/imu/mpu6050', 'sensor_msgs.msg.Imu'],
         parameters=[{'use_sim_time': True}])
 
+    # ---- Teleport robot to start_node ----
+    set_pose = Node(
+        condition=with_robot,
+        package='frob_mission',
+        executable='set_initial_pose',
+        name='set_initial_pose',
+        output='screen',
+        parameters=[{
+            'use_sim_time': True,
+            'start_node': start_node,
+        }])
+
     # ---- Mission nodes (mode=mission only) ----
     mission_config = os.path.join(
         pkg_frob_mission, 'config', 'mission_params.yaml')
@@ -176,6 +188,7 @@ def generate_launch_description():
         tb4_bridge,
         relay_odom,
         relay_imu,
+        set_pose,
         motion_executor_node,
         graph_navigator_node,
         graph_visualizer_node,

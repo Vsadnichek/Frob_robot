@@ -48,11 +48,16 @@ class GraphNavigator(Node):
         self.edges = {}
         self.cmd_lookup = {}
 
+        self._suggested_headings = {}
+
         for node_id, entry in config['nodes'].items():
             nid = int(node_id)
             self.nodes[nid] = (entry['x'], entry['y'])
             self.edges[nid] = []
             self.cmd_lookup[nid] = {}
+
+            if 'suggested_heading' in entry:
+                self._suggested_headings[nid] = float(entry['suggested_heading'])
 
             for cmd in ('forward', 'right_turn', 'left_turn', 'u_turn'):
                 targets = entry.get(cmd, [])
@@ -171,14 +176,22 @@ class GraphNavigator(Node):
         self.path_pub.publish(msg)
 
         heading = self.initial_heading_param
-        if self.initial_heading_param == 0.0 and len(path) >= 2:
-            ax, ay = self.nodes[path[0]]
-            bx, by = self.nodes[path[1]]
-            heading = math.atan2(by - ay, bx - ax)
-            self.get_logger().info(
-                f'Auto initial_heading={heading:.3f} rad '
-                f'(from first edge {path[0]}->{path[1]})'
-            )
+        if self.initial_heading_param == 0.0:
+            start_nid = path[0]
+            if start_nid in self._suggested_headings:
+                heading = self._suggested_headings[start_nid]
+                self.get_logger().info(
+                    f'Auto initial_heading={heading:.3f} rad '
+                    f'(suggested for node {start_nid})'
+                )
+            elif len(path) >= 2:
+                ax, ay = self.nodes[path[0]]
+                bx, by = self.nodes[path[1]]
+                heading = math.atan2(by - ay, bx - ax)
+                self.get_logger().info(
+                    f'Auto initial_heading={heading:.3f} rad '
+                    f'(from first edge {path[0]}->{path[1]})'
+                )
 
         commands = self._plan_motion(path, heading)
         self.get_logger().info(f'Commands ({len(commands)}):')
