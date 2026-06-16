@@ -115,12 +115,22 @@ Heading tracking in `_plan_motion` is used for fallback computation only.
 | `initial_heading` | `0.0` | `initial_heading:=` | Override auto-computed heading (rad). 0 = use `suggested_heading` from graph |
 | `execute` | `True` | `execute:=False` | If False, publish path only (planning mode) |
 
+### Heading Convention
+
+Heading values use the convention **0 = north, π/2 = east** (standard compass convention).
+All `suggested_heading` values in `graph.yaml` use this convention. Internally,
+`graph_navigator` converts to standard math (0 = east) via `HEADING_OFFSET = π/2`
+before tracking heading through the command sequence. The `initial_heading` CLI
+parameter also uses the compass convention (0 = north).
+
+`set_initial_pose` adds `π/2` when reading `suggested_heading` to convert back
+to standard math for the Gazebo `set_pose` service (which uses 0 = east).
+
 ### Initial Heading Resolution
 
 When `initial_heading` is 0.0 (default), the node reads `suggested_heading` from the
-start node's entry in `graph.yaml`. This heading is pre-computed based on the first
-outgoing edge (priority: forward > right_turn > left_turn > u_turn) and ensures the
-robot starts facing the correct direction for its first command.
+start node's entry in `graph.yaml` (in compass convention, 0 = north). The value
+is converted to standard math via `HEADING_OFFSET` for internal use.
 
 If the node has no `suggested_heading`, falls back to computing `atan2(dy, dx)` from
 the first edge of the planned path (legacy behavior).
@@ -216,6 +226,19 @@ Uses `MultiThreadedExecutor` — the action server callback is in a
 
 Publishes `visualization_msgs/MarkerArray` to `/graph_markers` for RViz.
 
+### Coordinate Transform (world → odom)
+
+The graph stores node coordinates in **world frame** (matching the SDF polygon), but
+the DiffDrive plugin publishes odometry in the **odom frame** (robot starts at 0,0).
+The visualizer transforms all graph coordinates from world to odom using the robot's
+spawn position and heading (`start_node`'s coordinates and `suggested_heading + π/2`):
+
+```
+odom_point = R(−heading) * (world_point − origin)
+```
+
+This keeps markers and the robot dot perfectly aligned in RViz without needing TF.
+
 ### Parameters
 
 | Parameter | Default | Description |
@@ -223,6 +246,7 @@ Publishes `visualization_msgs/MarkerArray` to `/graph_markers` for RViz.
 | `graph_file` | `''` (auto) | Path to `graph.yaml` |
 | `publish_rate` | `1.0` | Marker publish rate (Hz) |
 | `frame_id` | `odom` | TF frame for markers |
+| `start_node` | `-1` (auto from graph) | Robot spawn node (defines world→odom origin) |
 
 ### Topics
 
@@ -332,6 +356,9 @@ ros2 launch frob_mission mission.launch.py start_node:=23 target_node:=108
 | `tb4` | `city_polygon_tb4.sdf` | World + TB4 | clock + tb4_bridge | odom, imu | set_initial_pose | — |
 | `mission` | `city_polygon_tb4.sdf` | World + TB4 | clock + tb4_bridge | odom, imu | set_initial_pose + motion_executor + graph_navigator + graph_visualizer | Yes |
 
+**Gazebo camera**: auto-positioned via `--gui-config` loading `config/gazebo_camera.config`
+with camera pose `(2, 2, 3) pitch=π/2 yaw=π/2` — top-down view centered on polygon.
+
 **Topic mapping in simulation:**
 - `/odom` → `/odometry/filtered` (relay)
 - `/imu` → `/imu/mpu6050` (relay, ⚠️ IMU not publishing in Gazebo)
@@ -396,7 +423,7 @@ Pure city polygon without robot. Contains:
 ### `city_polygon_tb4.sdf` (`worlds/city_polygon_tb4.sdf`)
 Same as `city_polygon.sdf` + embedded TurtleBot 4 robot model:
 - All geometry (meshes, primitives, poses, masses, inertias) directly scaled by factor 0.453
-- `<pose>0.6 0.8 0.01 0 0 1.5708</pose>` — spawn at node 23 (0.6, 0.8), facing north
+- `<pose>0.6 0.8 0.01 0 0 1.5708</pose>` — spawn at node 23 (0.6, 0.8), facing world +Y (north, standard math yaw = π/2)
 - **Note**: `<scale>` at model level is invalid in SDF 1.7 and silently ignored by Gazebo;
   scaling is applied directly to all geometry values
 - Full SDF generated from `nav2_minimal_tb4_description` URDF via `gz sdf -p`, then
@@ -419,16 +446,17 @@ nodes:
     right_turn: []
     left_turn: [13]
     u_turn: []
-    suggested_heading: 1.570796
+    suggested_heading: 0.0
 ```
 
 - `forward` — straight-line movement
 - `right_turn` — CW quarter-circle arc
 - `left_turn` — CCW quarter-circle arc
 - `u_turn` — CCW half-circle arc
-- `suggested_heading` — recommended initial heading in radians (0=east, π/2=north).
+- `suggested_heading` — recommended initial heading in radians (**0 = north, π/2 = east**).
   Computed from the first outgoing edge (priority: forward > right_turn > left_turn > u_turn).
   Used by `graph_navigator` for auto‑initialization and by `set_initial_pose` for spawn orientation.
+  Converted to/from standard math (0 = east) at the boundary by adding/subtracting π/2.
 
 Edges are pre-annotated with command types. The motion planner reads the command
 directly from the graph without heading-based classification. Values are defined

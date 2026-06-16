@@ -10,7 +10,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/config', ['config/graph.yaml', 'config/mission_params.yaml', 'config/planning.rviz']),
+        ('share/' + package_name + '/config', ['config/graph.yaml', 'config/mission_params.yaml', 'config/planning.rviz', 'config/gazebo_camera.config']),
         ('share/' + package_name + '/launch', [
             'launch/mission.launch.py',
             'launch/planning.launch.py',

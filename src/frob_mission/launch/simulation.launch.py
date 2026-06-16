@@ -20,6 +20,8 @@ def generate_launch_description():
     pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
     pkg_tb4_sim = get_package_share_directory('nav2_minimal_tb4_sim')
 
+    gui_config = os.path.join(pkg_frob_mission, 'config', 'gazebo_camera.config')
+
     # ---- Arguments ----
     mode = LaunchConfiguration('mode')
     world_override = LaunchConfiguration('world')
@@ -77,7 +79,7 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(
             os.path.join(pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py')),
         launch_arguments={
-            'gz_args': ['-r ', world_path]}.items())
+            'gz_args': ['-r --gui-config ', gui_config, ' ', world_path]}.items())
 
     # ---- Clock bridge ----
     clock_bridge = Node(
